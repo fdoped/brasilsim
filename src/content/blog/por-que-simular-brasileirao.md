@@ -2,7 +2,7 @@
 titulo: "Por que simular o Brasileirão faz sentido"
 descricao: "Torcida acha que sente as chances no dedo. Estatística ajuda a colocar números onde a intuição escorrega."
 data: 2026-07-27
-autor: BrasilSim
+autor: Bolaverso
 tags: [metodologia, introducao]
 ---
 
@@ -39,4 +39,4 @@ O papel de um simulador é oferecer o "chão" estatístico da conversa: dado só
 aconteceu no campo, quais são as probabilidades? A partir daí, a intuição informada pode
 puxar para cima ou para baixo.
 
-É esse chão que o BrasilSim tenta oferecer, com honestidade sobre o método.
+É esse chão que o Bolaverso tenta oferecer, com honestidade sobre o método.

@@ -1,15 +1,15 @@
 ---
-titulo: "Como o BrasilSim se compara ao simulador da UFMG"
-descricao: "A UFMG é referência acadêmica em simulações do Brasileirão. Explicamos o que o BrasilSim faz igual, e o que faz diferente."
+titulo: "Como o Bolaverso se compara ao simulador da UFMG"
+descricao: "A UFMG é referência acadêmica em simulações do Brasileirão. Explicamos o que o Bolaverso faz igual, e o que faz diferente."
 data: 2026-07-26
-autor: BrasilSim
+autor: Bolaverso
 tags: [metodologia, comparacao]
 ---
 
 O laboratório de Matemática da UFMG mantém há anos um dos simuladores mais respeitados do
 Brasileirão, publicando probabilidades semanais para clubes e imprensa. É referência.
 
-Ao calibrar o BrasilSim, usamos as probabilidades da UFMG como referência para verificar
+Ao calibrar o Bolaverso, usamos as probabilidades da UFMG como referência para verificar
 sanidade dos números. Quando construímos o motor, o teste era: com os dados da rodada X, o
 que a UFMG está publicando? Se batíamos, bom sinal. Se não, algo estava mal calibrado.
 
@@ -30,15 +30,15 @@ medida em cerca de 0,2 a 0,3 gols esperados a mais para o mandante.
 ## O que fazemos diferente
 
 **Ensemble em vez de modelo único.** A UFMG usa uma variação de Poisson bem afinada. O
-BrasilSim roda três modelos independentes (Poisson, Dixon-Coles e Elo) e tira a média. Nossa
+Bolaverso roda três modelos independentes (Poisson, Dixon-Coles e Elo) e tira a média. Nossa
 hipótese é que erros de cada modelo, se independentes entre si, tendem a se cancelar. É a
 mesma lógica de ensembles em machine learning.
 
-**Modelagem explícita de incerteza (σ).** Aqui está uma decisão importante do BrasilSim: no
+**Modelagem explícita de incerteza (σ).** Aqui está uma decisão importante do Bolaverso: no
 meio da temporada, a força medida de cada time (a partir de gols pró/contra em ~20 jogos)
 tem incerteza significativa. Se um time tem taxa de ataque muito alta em 20 jogos, é
 provável que essa taxa seja alta *de verdade*, mas também é provável que a taxa "verdadeira"
-seja um pouco menos extrema — regressão à média. O BrasilSim reamostra a força a cada
+seja um pouco menos extrema — regressão à média. O Bolaverso reamostra a força a cada
 simulação, refletindo essa incerteza. Sem isso, o líder do campeonato aparece com
 probabilidades exageradas (algo como 90% de título quando lidera por 6 pontos com folga).
 

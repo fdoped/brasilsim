@@ -6,7 +6,7 @@ const blog = defineCollection({
     titulo: z.string(),
     descricao: z.string(),
     data: z.date(),
-    autor: z.string().default('BrasilSim'),
+    autor: z.string().default('Bolaverso'),
     tags: z.array(z.string()).default([]),
   }),
 });

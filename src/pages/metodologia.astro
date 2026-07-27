@@ -2,12 +2,12 @@
 import Base from '../layouts/Base.astro';
 ---
 <Base
-  title="Metodologia — Como o BrasilSim calcula as probabilidades"
+  title="Metodologia — Como o Bolaverso calcula as probabilidades"
   description="Detalhes técnicos: modelos de Poisson, Dixon-Coles e Elo, calibração com incerteza (sigma), e como derivamos os jogos restantes."
 >
   <h1>Metodologia</h1>
   <p>
-    Como o BrasilSim chega nas probabilidades exibidas na home. Sem esconder detalhe: se você
+    Como o Bolaverso chega nas probabilidades exibidas na home. Sem esconder detalhe: se você
     quiser reproduzir os cálculos por conta, o código está disponível.
   </p>
 
@@ -19,7 +19,7 @@ import Base from '../layouts/Base.astro';
     pelo total de simulações, é a probabilidade.
   </p>
   <p>
-    O BrasilSim roda <strong>30.000 simulações</strong> por dia, no total.
+    O Bolaverso roda <strong>30.000 simulações</strong> por dia, no total.
   </p>
 
   <h2>Três modelos, uma média</h2>
@@ -44,7 +44,7 @@ import Base from '../layouts/Base.astro';
   <p>
     Sistema de rating originalmente criado para xadrez. Cada time tem uma pontuação que reflete
     sua força relativa. A diferença de pontos entre dois times determina a probabilidade de
-    cada um vencer. O BrasilSim usa uma variante híbrida: 60% do rating vem do aproveitamento
+    cada um vencer. O Bolaverso usa uma variante híbrida: 60% do rating vem do aproveitamento
     de pontos por jogo, 40% da força ofensiva menos defensiva. Adicionamos ainda uma pequena
     vantagem de mando de campo.
   </p>
@@ -61,7 +61,7 @@ import Base from '../layouts/Base.astro';
   <p>
     Um erro comum em simuladores é tratar a força medida de cada time como verdade absoluta.
     Se o Palmeiras venceu 13 dos primeiros 20 jogos, isso <em>não</em> significa que ele vai
-    vencer 13 dos próximos 18 — pode ser sorte ou uma janela específica. O BrasilSim modela
+    vencer 13 dos próximos 18 — pode ser sorte ou uma janela específica. O Bolaverso modela
     essa incerteza: a cada simulação, a força de ataque e defesa de cada time é reamostrada
     dentro de uma distribuição, controlada pelo parâmetro σ = 0,40.
   </p>
