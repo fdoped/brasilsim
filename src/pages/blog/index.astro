@@ -1,0 +1,40 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .sort((a, b) => b.data.data.getTime() - a.data.data.getTime());
+---
+<Base
+  title="Análises do Brasileirão — BrasilSim"
+  description="Análises estatísticas, comentários de rodada e curiosidades sobre o Brasileirão Série A."
+>
+  <h1>Análises</h1>
+  <p>Comentários de rodada, curiosidades estatísticas e artigos sobre modelagem no futebol brasileiro.</p>
+
+  <ul class="posts">
+    {posts.map((p) => (
+      <li>
+        <a href={`/blog/${p.slug}/`}>
+          <h2>{p.data.titulo}</h2>
+          <p class="desc">{p.data.descricao}</p>
+          <p class="meta">
+            {p.data.data.toLocaleDateString('pt-BR', {
+              day: '2-digit', month: 'long', year: 'numeric',
+            })} · {p.data.autor}
+          </p>
+        </a>
+      </li>
+    ))}
+  </ul>
+</Base>
+
+<style>
+  .posts { list-style: none; padding: 0; }
+  .posts li { border-bottom: 1px solid var(--borda); padding: 1.25rem 0; }
+  .posts a { color: inherit; text-decoration: none; display: block; }
+  .posts a:hover h2 { color: var(--verde); }
+  .posts h2 { font-size: 1.35rem; margin: 0 0 0.35rem; transition: color 0.15s; }
+  .posts .desc { margin: 0 0 0.35rem; color: var(--texto); }
+  .posts .meta { margin: 0; color: var(--cinza); font-size: 0.85rem; }
+</style>

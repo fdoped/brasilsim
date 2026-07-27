@@ -1,0 +1,44 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Sobre o BrasilSim — Simulação do Brasileirão"
+  description="Sobre o projeto BrasilSim: simulação estatística independente do Campeonato Brasileiro de futebol."
+>
+  <h1>Sobre o BrasilSim</h1>
+
+  <p>
+    O BrasilSim é um projeto independente que calcula probabilidades de título, classificação
+    para a Libertadores e rebaixamento no Campeonato Brasileiro de futebol, usando simulação
+    de Monte Carlo.
+  </p>
+
+  <p>
+    A cada dia, o motor roda 30.000 simulações do restante do campeonato com um ensemble de três
+    modelos estatísticos: <strong>Poisson</strong> (o mais tradicional para futebol),
+    <strong>Dixon-Coles</strong> (versão refinada que corrige a distribuição de placares
+    baixos) e <strong>Elo</strong> (ratings comparativos). A média das três saídas é a
+    probabilidade final apresentada.
+  </p>
+
+  <h2>Por que este site existe</h2>
+  <p>
+    Sites como o da UFMG ou o "Chance de Gol" fazem excelente trabalho publicando previsões,
+    mas raramente explicam o método por trás. O BrasilSim é aberto sobre como calcula tudo,
+    incluindo a metodologia detalhada, para que qualquer torcedor curioso possa entender de
+    onde vêm os números.
+  </p>
+
+  <h2>Independência</h2>
+  <p>
+    Este site não tem vínculo com nenhum clube, casa de apostas ou veículo esportivo. Os dados
+    da tabela são obtidos publicamente do <a href="https://ge.globo.com/futebol/brasileirao-serie-a/">
+    ge.globo</a>. As probabilidades são calculadas por modelos estatísticos independentes.
+  </p>
+
+  <h2>Contato</h2>
+  <p>
+    Sugestões, correções e críticas construtivas são bem-vindas em
+    <a href="/contato/">contato</a>.
+  </p>
+</Base>

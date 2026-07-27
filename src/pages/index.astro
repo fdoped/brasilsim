@@ -1,0 +1,211 @@
+---
+// Home: consome o JSON gerado pelo GitHub Action e renderiza a página inteira
+// como HTML estático. Zero JavaScript no cliente, zero requisição a API.
+import Base from '../layouts/Base.astro';
+import dados from '../data/probabilidades.json';
+
+const { atualizado_em, fonte, nsim, tabela, proximos_jogos } = dados;
+const atualizadoBR = new Date(atualizado_em).toLocaleString('pt-BR', {
+  day: '2-digit', month: '2-digit', year: 'numeric',
+  hour: '2-digit', minute: '2-digit', timeZone: 'America/Sao_Paulo',
+});
+
+// Utilitário: escolhe cor da barra por probabilidade
+const cor = (p: number, base: string) => {
+  const intensidade = Math.max(0.15, Math.min(1, p / 100));
+  return `background: ${base}; opacity: ${intensidade}`;
+};
+
+function corProvavel(p: string): string {
+  return p === 'casa' ? 'var(--verde)' : p === 'empate' ? 'var(--amarelo)' : 'var(--azul)';
+}
+---
+<Base
+  title="Chances no Brasileirão 2026 — Simulação por Monte Carlo | BrasilSim"
+  description="Probabilidades de título, Libertadores e rebaixamento no Brasileirão Série A 2026. Simulação com 30 mil execuções, atualizada diariamente."
+>
+  <h1>Chances no Brasileirão 2026</h1>
+  <p class="lead">
+    Probabilidades de <strong>título</strong>, <strong>Libertadores</strong> e <strong>rebaixamento</strong>
+    calculadas por Monte Carlo com {nsim.toLocaleString('pt-BR')} simulações do restante do campeonato.
+  </p>
+  <p class="meta">
+    Atualizado em <strong>{atualizadoBR}</strong> · Fonte: {fonte}
+  </p>
+
+  <h2>Tabela de probabilidades</h2>
+  <div class="tabela-wrap">
+    <table class="tabela">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th class="left">Time</th>
+          <th>P</th><th>J</th>
+          <th class="prob">🏆 Título</th>
+          <th class="prob">🌎 G5</th>
+          <th class="prob">⬇️ Z4</th>
+        </tr>
+      </thead>
+      <tbody>
+        {tabela.map((t) => (
+          <tr>
+            <td class="pos">{t.posicao_atual}</td>
+            <td class="left nome">{t.time}</td>
+            <td>{t.pts}</td>
+            <td>{t.j}</td>
+            <td>
+              <div class="barra-cont">
+                <div class="barra" style={cor(t.titulo, 'var(--verde)')}></div>
+                <span class="valor">{t.titulo.toFixed(1)}%</span>
+              </div>
+            </td>
+            <td>
+              <div class="barra-cont">
+                <div class="barra" style={cor(t.g5, 'var(--azul)')}></div>
+                <span class="valor">{t.g5.toFixed(1)}%</span>
+              </div>
+            </td>
+            <td>
+              <div class="barra-cont">
+                <div class="barra" style={cor(t.z4, 'var(--vermelho)')}></div>
+                <span class="valor">{t.z4.toFixed(1)}%</span>
+              </div>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  {proximos_jogos.length > 0 && (
+    <>
+      <h2>Probabilidades da próxima rodada</h2>
+      <p>Chance de cada resultado calculada pelo modelo Dixon-Coles.</p>
+      <div class="jogos">
+        {proximos_jogos.map((j) => (
+          <div class="jogo">
+            <div class="times">
+              <span class="mandante">{j.mandante}</span>
+              <span class="vs">×</span>
+              <span class="visitante">{j.visitante}</span>
+            </div>
+            <div class="probs">
+              <div class="prob-item" style={`--w:${j.casa}%`}>
+                <span class="lbl">Casa</span>
+                <span class="val">{j.casa.toFixed(0)}%</span>
+                <div class="prob-barra" style={`background: var(--verde); width: ${j.casa}%`}></div>
+              </div>
+              <div class="prob-item" style={`--w:${j.empate}%`}>
+                <span class="lbl">Empate</span>
+                <span class="val">{j.empate.toFixed(0)}%</span>
+                <div class="prob-barra" style={`background: var(--amarelo); width: ${j.empate}%`}></div>
+              </div>
+              <div class="prob-item" style={`--w:${j.fora}%`}>
+                <span class="lbl">Fora</span>
+                <span class="val">{j.fora.toFixed(0)}%</span>
+                <div class="prob-barra" style={`background: var(--azul); width: ${j.fora}%`}></div>
+              </div>
+            </div>
+            <div class="placar-provavel">Placar mais provável: <strong>{j.placar_provavel}</strong></div>
+          </div>
+        ))}
+      </div>
+    </>
+  )}
+
+  <p class="disclaimer">
+    Simulação estatística baseada em modelos de Poisson, Dixon-Coles e Elo — não é previsão oficial.
+    <a href="/metodologia/">Entenda como funciona</a>.
+  </p>
+</Base>
+
+<style>
+  .lead { font-size: 1.1rem; color: var(--texto); max-width: 62ch; }
+  .meta { color: var(--cinza); font-size: 0.9rem; margin-top: -0.25rem; }
+
+  .tabela-wrap { overflow-x: auto; margin: 1rem 0 2rem; }
+  .tabela {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    min-width: 640px;
+  }
+  .tabela th, .tabela td {
+    padding: 0.6rem 0.5rem;
+    text-align: center;
+    border-bottom: 1px solid var(--borda);
+    font-size: 0.9rem;
+  }
+  .tabela th {
+    background: #f6f7f9; font-weight: 600; color: var(--cinza);
+  }
+  .tabela .left { text-align: left; }
+  .tabela .nome { font-weight: 600; }
+  .tabela .pos { color: var(--cinza); }
+  .tabela .prob { min-width: 100px; }
+  .tabela tr:last-child td { border-bottom: none; }
+
+  .barra-cont {
+    position: relative; display: flex; align-items: center;
+    justify-content: flex-end; padding: 0 0.4rem; height: 22px;
+    background: #f0f2f5; border-radius: 4px;
+  }
+  .barra {
+    position: absolute; left: 0; top: 0; bottom: 0;
+    border-radius: 4px; width: 100%;
+    transform-origin: left;
+  }
+  .valor {
+    position: relative; z-index: 1; font-size: 0.82rem;
+    font-weight: 600; color: #fff;
+    text-shadow: 0 0 3px rgba(0,0,0,0.4);
+  }
+
+  /* Ajusta largura da barra pelo valor. Como CSS puro não faz isso via data-attr
+     em SSG, usamos style inline via astro no template acima. */
+  .barra { transform: scaleX(var(--w, 1)); }
+
+  .jogos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0 2rem;
+  }
+  .jogo {
+    background: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  .times {
+    display: flex; justify-content: space-between; align-items: center;
+    font-weight: 600; margin-bottom: 0.75rem;
+  }
+  .vs { color: var(--cinza); font-weight: 400; }
+  .probs { display: flex; flex-direction: column; gap: 0.35rem; }
+  .prob-item {
+    position: relative; display: flex;
+    justify-content: space-between; align-items: center;
+    background: #f0f2f5; border-radius: 4px; padding: 0.3rem 0.6rem;
+    height: 26px; overflow: hidden;
+  }
+  .prob-barra {
+    position: absolute; left: 0; top: 0; bottom: 0;
+    opacity: 0.5; z-index: 0;
+  }
+  .prob-item .lbl, .prob-item .val {
+    position: relative; z-index: 1;
+    font-size: 0.85rem; font-weight: 600;
+  }
+  .placar-provavel {
+    margin-top: 0.75rem; font-size: 0.85rem; color: var(--cinza);
+  }
+  .disclaimer {
+    margin-top: 2rem; padding: 1rem;
+    background: #f6f7f9; border-radius: 6px;
+    font-size: 0.9rem; color: var(--cinza);
+  }
+</style>

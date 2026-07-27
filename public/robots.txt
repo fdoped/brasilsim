@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://brasilsim.com.br/sitemap-index.xml

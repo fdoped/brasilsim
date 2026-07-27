@@ -1,0 +1,109 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Metodologia — Como o BrasilSim calcula as probabilidades"
+  description="Detalhes técnicos: modelos de Poisson, Dixon-Coles e Elo, calibração com incerteza (sigma), e como derivamos os jogos restantes."
+>
+  <h1>Metodologia</h1>
+  <p>
+    Como o BrasilSim chega nas probabilidades exibidas na home. Sem esconder detalhe: se você
+    quiser reproduzir os cálculos por conta, o código está disponível.
+  </p>
+
+  <h2>Ideia geral: Monte Carlo</h2>
+  <p>
+    A ideia é simples: se você jogar o restante do campeonato milhares de vezes, computando o
+    resultado de cada jogo por um modelo estatístico, dá para contar em quantas dessas "linhas
+    do tempo alternativas" cada time terminou campeão, no G5 ou no Z4. Essa contagem, dividida
+    pelo total de simulações, é a probabilidade.
+  </p>
+  <p>
+    O BrasilSim roda <strong>30.000 simulações</strong> por dia, no total.
+  </p>
+
+  <h2>Três modelos, uma média</h2>
+
+  <h3>1. Poisson</h3>
+  <p>
+    O modelo mais tradicional para futebol desde os anos 80. Para cada jogo A × B, calcula uma
+    expectativa de gols de A (baseada no ataque de A e defesa de B) e de B, e sorteia os gols
+    de cada equipe de forma independente por uma distribuição de Poisson.
+  </p>
+
+  <h3>2. Dixon-Coles</h3>
+  <p>
+    Uma versão refinada do Poisson, publicada em 1997 pelos ingleses Mark Dixon e Stuart Coles.
+    Ela corrige um problema conhecido do Poisson simples: placares baixos (0-0, 1-0, 0-1, 1-1)
+    aparecem com frequência ligeiramente diferente da prevista pelo modelo puro. A correção usa
+    um parâmetro <em>rho</em> que ajusta essa diferença. É considerado o padrão-ouro acadêmico
+    para modelagem de placares no futebol.
+  </p>
+
+  <h3>3. Elo</h3>
+  <p>
+    Sistema de rating originalmente criado para xadrez. Cada time tem uma pontuação que reflete
+    sua força relativa. A diferença de pontos entre dois times determina a probabilidade de
+    cada um vencer. O BrasilSim usa uma variante híbrida: 60% do rating vem do aproveitamento
+    de pontos por jogo, 40% da força ofensiva menos defensiva. Adicionamos ainda uma pequena
+    vantagem de mando de campo.
+  </p>
+
+  <h3>Ensemble: por que média dos três?</h3>
+  <p>
+    Cada modelo captura o jogo de um jeito. O Poisson e o Dixon-Coles pensam em gols; o Elo
+    pensa em resultados. A média das três saídas costuma ser mais robusta que qualquer um
+    isoladamente. É o mesmo princípio de ensembles em machine learning: modelos diferentes
+    errando por razões diferentes, quando combinados, erram menos.
+  </p>
+
+  <h2>Incerteza de força (parâmetro σ)</h2>
+  <p>
+    Um erro comum em simuladores é tratar a força medida de cada time como verdade absoluta.
+    Se o Palmeiras venceu 13 dos primeiros 20 jogos, isso <em>não</em> significa que ele vai
+    vencer 13 dos próximos 18 — pode ser sorte ou uma janela específica. O BrasilSim modela
+    essa incerteza: a cada simulação, a força de ataque e defesa de cada time é reamostrada
+    dentro de uma distribuição, controlada pelo parâmetro σ = 0,40.
+  </p>
+  <p>
+    Sem essa reamostragem, o modelo dá probabilidades exageradas ao líder (algo como 89% ao
+    Palmeiras quando ele lidera com folga). Com σ ajustado, os números ficam próximos das
+    referências acadêmicas como a UFMG e as casas especializadas internacionais.
+  </p>
+
+  <h2>Jogos restantes</h2>
+  <p>
+    Como cada par de times se enfrenta duas vezes ao longo da temporada (turno e returno) e
+    conhecemos exatamente quantos jogos cada time já disputou, dá para reconstruir a estrutura
+    de jogos restantes preservando corretamente os efeitos de jogos adiados. Um time com um
+    jogo a menos tem, ao final, uma partida a mais para pontuar — e isso é refletido nas
+    simulações.
+  </p>
+
+  <h2>Probabilidades por jogo</h2>
+  <p>
+    Para os próximos jogos da rodada em andamento, exibimos as probabilidades de cada resultado
+    (mandante ganha, empate, visitante ganha) calculadas pelo Dixon-Coles diretamente — sem
+    Monte Carlo. Como o cálculo é fechado (probabilidade exata sobre a distribuição conjunta
+    de placares até 6×6), é mais preciso que amostrar.
+  </p>
+
+  <h2>Fonte dos dados</h2>
+  <p>
+    Classificação e calendário vêm do <a href="https://ge.globo.com/futebol/brasileirao-serie-a/">
+    ge.globo</a>, atualizados uma vez ao dia às 6h da manhã (horário de Brasília). O JSON com
+    os números do dia é gerado por uma rotina automática e publicado no repositório do site;
+    quem visita a página vê HTML puro, servido de CDN — não há requisição a nenhuma API a cada
+    acesso.
+  </p>
+
+  <h2>Limitações honestas</h2>
+  <ul>
+    <li>Modelos estatísticos não conhecem jogadores lesionados, mudança de técnico, motivação
+      psicológica, escândalos ou qualquer variável qualitativa. Eles só olham para pontos e gols.</li>
+    <li>A calibração é feita para o campeonato de pontos corridos brasileiro; extrapolações
+      para outras competições exigiriam recalibração.</li>
+    <li>O universo simulado tem 30.000 amostras — precisão típica de ±0,5 ponto percentual.
+      Valores muito próximos entre times podem se inverter em execuções diferentes.</li>
+  </ul>
+</Base>

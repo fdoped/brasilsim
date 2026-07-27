@@ -1,0 +1,43 @@
+name: Atualizar probabilidades
+
+on:
+  # Roda 1x/dia às 6h de Brasília (9h UTC)
+  schedule:
+    - cron: '0 9 * * *'
+  # Permite disparar manualmente pela aba Actions
+  workflow_dispatch:
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Instalar dependências
+        run: |
+          pip install numpy scipy requests
+
+      - name: Rodar simulação e gerar JSON
+        run: |
+          cd scripts
+          python atualizar.py
+
+      - name: Commitar se houve mudança
+        run: |
+          git config user.name "brasilsim-bot"
+          git config user.email "bot@brasilsim.com.br"
+          git add src/data/probabilidades.json
+          if git diff --staged --quiet; then
+            echo "Sem mudanças nos dados"
+          else
+            git commit -m "chore: atualiza probabilidades ($(date -u +%Y-%m-%d))"
+            git push
+          fi

@@ -1,0 +1,45 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((p) => ({ params: { slug: p.slug }, props: { post: p } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+<Base title={`${post.data.titulo} — BrasilSim`} description={post.data.descricao}>
+  <article>
+    <header class="post-head">
+      <h1>{post.data.titulo}</h1>
+      <p class="meta">
+        {post.data.data.toLocaleDateString('pt-BR', {
+          day: '2-digit', month: 'long', year: 'numeric',
+        })} · {post.data.autor}
+      </p>
+    </header>
+    <div class="post-body">
+      <Content />
+    </div>
+    <footer class="post-foot">
+      <a href="/blog/">← Voltar para análises</a>
+    </footer>
+  </article>
+</Base>
+
+<style>
+  article { max-width: 68ch; margin: 0 auto; }
+  .post-head { margin-bottom: 2rem; }
+  .post-head h1 { margin-bottom: 0.5rem; }
+  .meta { color: var(--cinza); font-size: 0.9rem; }
+  .post-body :global(h2) { margin-top: 2rem; }
+  .post-body :global(p) { line-height: 1.7; }
+  .post-body :global(blockquote) {
+    border-left: 3px solid var(--verde);
+    padding-left: 1rem; margin-left: 0;
+    color: var(--cinza); font-style: italic;
+  }
+  .post-foot { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--borda); }
+</style>

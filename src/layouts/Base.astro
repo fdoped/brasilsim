@@ -1,0 +1,135 @@
+---
+// Layout base: header, footer, meta SEO. Todas as páginas herdam daqui.
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+}
+const { title, description, canonical } = Astro.props;
+const site = Astro.site;
+const urlAtual = new URL(Astro.url.pathname, site);
+---
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical || urlAtual.href} />
+
+  <!-- Open Graph para redes sociais -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={urlAtual.href} />
+  <meta property="og:locale" content="pt_BR" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <style is:global>
+    :root {
+      --verde: #06AA48;
+      --azul: #2a78d6;
+      --amarelo: #ffd85d;
+      --vermelho: #e34948;
+      --fundo: #fafafa;
+      --texto: #1a1a1a;
+      --cinza: #6b7280;
+      --borda: #e5e7eb;
+      --card: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--fundo);
+      color: var(--texto);
+      line-height: 1.55;
+    }
+    a { color: var(--azul); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header {
+      background: var(--card);
+      border-bottom: 1px solid var(--borda);
+      padding: 1rem 0;
+    }
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 1.35rem;
+      color: var(--verde);
+      text-decoration: none;
+    }
+    .nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      margin: 0; padding: 0;
+    }
+    .nav ul a {
+      color: var(--texto);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    main { padding: 2rem 0 3rem; }
+    footer {
+      background: var(--card);
+      border-top: 1px solid var(--borda);
+      padding: 2rem 0;
+      color: var(--cinza);
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    footer a { color: var(--cinza); }
+    h1 { font-size: 2rem; margin: 0 0 0.5rem; }
+    h2 { font-size: 1.4rem; margin: 2rem 0 0.75rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="/" class="logo">⚽ BrasilSim</a>
+      <ul>
+        <li><a href="/">Simulador</a></li>
+        <li><a href="/blog/">Análises</a></li>
+        <li><a href="/metodologia/">Metodologia</a></li>
+        <li><a href="/sobre/">Sobre</a></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <slot />
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <div>© 2026 BrasilSim · Dados: ge.globo · Simulações independentes</div>
+      <div>
+        <a href="/privacidade/">Privacidade</a> ·
+        <a href="/termos/">Termos</a> ·
+        <a href="/contato/">Contato</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
