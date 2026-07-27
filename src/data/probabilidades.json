@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-07-27T00:51:41.596822-03:00",
+  "atualizado_em": "2026-07-27T09:30:25.232173-03:00",
   "fonte": "ge.globo",
   "nsim": 30000,
   "sigma": 0.4,
@@ -12,13 +12,13 @@
       "gp": 34,
       "gc": 16,
       "sg": 18,
-      "titulo": 58.0,
+      "titulo": 58.2,
       "g5": 98.0,
       "z4": 0.0,
       "por_modelo": {
-        "poisson": 53.7,
-        "dixon_coles": 53.9,
-        "elo": 66.4
+        "poisson": 54.1,
+        "dixon_coles": 54.3,
+        "elo": 66.1
       }
     },
     {
@@ -29,13 +29,13 @@
       "gp": 36,
       "gc": 17,
       "sg": 19,
-      "titulo": 30.2,
-      "g5": 93.3,
+      "titulo": 30.3,
+      "g5": 93.4,
       "z4": 0.0,
       "por_modelo": {
-        "poisson": 31.6,
+        "poisson": 31.2,
         "dixon_coles": 31.2,
-        "elo": 27.9
+        "elo": 28.4
       }
     },
     {
@@ -50,8 +50,8 @@
       "g5": 67.9,
       "z4": 0.2,
       "por_modelo": {
-        "poisson": 6.7,
-        "dixon_coles": 6.8,
+        "poisson": 6.9,
+        "dixon_coles": 6.6,
         "elo": 3.4
       }
     },
@@ -64,11 +64,11 @@
       "gc": 20,
       "sg": 6,
       "titulo": 1.6,
-      "g5": 48.6,
+      "g5": 48.5,
       "z4": 0.9,
       "por_modelo": {
         "poisson": 1.9,
-        "dixon_coles": 2.2,
+        "dixon_coles": 2.1,
         "elo": 0.6
       }
     },
@@ -81,12 +81,12 @@
       "gc": 25,
       "sg": 5,
       "titulo": 1.4,
-      "g5": 39.4,
+      "g5": 39.2,
       "z4": 1.4,
       "por_modelo": {
         "poisson": 1.8,
-        "dixon_coles": 1.8,
-        "elo": 0.7
+        "dixon_coles": 1.7,
+        "elo": 0.5
       }
     },
     {
@@ -97,12 +97,12 @@
       "gp": 29,
       "gc": 25,
       "sg": 4,
-      "titulo": 1.2,
-      "g5": 32.1,
+      "titulo": 1.1,
+      "g5": 32.0,
       "z4": 2.4,
       "por_modelo": {
-        "poisson": 1.5,
-        "dixon_coles": 1.6,
+        "poisson": 1.4,
+        "dixon_coles": 1.5,
         "elo": 0.4
       }
     },
@@ -114,12 +114,12 @@
       "gp": 34,
       "gc": 32,
       "sg": 2,
-      "titulo": 0.8,
+      "titulo": 0.9,
       "g5": 25.4,
-      "z4": 5.3,
+      "z4": 5.2,
       "por_modelo": {
         "poisson": 1.2,
-        "dixon_coles": 1.1,
+        "dixon_coles": 1.2,
         "elo": 0.2
       }
     },
@@ -132,10 +132,10 @@
       "gc": 25,
       "sg": 0,
       "titulo": 0.3,
-      "g5": 16.2,
-      "z4": 7.5,
+      "g5": 16.1,
+      "z4": 7.3,
       "por_modelo": {
-        "poisson": 0.5,
+        "poisson": 0.4,
         "dixon_coles": 0.4,
         "elo": 0.1
       }
@@ -149,12 +149,12 @@
       "gc": 23,
       "sg": 2,
       "titulo": 0.2,
-      "g5": 18.1,
-      "z4": 7.7,
+      "g5": 18.3,
+      "z4": 7.6,
       "por_modelo": {
-        "poisson": 0.3,
+        "poisson": 0.4,
         "dixon_coles": 0.3,
-        "elo": 0.0
+        "elo": 0.1
       }
     },
     {
@@ -166,11 +166,11 @@
       "gc": 20,
       "sg": 2,
       "titulo": 0.2,
-      "g5": 19.4,
-      "z4": 5.7,
+      "g5": 19.5,
+      "z4": 5.6,
       "por_modelo": {
         "poisson": 0.3,
-        "dixon_coles": 0.2,
+        "dixon_coles": 0.3,
         "elo": 0.1
       }
     },
@@ -183,8 +183,8 @@
       "gc": 30,
       "sg": -4,
       "titulo": 0.1,
-      "g5": 12.8,
-      "z4": 12.3,
+      "g5": 12.7,
+      "z4": 12.4,
       "por_modelo": {
         "poisson": 0.2,
         "dixon_coles": 0.2,
@@ -200,28 +200,11 @@
       "gc": 27,
       "sg": -5,
       "titulo": 0.1,
-      "g5": 5.4,
-      "z4": 21.3,
+      "g5": 5.6,
+      "z4": 21.1,
       "por_modelo": {
         "poisson": 0.1,
         "dixon_coles": 0.1,
-        "elo": 0.0
-      }
-    },
-    {
-      "posicao_atual": 15,
-      "time": "Grêmio",
-      "pts": 22,
-      "j": 20,
-      "gp": 22,
-      "gc": 26,
-      "sg": -4,
-      "titulo": 0.0,
-      "g5": 4.4,
-      "z4": 26.6,
-      "por_modelo": {
-        "poisson": 0.1,
-        "dixon_coles": 0.0,
         "elo": 0.0
       }
     },
@@ -234,28 +217,11 @@
       "gc": 33,
       "sg": -4,
       "titulo": 0.0,
-      "g5": 4.0,
+      "g5": 4.1,
       "z4": 33.0,
       "por_modelo": {
-        "poisson": 0.1,
-        "dixon_coles": 0.0,
-        "elo": 0.0
-      }
-    },
-    {
-      "posicao_atual": 19,
-      "time": "Mirassol",
-      "pts": 20,
-      "j": 19,
-      "gp": 21,
-      "gc": 26,
-      "sg": -5,
-      "titulo": 0.0,
-      "g5": 2.9,
-      "z4": 38.5,
-      "por_modelo": {
         "poisson": 0.0,
-        "dixon_coles": 0.0,
+        "dixon_coles": 0.1,
         "elo": 0.0
       }
     },
@@ -269,7 +235,7 @@
       "sg": -2,
       "titulo": 0.0,
       "g5": 5.9,
-      "z4": 17.1,
+      "z4": 17.3,
       "por_modelo": {
         "poisson": 0.0,
         "dixon_coles": 0.0,
@@ -277,16 +243,33 @@
       }
     },
     {
-      "posicao_atual": 17,
-      "time": "Vasco",
-      "pts": 21,
+      "posicao_atual": 15,
+      "time": "Grêmio",
+      "pts": 22,
       "j": 20,
-      "gp": 23,
-      "gc": 31,
-      "sg": -8,
+      "gp": 22,
+      "gc": 26,
+      "sg": -4,
       "titulo": 0.0,
-      "g5": 2.4,
-      "z4": 37.6,
+      "g5": 4.4,
+      "z4": 26.7,
+      "por_modelo": {
+        "poisson": 0.0,
+        "dixon_coles": 0.0,
+        "elo": 0.0
+      }
+    },
+    {
+      "posicao_atual": 19,
+      "time": "Mirassol",
+      "pts": 20,
+      "j": 19,
+      "gp": 21,
+      "gc": 26,
+      "sg": -5,
+      "titulo": 0.0,
+      "g5": 2.7,
+      "z4": 38.5,
       "por_modelo": {
         "poisson": 0.0,
         "dixon_coles": 0.0,
@@ -311,6 +294,23 @@
       }
     },
     {
+      "posicao_atual": 17,
+      "time": "Vasco",
+      "pts": 21,
+      "j": 20,
+      "gp": 23,
+      "gc": 31,
+      "sg": -8,
+      "titulo": 0.0,
+      "g5": 2.4,
+      "z4": 37.9,
+      "por_modelo": {
+        "poisson": 0.0,
+        "dixon_coles": 0.0,
+        "elo": 0.0
+      }
+    },
+    {
       "posicao_atual": 18,
       "time": "Remo",
       "pts": 21,
@@ -320,7 +320,7 @@
       "sg": -9,
       "titulo": 0.0,
       "g5": 2.2,
-      "z4": 40.1,
+      "z4": 39.9,
       "por_modelo": {
         "poisson": 0.0,
         "dixon_coles": 0.0,
@@ -337,7 +337,7 @@
       "sg": -22,
       "titulo": 0.0,
       "g5": 0.0,
-      "z4": 95.7,
+      "z4": 95.8,
       "por_modelo": {
         "poisson": 0.0,
         "dixon_coles": 0.0,
