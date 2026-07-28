@@ -2,7 +2,13 @@
 // Home: consome o JSON gerado pelo GitHub Action e renderiza a página inteira
 // como HTML estático. Zero JavaScript no cliente, zero requisição a API.
 import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
 import dados from '../data/probabilidades.json';
+
+// Últimos artigos do blog para a barra lateral
+const artigos = (await getCollection('blog'))
+  .sort((a, b) => b.data.data.getTime() - a.data.data.getTime())
+  .slice(0, 6);
 
 const { atualizado_em, fonte, nsim, tabela, proximos_jogos } = dados;
 const atualizadoBR = new Date(atualizado_em).toLocaleString('pt-BR', {
@@ -32,6 +38,9 @@ function corProvavel(p: string): string {
   <p class="meta">
     Atualizado em <strong>{atualizadoBR}</strong>
   </p>
+
+  <div class="layout">
+  <div class="principal">
 
   <h2>Tabela de probabilidades</h2>
   <div class="tabela-wrap">
@@ -117,9 +126,66 @@ function corProvavel(p: string): string {
     Simulação estatística baseada em modelos de Poisson, Dixon-Coles e Elo — não é previsão oficial.
     <a href="/metodologia/">Entenda como funciona</a>.
   </p>
+</div><!-- fim .principal -->
+
+  <aside class="lateral">
+    <h2 class="lateral-titulo">Análises</h2>
+    {artigos.length > 0 ? (
+      <ul class="lista-artigos">
+        {artigos.map((a) => (
+          <li>
+            <a href={`/blog/${a.slug}/`}>{a.data.titulo}</a>
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p class="sem-artigos">Em breve, análises das rodadas.</p>
+    )}
+    <a class="ver-todas" href="/blog/">Ver todas as análises →</a>
+  </aside>
+
+  </div><!-- fim .layout -->
 </Base>
 
 <style>
+  /* Layout de duas colunas: principal + barra lateral.
+     Desktop lado a lado; mobile a lateral vai para baixo. */
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 2rem;
+    align-items: start;
+  }
+  .principal { min-width: 0; }
+
+  .lateral {
+    background: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    padding: 1.25rem;
+    position: sticky;
+    top: 1rem;
+  }
+  .lateral-titulo { font-size: 1.15rem; margin: 0 0 0.75rem; }
+  .lista-artigos { list-style: none; padding: 0; margin: 0; }
+  .lista-artigos li { border-bottom: 1px solid var(--borda); }
+  .lista-artigos li:last-child { border-bottom: none; }
+  .lista-artigos a {
+    display: block; padding: 0.7rem 0;
+    color: var(--texto); font-weight: 500; font-size: 0.95rem;
+    line-height: 1.35; transition: color 0.15s;
+  }
+  .lista-artigos a:hover { color: var(--verde); text-decoration: none; }
+  .sem-artigos { color: var(--cinza); font-size: 0.9rem; }
+  .ver-todas {
+    display: inline-block; margin-top: 0.75rem;
+    font-size: 0.9rem; font-weight: 600;
+  }
+
+  @media (max-width: 820px) {
+    .layout { grid-template-columns: 1fr; }
+    .lateral { position: static; margin-top: 1rem; }
+  }
   .lead { font-size: 1.1rem; color: var(--texto); max-width: 62ch; }
   .meta { color: var(--cinza); font-size: 0.9rem; margin-top: -0.25rem; }
 
