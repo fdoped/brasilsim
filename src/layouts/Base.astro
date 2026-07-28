@@ -103,6 +103,14 @@ const urlAtual = new URL(Astro.url.pathname, site);
     h1 { font-size: 2rem; margin: 0 0 0.5rem; }
     h2 { font-size: 1.4rem; margin: 2rem 0 0.75rem; }
   </style>
+<!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-90H5KVD89T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-90H5KVD89T');
+  </script>
 </head>
 <body>
   <header>
