@@ -4,11 +4,17 @@
 import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 import dados from '../data/probabilidades.json';
+import historico from '../data/historico.json';
 
 // Últimos artigos do blog para a barra lateral
 const artigos = (await getCollection('blog'))
   .sort((a, b) => b.data.data.getTime() - a.data.data.getTime())
   .slice(0, 6);
+
+// Dados do gráfico de evolução: top 5 times por chance de título atual
+const top5 = dados.tabela.slice(0, 5).map((t) => t.time);
+const cores5 = ['#1baf7a', '#2a78d6', '#e0a020', '#e34948', '#8e44ad'];
+const graficoDados = JSON.stringify({ historico, times: top5, cores: cores5 });
 
 const { atualizado_em, fonte, nsim, tabela, proximos_jogos } = dados;
 const atualizadoBR = new Date(atualizado_em).toLocaleString('pt-BR', {
@@ -86,6 +92,28 @@ function corProvavel(p: string): string {
     </table>
   </div>
 
+  {historico.length >= 2 && (
+    <div class="grafico-bloco">
+      <h2>Evolução das probabilidades</h2>
+      <div class="grafico-controles">
+        <button class="gbtn ativo" data-metrica="titulo">Título</button>
+        <button class="gbtn" data-metrica="g5">Libertadores (G5)</button>
+        <button class="gbtn" data-metrica="z4">Rebaixamento (Z4)</button>
+      </div>
+      <div id="grafico" class="grafico-area"></div>
+      <div id="grafico-legenda" class="grafico-legenda"></div>
+      <p class="grafico-nota">Evolução dos 5 primeiros colocados. O gráfico cresce a cada dia.</p>
+    </div>
+  )}
+  {historico.length < 2 && (
+    <div class="grafico-bloco">
+      <h2>Evolução das probabilidades</h2>
+      <p class="grafico-nota">O gráfico de evolução aparece após alguns dias de dados acumulados. Volte em breve!</p>
+    </div>
+  )}
+
+  <script is:inline set:html={`window.GRAFICO_DADOS = ${graficoDados};`}></script>
+
   {proximos_jogos.length > 0 && (
     <>
       <h2>Probabilidades da próxima rodada</h2>
@@ -145,6 +173,78 @@ function corProvavel(p: string): string {
   </aside>
 
   </div><!-- fim .layout -->
+
+  <script is:inline>
+    (function () {
+      const cfg = window.GRAFICO_DADOS;
+      if (!cfg || !cfg.historico || cfg.historico.length < 2) return;
+      const area = document.getElementById('grafico');
+      const legenda = document.getElementById('grafico-legenda');
+      if (!area) return;
+
+      const W = 700, H = 320, ML = 40, MR = 20, MT = 20, MB = 40;
+      const iw = W - ML - MR, ih = H - MT - MB;
+      let metrica = 'titulo';
+
+      function desenhar() {
+        const hist = cfg.historico;
+        const datas = hist.map(r => r.data);
+        let maxV = 10;
+        cfg.times.forEach(t => hist.forEach(r => {
+          const v = r.times[t] ? r.times[t][metrica] : 0;
+          if (v > maxV) maxV = v;
+        }));
+        maxV = Math.ceil(maxV / 10) * 10;
+
+        const x = i => ML + (hist.length === 1 ? iw/2 : (i / (hist.length - 1)) * iw);
+        const y = v => MT + ih - (v / maxV) * ih;
+
+        let svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto;">';
+        for (let g = 0; g <= maxV; g += (maxV/5)) {
+          const gy = y(g);
+          svg += '<line x1="'+ML+'" y1="'+gy+'" x2="'+(W-MR)+'" y2="'+gy+'" stroke="#e5e7eb" stroke-width="1"/>';
+          svg += '<text x="'+(ML-6)+'" y="'+(gy+4)+'" text-anchor="end" font-size="11" fill="#9ca3af">'+Math.round(g)+'%</text>';
+        }
+        const passo = Math.ceil(hist.length / 6);
+        datas.forEach((d, i) => {
+          if (i % passo !== 0 && i !== hist.length-1) return;
+          const dd = d.slice(8,10)+'/'+d.slice(5,7);
+          svg += '<text x="'+x(i)+'" y="'+(H-MB+18)+'" text-anchor="middle" font-size="11" fill="#9ca3af">'+dd+'</text>';
+        });
+        cfg.times.forEach((t, ti) => {
+          const cor = cfg.cores[ti % cfg.cores.length];
+          let d = '';
+          hist.forEach((r, i) => {
+            const v = r.times[t] ? r.times[t][metrica] : 0;
+            d += (i === 0 ? 'M' : 'L') + x(i) + ' ' + y(v) + ' ';
+          });
+          svg += '<path d="'+d+'" fill="none" stroke="'+cor+'" stroke-width="2.5" stroke-linejoin="round"/>';
+          const lastV = hist[hist.length-1].times[t] ? hist[hist.length-1].times[t][metrica] : 0;
+          svg += '<circle cx="'+x(hist.length-1)+'" cy="'+y(lastV)+'" r="3.5" fill="'+cor+'"/>';
+        });
+        svg += '</svg>';
+        area.innerHTML = svg;
+
+        let leg = '';
+        cfg.times.forEach((t, ti) => {
+          const cor = cfg.cores[ti % cfg.cores.length];
+          leg += '<span class="leg-item"><span class="leg-cor" style="background:'+cor+'"></span>'+t+'</span>';
+        });
+        legenda.innerHTML = leg;
+      }
+
+      document.querySelectorAll('.gbtn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.gbtn').forEach(b => b.classList.remove('ativo'));
+          btn.classList.add('ativo');
+          metrica = btn.getAttribute('data-metrica');
+          desenhar();
+        });
+      });
+
+      desenhar();
+    })();
+  </script>
 </Base>
 
 <style>
@@ -188,6 +288,45 @@ function corProvavel(p: string): string {
   }
   .lead { font-size: 1.1rem; color: var(--texto); max-width: 62ch; }
   .meta { color: var(--cinza); font-size: 0.9rem; margin-top: -0.25rem; }
+
+  /* Gráfico de evolução */
+  .grafico-bloco {
+    background: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin: 1rem 0 2rem;
+  }
+  .grafico-bloco h2 { margin-top: 0; }
+  .grafico-controles {
+    display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;
+  }
+  .gbtn {
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--borda);
+    background: var(--fundo);
+    color: var(--cinza);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .gbtn:hover { border-color: var(--verde); color: var(--verde); }
+  .gbtn.ativo { background: var(--verde); color: #fff; border-color: var(--verde); }
+  .grafico-area { width: 100%; }
+  .grafico-legenda {
+    display: flex; flex-wrap: wrap; gap: 1rem;
+    margin-top: 0.75rem; justify-content: center;
+  }
+  .leg-item {
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    font-size: 0.85rem; color: var(--texto);
+  }
+  .leg-cor {
+    width: 14px; height: 3px; border-radius: 2px; display: inline-block;
+  }
+  .grafico-nota { color: var(--cinza); font-size: 0.85rem; margin-top: 0.75rem; }
 
   .tabela-wrap { overflow-x: auto; margin: 1rem 0 2rem; }
   .tabela {

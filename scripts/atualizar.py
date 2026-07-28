@@ -31,6 +31,7 @@ GE_URL = "https://ge.globo.com/futebol/brasileirao-serie-a/"
 NSIM = 30_000
 SIGMA = 0.40
 SAIDA = Path(__file__).resolve().parent.parent / "src/data/probabilidades.json"
+SAIDA_HIST = Path(__file__).resolve().parent.parent / "src/data/historico.json"
 
 
 def baixa_ge():
@@ -134,6 +135,28 @@ def main():
     SAIDA.parent.mkdir(parents=True, exist_ok=True)
     SAIDA.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"escrito: {SAIDA} ({SAIDA.stat().st_size:,} bytes)")
+
+    # ---- histórico: acumula um registro por dia (para o gráfico de evolução) ----
+    hoje = datetime.now(br).date().isoformat()
+    registro = {
+        "data": hoje,
+        "times": {l["time"]: {"titulo": l["titulo"], "g5": l["g5"], "z4": l["z4"]}
+                  for l in tabela},
+    }
+    # carrega histórico existente (se houver)
+    try:
+        historico = json.loads(SAIDA_HIST.read_text(encoding="utf-8"))
+        if not isinstance(historico, list):
+            historico = []
+    except (FileNotFoundError, ValueError):
+        historico = []
+    # se já existe registro de hoje, substitui; senão, adiciona
+    historico = [r for r in historico if r.get("data") != hoje]
+    historico.append(registro)
+    # mantém só os últimos 120 dias (evita crescer sem limite)
+    historico = historico[-120:]
+    SAIDA_HIST.write_text(json.dumps(historico, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"histórico: {len(historico)} dia(s) registrado(s)")
 
     # resumo no stdout (aparece no log do Action)
     print("\nTop 5 título:")
