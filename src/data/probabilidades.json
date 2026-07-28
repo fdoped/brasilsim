@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-07-27T09:30:25.232173-03:00",
+  "atualizado_em": "2026-07-28T08:23:20.911002-03:00",
   "fonte": "ge.globo",
   "nsim": 30000,
   "sigma": 0.4,
@@ -12,12 +12,12 @@
       "gp": 34,
       "gc": 16,
       "sg": 18,
-      "titulo": 58.2,
-      "g5": 98.0,
+      "titulo": 58.1,
+      "g5": 97.9,
       "z4": 0.0,
       "por_modelo": {
-        "poisson": 54.1,
-        "dixon_coles": 54.3,
+        "poisson": 53.8,
+        "dixon_coles": 54.2,
         "elo": 66.1
       }
     },
@@ -29,12 +29,12 @@
       "gp": 36,
       "gc": 17,
       "sg": 19,
-      "titulo": 30.3,
-      "g5": 93.4,
+      "titulo": 30.4,
+      "g5": 93.3,
       "z4": 0.0,
       "por_modelo": {
-        "poisson": 31.2,
-        "dixon_coles": 31.2,
+        "poisson": 31.6,
+        "dixon_coles": 31.1,
         "elo": 28.4
       }
     },
@@ -47,12 +47,12 @@
       "gc": 19,
       "sg": 9,
       "titulo": 5.6,
-      "g5": 67.9,
+      "g5": 68.0,
       "z4": 0.2,
       "por_modelo": {
-        "poisson": 6.9,
-        "dixon_coles": 6.6,
-        "elo": 3.4
+        "poisson": 6.7,
+        "dixon_coles": 6.9,
+        "elo": 3.3
       }
     },
     {
@@ -63,13 +63,13 @@
       "gp": 26,
       "gc": 20,
       "sg": 6,
-      "titulo": 1.6,
-      "g5": 48.5,
+      "titulo": 1.5,
+      "g5": 48.7,
       "z4": 0.9,
       "por_modelo": {
         "poisson": 1.9,
-        "dixon_coles": 2.1,
-        "elo": 0.6
+        "dixon_coles": 1.9,
+        "elo": 0.7
       }
     },
     {
@@ -81,12 +81,12 @@
       "gc": 25,
       "sg": 5,
       "titulo": 1.4,
-      "g5": 39.2,
+      "g5": 39.3,
       "z4": 1.4,
       "por_modelo": {
-        "poisson": 1.8,
-        "dixon_coles": 1.7,
-        "elo": 0.5
+        "poisson": 1.7,
+        "dixon_coles": 1.9,
+        "elo": 0.6
       }
     },
     {
@@ -97,12 +97,12 @@
       "gp": 29,
       "gc": 25,
       "sg": 4,
-      "titulo": 1.1,
-      "g5": 32.0,
+      "titulo": 1.2,
+      "g5": 32.2,
       "z4": 2.4,
       "por_modelo": {
-        "poisson": 1.4,
-        "dixon_coles": 1.5,
+        "poisson": 1.6,
+        "dixon_coles": 1.6,
         "elo": 0.4
       }
     },
@@ -114,12 +114,12 @@
       "gp": 34,
       "gc": 32,
       "sg": 2,
-      "titulo": 0.9,
-      "g5": 25.4,
+      "titulo": 0.8,
+      "g5": 25.3,
       "z4": 5.2,
       "por_modelo": {
         "poisson": 1.2,
-        "dixon_coles": 1.2,
+        "dixon_coles": 1.1,
         "elo": 0.2
       }
     },
@@ -133,10 +133,10 @@
       "sg": 0,
       "titulo": 0.3,
       "g5": 16.1,
-      "z4": 7.3,
+      "z4": 7.5,
       "por_modelo": {
         "poisson": 0.4,
-        "dixon_coles": 0.4,
+        "dixon_coles": 0.3,
         "elo": 0.1
       }
     },
@@ -149,10 +149,10 @@
       "gc": 23,
       "sg": 2,
       "titulo": 0.2,
-      "g5": 18.3,
-      "z4": 7.6,
+      "g5": 18.2,
+      "z4": 7.7,
       "por_modelo": {
-        "poisson": 0.4,
+        "poisson": 0.3,
         "dixon_coles": 0.3,
         "elo": 0.1
       }
@@ -166,7 +166,7 @@
       "gc": 20,
       "sg": 2,
       "titulo": 0.2,
-      "g5": 19.5,
+      "g5": 19.2,
       "z4": 5.6,
       "por_modelo": {
         "poisson": 0.3,
@@ -183,8 +183,8 @@
       "gc": 30,
       "sg": -4,
       "titulo": 0.1,
-      "g5": 12.7,
-      "z4": 12.4,
+      "g5": 12.8,
+      "z4": 12.5,
       "por_modelo": {
         "poisson": 0.2,
         "dixon_coles": 0.2,
@@ -201,26 +201,9 @@
       "sg": -5,
       "titulo": 0.1,
       "g5": 5.6,
-      "z4": 21.1,
+      "z4": 20.9,
       "por_modelo": {
         "poisson": 0.1,
-        "dixon_coles": 0.1,
-        "elo": 0.0
-      }
-    },
-    {
-      "posicao_atual": 14,
-      "time": "Santos",
-      "pts": 22,
-      "j": 20,
-      "gp": 29,
-      "gc": 33,
-      "sg": -4,
-      "titulo": 0.0,
-      "g5": 4.1,
-      "z4": 33.0,
-      "por_modelo": {
-        "poisson": 0.0,
         "dixon_coles": 0.1,
         "elo": 0.0
       }
@@ -234,8 +217,25 @@
       "gc": 27,
       "sg": -2,
       "titulo": 0.0,
-      "g5": 5.9,
-      "z4": 17.3,
+      "g5": 5.8,
+      "z4": 17.2,
+      "por_modelo": {
+        "poisson": 0.0,
+        "dixon_coles": 0.0,
+        "elo": 0.0
+      }
+    },
+    {
+      "posicao_atual": 14,
+      "time": "Santos",
+      "pts": 22,
+      "j": 20,
+      "gp": 29,
+      "gc": 33,
+      "sg": -4,
+      "titulo": 0.0,
+      "g5": 4.1,
+      "z4": 32.7,
       "por_modelo": {
         "poisson": 0.0,
         "dixon_coles": 0.0,
@@ -251,8 +251,25 @@
       "gc": 26,
       "sg": -4,
       "titulo": 0.0,
-      "g5": 4.4,
-      "z4": 26.7,
+      "g5": 4.5,
+      "z4": 26.5,
+      "por_modelo": {
+        "poisson": 0.0,
+        "dixon_coles": 0.0,
+        "elo": 0.0
+      }
+    },
+    {
+      "posicao_atual": 18,
+      "time": "Remo",
+      "pts": 21,
+      "j": 20,
+      "gp": 23,
+      "gc": 32,
+      "sg": -9,
+      "titulo": 0.0,
+      "g5": 2.3,
+      "z4": 39.9,
       "por_modelo": {
         "poisson": 0.0,
         "dixon_coles": 0.0,
@@ -269,24 +286,7 @@
       "sg": -5,
       "titulo": 0.0,
       "g5": 2.7,
-      "z4": 38.5,
-      "por_modelo": {
-        "poisson": 0.0,
-        "dixon_coles": 0.0,
-        "elo": 0.0
-      }
-    },
-    {
-      "posicao_atual": 16,
-      "time": "Internacional",
-      "pts": 21,
-      "j": 20,
-      "gp": 22,
-      "gc": 26,
-      "sg": -4,
-      "titulo": 0.0,
-      "g5": 1.7,
-      "z4": 46.9,
+      "z4": 38.7,
       "por_modelo": {
         "poisson": 0.0,
         "dixon_coles": 0.0,
@@ -302,8 +302,8 @@
       "gc": 31,
       "sg": -8,
       "titulo": 0.0,
-      "g5": 2.4,
-      "z4": 37.9,
+      "g5": 2.5,
+      "z4": 37.4,
       "por_modelo": {
         "poisson": 0.0,
         "dixon_coles": 0.0,
@@ -311,16 +311,16 @@
       }
     },
     {
-      "posicao_atual": 18,
-      "time": "Remo",
+      "posicao_atual": 16,
+      "time": "Internacional",
       "pts": 21,
       "j": 20,
-      "gp": 23,
-      "gc": 32,
-      "sg": -9,
+      "gp": 22,
+      "gc": 26,
+      "sg": -4,
       "titulo": 0.0,
-      "g5": 2.2,
-      "z4": 39.9,
+      "g5": 1.6,
+      "z4": 47.4,
       "por_modelo": {
         "poisson": 0.0,
         "dixon_coles": 0.0,
@@ -337,7 +337,7 @@
       "sg": -22,
       "titulo": 0.0,
       "g5": 0.0,
-      "z4": 95.8,
+      "z4": 95.9,
       "por_modelo": {
         "poisson": 0.0,
         "dixon_coles": 0.0,
@@ -345,5 +345,116 @@
       }
     }
   ],
-  "proximos_jogos": []
+  "proximos_jogos": [
+    {
+      "mandante": "Mirassol",
+      "visitante": "Remo",
+      "casa": 46.0,
+      "empate": 25.9,
+      "fora": 28.1,
+      "placar_provavel": "1x1",
+      "provavel": "casa",
+      "data": "2026-07-29T19:30",
+      "sede": "Maião"
+    },
+    {
+      "mandante": "Internacional",
+      "visitante": "Flamengo",
+      "casa": 19.3,
+      "empate": 23.4,
+      "fora": 57.3,
+      "placar_provavel": "1x1",
+      "provavel": "fora",
+      "data": "2026-07-29T19:30",
+      "sede": "Beira-Rio"
+    },
+    {
+      "mandante": "Fluminense",
+      "visitante": "Bahia",
+      "casa": 44.0,
+      "empate": 24.9,
+      "fora": 31.1,
+      "placar_provavel": "1x1",
+      "provavel": "casa",
+      "data": "2026-07-29T21:30",
+      "sede": "Maracanã"
+    },
+    {
+      "mandante": "Vitória",
+      "visitante": "Palmeiras",
+      "casa": 19.1,
+      "empate": 24.6,
+      "fora": 56.3,
+      "placar_provavel": "1x1",
+      "provavel": "fora",
+      "data": "2026-07-29T21:30",
+      "sede": "Barradão"
+    },
+    {
+      "mandante": "Corinthians",
+      "visitante": "Athletico-PR",
+      "casa": 33.9,
+      "empate": 31.2,
+      "fora": 35.0,
+      "placar_provavel": "1x1",
+      "provavel": "fora",
+      "data": "2026-07-30T19:30",
+      "sede": "Neo Química Arena"
+    },
+    {
+      "mandante": "Coritiba",
+      "visitante": "Cruzeiro",
+      "casa": 44.9,
+      "empate": 25.0,
+      "fora": 30.1,
+      "placar_provavel": "1x1",
+      "provavel": "casa",
+      "data": "2026-07-30T21:30",
+      "sede": "Couto Pereira"
+    },
+    {
+      "mandante": "Botafogo",
+      "visitante": "Grêmio",
+      "casa": 50.7,
+      "empate": 23.2,
+      "fora": 26.2,
+      "placar_provavel": "1x1",
+      "provavel": "casa",
+      "data": null,
+      "sede": "Nilton Santos (Engenhão)"
+    },
+    {
+      "mandante": "São Paulo",
+      "visitante": "Santos",
+      "casa": 49.7,
+      "empate": 24.0,
+      "fora": 26.2,
+      "placar_provavel": "1x1",
+      "provavel": "casa",
+      "data": null,
+      "sede": null
+    },
+    {
+      "mandante": "Atlético-MG",
+      "visitante": "RB Bragantino",
+      "casa": 34.8,
+      "empate": 28.7,
+      "fora": 36.5,
+      "placar_provavel": "1x1",
+      "provavel": "fora",
+      "data": null,
+      "sede": "Arena MRV"
+    },
+    {
+      "mandante": "Chapecoense",
+      "visitante": "Vasco",
+      "casa": 29.0,
+      "empate": 24.1,
+      "fora": 46.9,
+      "placar_provavel": "1x1",
+      "provavel": "fora",
+      "data": null,
+      "sede": "Arena Condá"
+    }
+  ]
 }
