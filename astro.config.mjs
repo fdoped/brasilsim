@@ -1,10 +1,8 @@
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 
-// IMPORTANTE: quando comprar seu domínio, troque a URL abaixo e descomente o sitemap.
-// Como comprar: registro.br (.com.br) ou namecheap.com (.com)
 export default defineConfig({
-  site: 'https://brasilsim.pages.dev',   // provisório do Cloudflare Pages
+  site: 'https://bolaverso.com',
+  integrations: [sitemap()],
   build: { format: 'directory' },
-  // Depois de comprar domínio, instale @astrojs/sitemap e adicione:
-  // integrations: [sitemap()],
 });
