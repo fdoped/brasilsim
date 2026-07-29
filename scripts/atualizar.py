@@ -191,6 +191,45 @@ def processa_serie(chave: str, cfg: dict, br) -> bool:
         prob["data"] = meta.get("data")
         prob["sede"] = meta.get("sede")
 
+    # curva "quantos pontos preciso?" — usa Dixon-Coles (padrão acadêmico)
+    f_curva = calcular_forcas(e)
+    curva = DixonColes(e, f_curva, sigma=SIGMA, faixas=faixas).curva_pontos(NSIM)
+    # descarta pontuações com poucas amostras (ruído estatístico)
+    MIN_AMOSTRAS = 40
+    idx_ok = [i for i, a in enumerate(curva["amostras"]) if a >= MIN_AMOSTRAS]
+    curva_limpa = {"pontos": [curva["pontos"][i] for i in idx_ok],
+                   "amostras": [curva["amostras"][i] for i in idx_ok]}
+    for k in faixas:
+        curva_limpa[k] = [curva[k][i] for i in idx_ok]
+
+    # limiares notáveis: menor pontuação que atinge X% em cada faixa
+    def limiar(chave, alvo, crescente=True):
+        """Menor pontuação em que a probabilidade cruza `alvo`%."""
+        pares_pc = list(zip(curva_limpa["pontos"], curva_limpa[chave]))
+        if crescente:
+            for p, v in pares_pc:
+                if v is not None and v >= alvo:
+                    return p
+        else:
+            for p, v in reversed(pares_pc):
+                if v is not None and v >= alvo:
+                    return p
+        return None
+
+    limiares = {}
+    if "z4" in faixas:
+        # risco de queda: queremos a pontuação em que o risco cai abaixo de X
+        limiares["salvo_99"] = limiar("z4", 1.0, crescente=False)
+        limiares["salvo_95"] = limiar("z4", 5.0, crescente=False)
+        limiares["risco_50"] = limiar("z4", 50.0, crescente=False)
+    for chave, rot in (("g5", "g5"), ("acesso_direto", "acesso"), ("playoff", "playoff")):
+        if chave in faixas:
+            limiares[f"{rot}_50"] = limiar(chave, 50.0)
+            limiares[f"{rot}_90"] = limiar(chave, 90.0)
+    if "titulo" in faixas:
+        limiares["titulo_50"] = limiar("titulo", 50.0)
+        limiares["titulo_90"] = limiar("titulo", 90.0)
+
     payload = {
         "competicao": cfg["nome"],
         "atualizado_em": datetime.now(br).isoformat(),
@@ -200,6 +239,8 @@ def processa_serie(chave: str, cfg: dict, br) -> bool:
         "faixas": {k: list(v) for k, v in faixas.items()},
         "tabela": tabela,
         "proximos_jogos": probs_jogos,
+        "curva_pontos": curva_limpa,
+        "limiares": limiares,
     }
     cfg["saida"].parent.mkdir(parents=True, exist_ok=True)
     cfg["saida"].write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")

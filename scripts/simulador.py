@@ -741,6 +741,57 @@ class Modelo:
             saida[chave_nome] = 100 * acc / nsim
         return saida
 
+    def curva_pontos(self, nsim: int) -> dict:
+        """
+        Responde "quantos pontos preciso?".
+
+        Roda as simulações e agrega, para cada pontuação final possível, em que
+        fração das vezes um time com aquela pontuação terminou em cada faixa
+        (título, G5, Z4...). Ex.: com 45 pontos, 8% das vezes o time caiu.
+
+        Retorna {"pontos": [...], "<faixa>": [...], "amostras": [...]}, onde cada
+        lista é alinhada por índice com a lista de pontos.
+        """
+        n, nj = self.n, self.nj
+        atk, dfs, elo = self._amostrar_forca(nsim)
+        pm, pv, sdm = self._resultados(nsim, atk, dfs, elo)
+
+        pts = np.tile(self.f.pts.astype(float), (nsim, 1))
+        sd = np.tile(self.f.sg.astype(float), (nsim, 1))
+        linhas = np.arange(nsim)[:, None]
+        np.add.at(pts, (linhas, self.mand[None, :]), pm)
+        np.add.at(pts, (linhas, self.vis[None, :]), pv)
+        np.add.at(sd, (linhas, self.mand[None, :]), sdm)
+        np.add.at(sd, (linhas, self.vis[None, :]), -sdm)
+
+        chave = pts * 1e6 + sd * 1e2 + np.random.rand(nsim, n)
+        ordem = np.argsort(-chave, axis=1)
+        # posicao[s, i] = colocação (1..n) do time i na simulação s
+        posicao = np.empty_like(ordem)
+        np.put_along_axis(posicao, ordem, np.arange(1, n + 1)[None, :], axis=1)
+
+        pts_int = pts.astype(int).ravel()
+        pos_flat = posicao.ravel()
+        pmin, pmax = int(pts_int.min()), int(pts_int.max())
+        faixa_pts = np.arange(pmin, pmax + 1)
+        total = np.bincount(pts_int - pmin, minlength=len(faixa_pts)).astype(float)
+
+        faixas = self.faixas or {
+            "titulo": (1, 1),
+            "g5": (1, 5),
+            "z4": (-4, -1),
+        }
+        saida = {"pontos": faixa_pts.tolist(), "amostras": total.astype(int).tolist()}
+        for nome, (ini, fim) in faixas.items():
+            i0 = ini if ini > 0 else n + ini + 1
+            i1 = fim if fim > 0 else n + fim + 1
+            dentro = (pos_flat >= i0) & (pos_flat <= i1)
+            cont = np.bincount(pts_int[dentro] - pmin, minlength=len(faixa_pts)).astype(float)
+            with np.errstate(divide="ignore", invalid="ignore"):
+                prob = np.where(total > 0, 100 * cont / total, np.nan)
+            saida[nome] = [None if np.isnan(v) else round(float(v), 1) for v in prob]
+        return saida
+
     def _amostrar_forca(self, nsim):
         f = self.f
         if self.sigma <= 0:

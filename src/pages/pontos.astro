@@ -1,0 +1,256 @@
+---
+// "Quantos pontos preciso?" — extrai das simulações a relação entre pontuação
+// final e destino no campeonato.
+import Base from '../layouts/Base.astro';
+import dados from '../data/probabilidades.json';
+
+const { atualizado_em, curva_pontos, limiares, nsim } = dados;
+const atualizadoBR = new Date(atualizado_em).toLocaleString('pt-BR', {
+  day: '2-digit', month: '2-digit', year: 'numeric',
+  hour: '2-digit', minute: '2-digit', timeZone: 'America/Sao_Paulo',
+});
+
+const temCurva = curva_pontos && curva_pontos.pontos && curva_pontos.pontos.length > 0;
+const dadosCurva = JSON.stringify(curva_pontos || {});
+
+// tabela resumida: de 5 em 5 pontos, só onde há dados relevantes
+const linhasTabela = temCurva
+  ? curva_pontos.pontos
+      .map((p, i) => ({
+        pts: p,
+        titulo: curva_pontos.titulo?.[i],
+        g5: curva_pontos.g5?.[i],
+        z4: curva_pontos.z4?.[i],
+        amostras: curva_pontos.amostras[i],
+      }))
+      .filter((l) => l.pts % 2 === 0)
+  : [];
+---
+<Base
+  title="Quantos pontos para não cair, subir ou ser campeão? | Bolaverso"
+  description="Quantos pontos garantem a permanência, a vaga na Libertadores ou o título do Brasileirão 2026, segundo 30 mil simulações."
+>
+  <h1>Quantos pontos preciso?</h1>
+  <p class="lead">
+    A pergunta que todo torcedor faz. Extraímos a resposta de {nsim.toLocaleString('pt-BR')}
+    simulações do restante do Brasileirão: para cada pontuação final possível, em que
+    fração dos cenários o time terminou em cada faixa da tabela.
+  </p>
+  <p class="meta">Atualizado em <strong>{atualizadoBR}</strong></p>
+
+  {limiares && (
+    <>
+      <h2>Os números que importam</h2>
+      <div class="limiares">
+        {limiares.salvo_99 && (
+          <div class="lim vermelho">
+            <span class="lim-num">{limiares.salvo_99}</span>
+            <span class="lim-txt">pontos para estar <strong>praticamente salvo</strong></span>
+            <span class="lim-sub">risco de queda abaixo de 1%</span>
+          </div>
+        )}
+        {limiares.risco_50 && (
+          <div class="lim laranja">
+            <span class="lim-num">{limiares.risco_50}</span>
+            <span class="lim-txt">pontos é a <strong>linha da vida</strong></span>
+            <span class="lim-sub">metade dos times com essa pontuação cai</span>
+          </div>
+        )}
+        {limiares.g5_90 && (
+          <div class="lim azul">
+            <span class="lim-num">{limiares.g5_90}</span>
+            <span class="lim-txt">pontos para a <strong>Libertadores</strong></span>
+            <span class="lim-sub">90% de chance de terminar no G5</span>
+          </div>
+        )}
+        {limiares.titulo_50 && (
+          <div class="lim verde">
+            <span class="lim-num">{limiares.titulo_50}</span>
+            <span class="lim-txt">pontos para ser <strong>favorito ao título</strong></span>
+            <span class="lim-sub">mais de 50% de chance de taça</span>
+          </div>
+        )}
+      </div>
+    </>
+  )}
+
+  {temCurva && (
+    <>
+      <h2>A curva completa</h2>
+      <p class="explica">
+        Cada linha mostra, para uma pontuação final, a chance de terminar em cada faixa.
+        Passe o mouse para ver os valores.
+      </p>
+      <div class="grafico-controles">
+        <button class="cbtn ativo" data-metrica="z4">Rebaixamento</button>
+        <button class="cbtn" data-metrica="g5">Libertadores (G5)</button>
+        <button class="cbtn" data-metrica="titulo">Título</button>
+      </div>
+      <div id="grafico-curva" class="grafico-area"></div>
+
+      <h2>Tabela detalhada</h2>
+      <div class="tabela-wrap">
+        <table class="tabela">
+          <thead>
+            <tr>
+              <th>Pontos</th>
+              <th>🏆 Título</th>
+              <th>🌎 Libertadores</th>
+              <th>⬇️ Rebaixamento</th>
+            </tr>
+          </thead>
+          <tbody>
+            {linhasTabela.map((l) => (
+              <tr>
+                <td class="pts">{l.pts}</td>
+                <td>{l.titulo === null || l.titulo === undefined ? '—' : `${l.titulo.toFixed(1)}%`}</td>
+                <td>{l.g5 === null || l.g5 === undefined ? '—' : `${l.g5.toFixed(1)}%`}</td>
+                <td class={l.z4 >= 50 ? 'perigo' : ''}>
+                  {l.z4 === null || l.z4 === undefined ? '—' : `${l.z4.toFixed(1)}%`}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  )}
+
+  <h2>Como calculamos</h2>
+  <p class="explica">
+    Não usamos regras fixas nem médias históricas. A cada dia, o modelo simula o restante
+    do campeonato milhares de vezes. Em cada cenário simulado, anotamos com quantos pontos
+    cada time terminou e em que posição ficou. Agregando tudo, sabemos exatamente em que
+    fração das vezes uma pontuação específica foi suficiente para cada objetivo.
+  </p>
+  <p class="explica">
+    Isso significa que os números <strong>mudam ao longo da temporada</strong>. Quando faltam
+    muitas rodadas, há mais incerteza e as faixas são mais largas. Na reta final, elas
+    ficam mais nítidas. É o oposto de uma regra fixa como "45 pontos salvam" — aqui o
+    número acompanha a realidade daquele campeonato específico.
+  </p>
+
+  <p class="disclaimer">
+    Baseado no modelo Dixon-Coles. <a href="/metodologia/">Entenda a metodologia</a> ·
+    <a href="/">ver a tabela de probabilidades</a>.
+  </p>
+
+  <script is:inline set:html={`window.CURVA = ${dadosCurva};`}></script>
+  <script is:inline>
+    (function () {
+      const c = window.CURVA;
+      if (!c || !c.pontos || !c.pontos.length) return;
+      const area = document.getElementById('grafico-curva');
+      if (!area) return;
+      const W = 720, H = 340, ML = 45, MR = 20, MT = 20, MB = 42;
+      const iw = W - ML - MR, ih = H - MT - MB;
+      let metrica = 'z4';
+      const cores = { titulo: '#1baf7a', g5: '#2a78d6', z4: '#e34948' };
+      const rotulos = { titulo: 'Chance de título', g5: 'Chance de G5', z4: 'Risco de queda' };
+
+      function desenhar() {
+        const pts = c.pontos, vals = c[metrica] || [];
+        const pmin = pts[0], pmax = pts[pts.length - 1];
+        const x = p => ML + ((p - pmin) / (pmax - pmin)) * iw;
+        const y = v => MT + ih - (v / 100) * ih;
+
+        let svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" style="width:100%;height:auto;">';
+        for (let g = 0; g <= 100; g += 25) {
+          const gy = y(g);
+          svg += '<line x1="'+ML+'" y1="'+gy+'" x2="'+(W-MR)+'" y2="'+gy+'" stroke="#e5e7eb"/>';
+          svg += '<text x="'+(ML-6)+'" y="'+(gy+4)+'" text-anchor="end" font-size="11" fill="#9ca3af">'+g+'%</text>';
+        }
+        const passoX = Math.max(5, Math.round((pmax - pmin) / 8 / 5) * 5);
+        for (let p = Math.ceil(pmin/passoX)*passoX; p <= pmax; p += passoX) {
+          svg += '<text x="'+x(p)+'" y="'+(H-MB+18)+'" text-anchor="middle" font-size="11" fill="#9ca3af">'+p+'</text>';
+        }
+        svg += '<text x="'+(ML+iw/2)+'" y="'+(H-4)+'" text-anchor="middle" font-size="11" fill="#6b7280">pontos ao fim do campeonato</text>';
+
+        let d = '';
+        let iniciou = false;
+        pts.forEach((p, i) => {
+          const v = vals[i];
+          if (v === null || v === undefined) return;
+          d += (iniciou ? 'L' : 'M') + x(p) + ' ' + y(v) + ' ';
+          iniciou = true;
+        });
+        svg += '<path d="'+d+'" fill="none" stroke="'+cores[metrica]+'" stroke-width="3" stroke-linejoin="round"/>';
+        // linha de 50%
+        svg += '<line x1="'+ML+'" y1="'+y(50)+'" x2="'+(W-MR)+'" y2="'+y(50)+'" stroke="#9ca3af" stroke-dasharray="4 4" stroke-width="1"/>';
+        svg += '<text x="'+(W-MR-4)+'" y="'+(y(50)-6)+'" text-anchor="end" font-size="10" fill="#9ca3af">50%</text>';
+        svg += '</svg>';
+        area.innerHTML = svg;
+      }
+
+      document.querySelectorAll('.cbtn').forEach(b => {
+        b.addEventListener('click', () => {
+          document.querySelectorAll('.cbtn').forEach(x => x.classList.remove('ativo'));
+          b.classList.add('ativo');
+          metrica = b.getAttribute('data-metrica');
+          desenhar();
+        });
+      });
+      desenhar();
+    })();
+  </script>
+</Base>
+
+<style>
+  .lead { font-size: 1.1rem; max-width: 64ch; }
+  .meta { color: var(--cinza); font-size: 0.9rem; margin-top: -0.25rem; }
+  .explica { color: var(--texto); max-width: 68ch; line-height: 1.65; }
+
+  .limiares {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1rem; margin: 1rem 0 2rem;
+  }
+  .lim {
+    background: var(--card); border: 1px solid var(--borda);
+    border-radius: 8px; padding: 1.1rem; text-align: center;
+    border-top: 4px solid var(--borda);
+  }
+  .lim.vermelho { border-top-color: #e34948; }
+  .lim.laranja { border-top-color: #e0a020; }
+  .lim.azul { border-top-color: #2a78d6; }
+  .lim.verde { border-top-color: #1baf7a; }
+  .lim-num { display: block; font-size: 2.6rem; font-weight: 800; line-height: 1; }
+  .lim.vermelho .lim-num { color: #e34948; }
+  .lim.laranja .lim-num { color: #c8890f; }
+  .lim.azul .lim-num { color: #2a78d6; }
+  .lim.verde .lim-num { color: #1baf7a; }
+  .lim-txt { display: block; margin-top: 0.5rem; font-size: 0.95rem; }
+  .lim-sub { display: block; margin-top: 0.3rem; font-size: 0.8rem; color: var(--cinza); }
+
+  .grafico-controles { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
+  .cbtn {
+    padding: 0.4rem 0.9rem; border: 1px solid var(--borda);
+    background: var(--fundo); color: var(--cinza); border-radius: 6px;
+    font-size: 0.9rem; font-weight: 600; cursor: pointer;
+  }
+  .cbtn.ativo { background: var(--verde); color: #fff; border-color: var(--verde); }
+  .grafico-area {
+    background: var(--card); border: 1px solid var(--borda);
+    border-radius: 8px; padding: 1rem; margin-bottom: 2rem;
+  }
+
+  .tabela-wrap { overflow-x: auto; margin: 1rem 0 2rem; max-height: 460px; overflow-y: auto; }
+  .tabela {
+    width: 100%; border-collapse: collapse; background: var(--card);
+    border-radius: 8px; overflow: hidden; min-width: 460px;
+  }
+  .tabela th, .tabela td {
+    padding: 0.5rem; text-align: center;
+    border-bottom: 1px solid var(--borda); font-size: 0.9rem;
+  }
+  .tabela th {
+    background: #f6f7f9; font-weight: 600; color: var(--cinza);
+    position: sticky; top: 0;
+  }
+  .tabela .pts { font-weight: 700; }
+  .tabela .perigo { color: #e34948; font-weight: 700; }
+
+  .disclaimer {
+    margin-top: 2rem; padding: 1rem; background: #f6f7f9;
+    border-radius: 6px; font-size: 0.9rem; color: var(--cinza);
+  }
+</style>
