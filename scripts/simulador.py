@@ -695,8 +695,9 @@ class Modelo:
     """
     nome = "base"
 
-    def __init__(self, e: Estado, f: Forcas, mando=0.25, sigma=0.0):
+    def __init__(self, e: Estado, f: Forcas, mando=0.25, sigma=0.0, faixas=None):
         self.e, self.f, self.mando, self.sigma = e, f, mando, sigma
+        self.faixas = faixas
         cal = [(f.idx[a], f.idx[b]) for a, b in e.jogos_restantes]
         self.mand = np.array([i for i, _ in cal])      # índice do mandante por jogo
         self.vis = np.array([j for _, j in cal])       # índice do visitante por jogo
@@ -722,13 +723,23 @@ class Modelo:
         chave = pts * 1e6 + sd * 1e2 + np.random.rand(nsim, n)
         ordem = np.argsort(-chave, axis=1)             # (nsim, n) posições -> time
 
-        tit = np.zeros(n); g5 = np.zeros(n); z4 = np.zeros(n)
-        np.add.at(tit, ordem[:, 0], 1)
-        for k in range(5):
-            np.add.at(g5, ordem[:, k], 1)
-        for k in range(n-4, n):
-            np.add.at(z4, ordem[:, k], 1)
-        return {"titulo": 100*tit/nsim, "g5": 100*g5/nsim, "z4": 100*z4/nsim}
+        # Faixas configuráveis: dict nome -> (pos_inicial, pos_final), 1-indexed.
+        # Posições negativas contam do fim (-4 = quarto de trás para frente).
+        # Padrão = Série A (título, G5/Libertadores, Z4/rebaixamento).
+        faixas = self.faixas or {
+            "titulo": (1, 1),
+            "g5": (1, 5),
+            "z4": (-4, -1),
+        }
+        saida = {}
+        for chave_nome, (ini, fim) in faixas.items():
+            acc = np.zeros(n)
+            i0 = ini - 1 if ini > 0 else n + ini
+            i1 = fim if fim > 0 else n + fim + 1
+            for k in range(i0, i1):
+                np.add.at(acc, ordem[:, k], 1)
+            saida[chave_nome] = 100 * acc / nsim
+        return saida
 
     def _amostrar_forca(self, nsim):
         f = self.f
@@ -769,8 +780,8 @@ class Poisson(Modelo):
 
 class DixonColes(Modelo):
     nome = "dixon_coles"
-    def __init__(self, e, f, mando=0.25, sigma=0.0, rho=-0.05, maxg=6):
-        super().__init__(e, f, mando, sigma)
+    def __init__(self, e, f, mando=0.25, sigma=0.0, rho=-0.05, maxg=6, faixas=None):
+        super().__init__(e, f, mando, sigma, faixas)
         self.rho, self.maxg = rho, maxg
 
     def _resultados(self, nsim, atk, dfs, elo):
@@ -785,8 +796,8 @@ class DixonColes(Modelo):
 
 class Elo(Modelo):
     nome = "elo"
-    def __init__(self, e, f, mando=0.25, sigma=0.0, hfa=65):
-        super().__init__(e, f, mando, sigma)
+    def __init__(self, e, f, mando=0.25, sigma=0.0, hfa=65, faixas=None):
+        super().__init__(e, f, mando, sigma, faixas)
         self.hfa = hfa
 
     def _resultados(self, nsim, atk, dfs, elo):

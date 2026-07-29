@@ -1,0 +1,300 @@
+---
+// Home da Série B. Métricas próprias: título, acesso direto (G2),
+// zona de playoff (3º-6º) e rebaixamento (Z4).
+import Base from '../../layouts/Base.astro';
+import dados from '../../data/probabilidades-b.json';
+import historico from '../../data/historico-b.json';
+
+const { atualizado_em, nsim, tabela, proximos_jogos } = dados;
+const atualizadoBR = new Date(atualizado_em).toLocaleString('pt-BR', {
+  day: '2-digit', month: '2-digit', year: 'numeric',
+  hour: '2-digit', minute: '2-digit', timeZone: 'America/Sao_Paulo',
+});
+
+const cor = (p, base) => {
+  const intensidade = Math.max(0.15, Math.min(1, p / 100));
+  return `background: ${base}; opacity: ${intensidade}`;
+};
+
+// top 5 para o gráfico de evolução
+const top5 = tabela.slice(0, 5).map((t) => t.time);
+const cores5 = ['#1baf7a', '#2a78d6', '#e0a020', '#e34948', '#8e44ad'];
+const graficoDados = JSON.stringify({ historico, times: top5, cores: cores5 });
+---
+<Base
+  title="Chances no Brasileirão Série B 2026 — Acesso e Rebaixamento | Bolaverso"
+  description="Probabilidades de título, acesso à Série A e rebaixamento no Brasileirão Série B 2026. Simulação de Monte Carlo atualizada diariamente."
+>
+  <h1>Chances na Série B 2026</h1>
+  <p class="lead">
+    Probabilidades de <strong>título</strong>, <strong>acesso</strong> e
+    <strong>rebaixamento</strong> na Série B, calculadas por Monte Carlo
+    com {nsim.toLocaleString('pt-BR')} simulações do restante do campeonato.
+  </p>
+  <p class="meta">Atualizado em <strong>{atualizadoBR}</strong></p>
+
+  <div class="explica-formato">
+    <strong>Como funciona o acesso:</strong> o 1º e o 2º colocados sobem direto para a
+    Série A. Os times que terminarem entre 3º e 6º disputam <em>playoffs</em> em
+    mata-mata (3º×6º e 4º×5º) pelas outras duas vagas. Os quatro últimos caem para a
+    Série C. As colunas abaixo mostram a chance de terminar em cada faixa — a chance
+    de subir via playoff depende ainda dos confrontos, que não são simulados aqui.
+  </div>
+
+  <h2>Tabela de probabilidades</h2>
+  <div class="tabela-wrap">
+    <table class="tabela">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th class="left">Time</th>
+          <th>P</th><th>J</th>
+          <th class="prob">🏆 Título</th>
+          <th class="prob">⬆️ Acesso direto</th>
+          <th class="prob">🎯 Playoff</th>
+          <th class="prob">⬇️ Z4</th>
+        </tr>
+      </thead>
+      <tbody>
+        {tabela.map((t) => (
+          <tr>
+            <td class="pos">{t.posicao_atual}</td>
+            <td class="left nome">{t.time}</td>
+            <td>{t.pts}</td>
+            <td>{t.j}</td>
+            <td>
+              <div class="barra-cont">
+                <div class="barra" style={cor(t.titulo, 'var(--verde)')}></div>
+                <span class="valor">{t.titulo.toFixed(1)}%</span>
+              </div>
+            </td>
+            <td>
+              <div class="barra-cont">
+                <div class="barra" style={cor(t.acesso_direto, '#2a78d6')}></div>
+                <span class="valor">{t.acesso_direto.toFixed(1)}%</span>
+              </div>
+            </td>
+            <td>
+              <div class="barra-cont">
+                <div class="barra" style={cor(t.playoff, '#e0a020')}></div>
+                <span class="valor">{t.playoff.toFixed(1)}%</span>
+              </div>
+            </td>
+            <td>
+              <div class="barra-cont">
+                <div class="barra" style={cor(t.z4, 'var(--vermelho)')}></div>
+                <span class="valor">{t.z4.toFixed(1)}%</span>
+              </div>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  {historico.length >= 2 && (
+    <div class="grafico-bloco">
+      <h2>Evolução das probabilidades</h2>
+      <div class="grafico-controles">
+        <button class="gbtn ativo" data-metrica="titulo">Título</button>
+        <button class="gbtn" data-metrica="acesso_direto">Acesso direto</button>
+        <button class="gbtn" data-metrica="playoff">Playoff</button>
+        <button class="gbtn" data-metrica="z4">Rebaixamento</button>
+      </div>
+      <div id="grafico" class="grafico-area"></div>
+      <div id="grafico-legenda" class="grafico-legenda"></div>
+    </div>
+  )}
+  {historico.length < 2 && (
+    <div class="grafico-bloco">
+      <h2>Evolução das probabilidades</h2>
+      <p class="grafico-nota">O gráfico aparece após alguns dias de dados acumulados.</p>
+    </div>
+  )}
+
+  {proximos_jogos.length > 0 && (
+    <>
+      <h2>Probabilidades da próxima rodada</h2>
+      <div class="jogos">
+        {proximos_jogos.map((j) => (
+          <div class="jogo">
+            <div class="times">
+              <span>{j.mandante}</span>
+              <span class="vs">×</span>
+              <span>{j.visitante}</span>
+            </div>
+            <div class="probs">
+              <div class="prob-item">
+                <span class="lbl">Casa</span><span class="val">{j.casa.toFixed(0)}%</span>
+                <div class="prob-barra" style={`background: var(--verde); width: ${j.casa}%`}></div>
+              </div>
+              <div class="prob-item">
+                <span class="lbl">Empate</span><span class="val">{j.empate.toFixed(0)}%</span>
+                <div class="prob-barra" style={`background: var(--amarelo); width: ${j.empate}%`}></div>
+              </div>
+              <div class="prob-item">
+                <span class="lbl">Fora</span><span class="val">{j.fora.toFixed(0)}%</span>
+                <div class="prob-barra" style={`background: var(--azul); width: ${j.fora}%`}></div>
+              </div>
+            </div>
+            <div class="placar-provavel">Placar mais provável: <strong>{j.placar_provavel}</strong></div>
+          </div>
+        ))}
+      </div>
+    </>
+  )}
+
+  <p class="disclaimer">
+    Simulação estatística baseada em Poisson, Dixon-Coles e Elo — não é previsão oficial.
+    <a href="/metodologia/">Entenda como funciona</a> ·
+    <a href="/">ver Série A</a>.
+  </p>
+
+  <script is:inline set:html={`window.GRAFICO_DADOS = ${graficoDados};`}></script>
+  <script is:inline>
+    (function () {
+      const cfg = window.GRAFICO_DADOS;
+      if (!cfg || !cfg.historico || cfg.historico.length < 2) return;
+      const area = document.getElementById('grafico');
+      const legenda = document.getElementById('grafico-legenda');
+      if (!area) return;
+      const W = 700, H = 320, ML = 40, MR = 20, MT = 20, MB = 40;
+      const iw = W - ML - MR, ih = H - MT - MB;
+      let metrica = 'titulo';
+
+      function desenhar() {
+        const hist = cfg.historico;
+        let maxV = 10;
+        cfg.times.forEach(t => hist.forEach(r => {
+          const v = r.times[t] ? r.times[t][metrica] : 0;
+          if (v > maxV) maxV = v;
+        }));
+        maxV = Math.ceil(maxV / 10) * 10;
+        const x = i => ML + (hist.length === 1 ? iw/2 : (i/(hist.length-1))*iw);
+        const y = v => MT + ih - (v/maxV)*ih;
+        let svg = '<svg viewBox="0 0 '+W+' '+H+'" style="width:100%;height:auto;">';
+        for (let g = 0; g <= maxV; g += (maxV/5)) {
+          const gy = y(g);
+          svg += '<line x1="'+ML+'" y1="'+gy+'" x2="'+(W-MR)+'" y2="'+gy+'" stroke="#e5e7eb"/>';
+          svg += '<text x="'+(ML-6)+'" y="'+(gy+4)+'" text-anchor="end" font-size="11" fill="#9ca3af">'+Math.round(g)+'%</text>';
+        }
+        const passo = Math.ceil(hist.length/6);
+        hist.forEach((r,i) => {
+          if (i % passo !== 0 && i !== hist.length-1) return;
+          const dd = r.data.slice(8,10)+'/'+r.data.slice(5,7);
+          svg += '<text x="'+x(i)+'" y="'+(H-MB+18)+'" text-anchor="middle" font-size="11" fill="#9ca3af">'+dd+'</text>';
+        });
+        cfg.times.forEach((t, ti) => {
+          const cor = cfg.cores[ti % cfg.cores.length];
+          let d = '';
+          hist.forEach((r,i) => {
+            const v = r.times[t] ? r.times[t][metrica] : 0;
+            d += (i===0?'M':'L')+x(i)+' '+y(v)+' ';
+          });
+          svg += '<path d="'+d+'" fill="none" stroke="'+cor+'" stroke-width="2.5"/>';
+          const lv = hist[hist.length-1].times[t] ? hist[hist.length-1].times[t][metrica] : 0;
+          svg += '<circle cx="'+x(hist.length-1)+'" cy="'+y(lv)+'" r="3.5" fill="'+cor+'"/>';
+        });
+        svg += '</svg>';
+        area.innerHTML = svg;
+        let leg = '';
+        cfg.times.forEach((t, ti) => {
+          leg += '<span class="leg-item"><span class="leg-cor" style="background:'+cfg.cores[ti % cfg.cores.length]+'"></span>'+t+'</span>';
+        });
+        legenda.innerHTML = leg;
+      }
+      document.querySelectorAll('.gbtn').forEach(b => {
+        b.addEventListener('click', () => {
+          document.querySelectorAll('.gbtn').forEach(x => x.classList.remove('ativo'));
+          b.classList.add('ativo');
+          metrica = b.getAttribute('data-metrica');
+          desenhar();
+        });
+      });
+      desenhar();
+    })();
+  </script>
+</Base>
+
+<style>
+  .lead { font-size: 1.1rem; max-width: 62ch; }
+  .meta { color: var(--cinza); font-size: 0.9rem; margin-top: -0.25rem; }
+  .explica-formato {
+    background: #eef3fb; border-left: 3px solid var(--azul);
+    padding: 0.9rem 1.1rem; border-radius: 0 6px 6px 0;
+    font-size: 0.92rem; margin: 1.25rem 0; line-height: 1.55;
+  }
+
+  .tabela-wrap { overflow-x: auto; margin: 1rem 0 2rem; }
+  .tabela {
+    width: 100%; border-collapse: collapse; background: var(--card);
+    border-radius: 8px; overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); min-width: 720px;
+  }
+  .tabela th, .tabela td {
+    padding: 0.6rem 0.5rem; text-align: center;
+    border-bottom: 1px solid var(--borda); font-size: 0.9rem;
+  }
+  .tabela th { background: #f6f7f9; font-weight: 600; color: var(--cinza); }
+  .tabela .left { text-align: left; }
+  .tabela .nome { font-weight: 600; }
+  .tabela .pos { color: var(--cinza); }
+  .tabela .prob { min-width: 95px; }
+  .tabela tr:last-child td { border-bottom: none; }
+
+  .barra-cont {
+    position: relative; display: flex; align-items: center;
+    justify-content: flex-end; padding: 0 0.4rem; height: 22px;
+    background: #f0f2f5; border-radius: 4px;
+  }
+  .barra { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 4px; width: 100%; }
+  .valor {
+    position: relative; z-index: 1; font-size: 0.82rem;
+    font-weight: 700; color: #1a1a1a;
+    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #fff;
+  }
+
+  .grafico-bloco {
+    background: var(--card); border: 1px solid var(--borda);
+    border-radius: 8px; padding: 1.25rem; margin: 1rem 0 2rem;
+  }
+  .grafico-bloco h2 { margin-top: 0; }
+  .grafico-controles { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+  .gbtn {
+    padding: 0.4rem 0.9rem; border: 1px solid var(--borda);
+    background: var(--fundo); color: var(--cinza); border-radius: 6px;
+    font-size: 0.9rem; font-weight: 600; cursor: pointer;
+  }
+  .gbtn.ativo { background: var(--verde); color: #fff; border-color: var(--verde); }
+  .grafico-area { width: 100%; }
+  .grafico-nota { color: var(--cinza); font-size: 0.85rem; }
+
+  .jogos {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem; margin: 1rem 0 2rem;
+  }
+  .jogo {
+    background: var(--card); border: 1px solid var(--borda);
+    border-radius: 8px; padding: 1rem;
+  }
+  .times {
+    display: flex; justify-content: space-between; align-items: center;
+    font-weight: 600; margin-bottom: 0.75rem;
+  }
+  .vs { color: var(--cinza); font-weight: 400; }
+  .probs { display: flex; flex-direction: column; gap: 0.35rem; }
+  .prob-item {
+    position: relative; display: flex; justify-content: space-between;
+    align-items: center; background: #f0f2f5; border-radius: 4px;
+    padding: 0.3rem 0.6rem; height: 26px; overflow: hidden;
+  }
+  .prob-barra { position: absolute; left: 0; top: 0; bottom: 0; opacity: 0.5; z-index: 0; }
+  .prob-item .lbl, .prob-item .val {
+    position: relative; z-index: 1; font-size: 0.85rem; font-weight: 600;
+  }
+  .placar-provavel { margin-top: 0.75rem; font-size: 0.85rem; color: var(--cinza); }
+  .disclaimer {
+    margin-top: 2rem; padding: 1rem; background: #f6f7f9;
+    border-radius: 6px; font-size: 0.9rem; color: var(--cinza);
+  }
+</style>

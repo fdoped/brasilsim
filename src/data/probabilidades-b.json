@@ -1,0 +1,628 @@
+{
+  "competicao": "Série B",
+  "atualizado_em": "2026-07-28T23:54:35.025255-03:00",
+  "fonte": "ge.globo",
+  "nsim": 30000,
+  "sigma": 0.4,
+  "faixas": {
+    "titulo": [
+      1,
+      1
+    ],
+    "acesso_direto": [
+      1,
+      2
+    ],
+    "playoff": [
+      3,
+      6
+    ],
+    "z4": [
+      -4,
+      -1
+    ]
+  },
+  "tabela": [
+    {
+      "posicao_atual": 1,
+      "time": "Criciúma",
+      "slug": "criciuma",
+      "pts": 40,
+      "j": 20,
+      "gp": 23,
+      "gc": 12,
+      "sg": 11,
+      "vitorias": 11,
+      "empates": 7,
+      "derrotas": 2,
+      "aproveitamento": 66,
+      "ultimos_jogos": [
+        "v",
+        "v",
+        "v",
+        "v",
+        "e"
+      ],
+      "por_modelo": {
+        "poisson": 35.6,
+        "dixon_coles": 35.8,
+        "elo": 49.6
+      },
+      "titulo": 40.3,
+      "acesso_direto": 60.6,
+      "playoff": 31.3,
+      "z4": 0.0
+    },
+    {
+      "posicao_atual": 2,
+      "time": "Juventude",
+      "slug": "juventude",
+      "pts": 35,
+      "j": 20,
+      "gp": 22,
+      "gc": 12,
+      "sg": 10,
+      "vitorias": 10,
+      "empates": 5,
+      "derrotas": 5,
+      "aproveitamento": 58,
+      "ultimos_jogos": [
+        "e",
+        "v",
+        "v",
+        "d",
+        "v"
+      ],
+      "por_modelo": {
+        "poisson": 15.8,
+        "dixon_coles": 16.4,
+        "elo": 14.4
+      },
+      "titulo": 15.5,
+      "acesso_direto": 32.9,
+      "playoff": 44.3,
+      "z4": 0.1
+    },
+    {
+      "posicao_atual": 6,
+      "time": "Novorizontino",
+      "slug": "novorizontino",
+      "pts": 33,
+      "j": 20,
+      "gp": 32,
+      "gc": 19,
+      "sg": 13,
+      "vitorias": 9,
+      "empates": 6,
+      "derrotas": 5,
+      "aproveitamento": 55,
+      "ultimos_jogos": [
+        "v",
+        "d",
+        "d",
+        "d",
+        "v"
+      ],
+      "por_modelo": {
+        "poisson": 14.7,
+        "dixon_coles": 14.7,
+        "elo": 10.5
+      },
+      "titulo": 13.3,
+      "acesso_direto": 26.8,
+      "playoff": 43.0,
+      "z4": 0.3
+    },
+    {
+      "posicao_atual": 5,
+      "time": "Vila Nova",
+      "slug": "vila-nova",
+      "pts": 34,
+      "j": 20,
+      "gp": 27,
+      "gc": 24,
+      "sg": 3,
+      "vitorias": 10,
+      "empates": 4,
+      "derrotas": 6,
+      "aproveitamento": 56,
+      "ultimos_jogos": [
+        "v",
+        "d",
+        "d",
+        "v",
+        "d"
+      ],
+      "por_modelo": {
+        "poisson": 8.9,
+        "dixon_coles": 8.8,
+        "elo": 8.1
+      },
+      "titulo": 8.6,
+      "acesso_direto": 20.4,
+      "playoff": 40.4,
+      "z4": 0.7
+    },
+    {
+      "posicao_atual": 3,
+      "time": "Operário-PR",
+      "slug": "operario-pr",
+      "pts": 35,
+      "j": 20,
+      "gp": 28,
+      "gc": 25,
+      "sg": 3,
+      "vitorias": 10,
+      "empates": 5,
+      "derrotas": 5,
+      "aproveitamento": 58,
+      "ultimos_jogos": [
+        "v",
+        "v",
+        "e",
+        "v",
+        "d"
+      ],
+      "por_modelo": {
+        "poisson": 6.9,
+        "dixon_coles": 6.8,
+        "elo": 6.8
+      },
+      "titulo": 6.8,
+      "acesso_direto": 15.8,
+      "playoff": 37.1,
+      "z4": 0.9
+    },
+    {
+      "posicao_atual": 4,
+      "time": "Fortaleza",
+      "slug": "fortaleza",
+      "pts": 34,
+      "j": 20,
+      "gp": 23,
+      "gc": 19,
+      "sg": 4,
+      "vitorias": 10,
+      "empates": 4,
+      "derrotas": 6,
+      "aproveitamento": 56,
+      "ultimos_jogos": [
+        "v",
+        "d",
+        "v",
+        "d",
+        "v"
+      ],
+      "por_modelo": {
+        "poisson": 6.7,
+        "dixon_coles": 6.5,
+        "elo": 5.0
+      },
+      "titulo": 6.1,
+      "acesso_direto": 15.3,
+      "playoff": 38.8,
+      "z4": 0.7
+    },
+    {
+      "posicao_atual": 7,
+      "time": "Atlético-GO",
+      "slug": "atletico-go",
+      "pts": 31,
+      "j": 20,
+      "gp": 23,
+      "gc": 20,
+      "sg": 3,
+      "vitorias": 8,
+      "empates": 7,
+      "derrotas": 5,
+      "aproveitamento": 51,
+      "ultimos_jogos": [
+        "d",
+        "v",
+        "e",
+        "v",
+        "v"
+      ],
+      "por_modelo": {
+        "poisson": 2.9,
+        "dixon_coles": 2.8,
+        "elo": 2.2
+      },
+      "titulo": 2.6,
+      "acesso_direto": 6.7,
+      "playoff": 28.7,
+      "z4": 2.5
+    },
+    {
+      "posicao_atual": 12,
+      "time": "São Bernardo",
+      "slug": "sao-bernardo",
+      "pts": 27,
+      "j": 20,
+      "gp": 28,
+      "gc": 23,
+      "sg": 5,
+      "vitorias": 7,
+      "empates": 6,
+      "derrotas": 7,
+      "aproveitamento": 45,
+      "ultimos_jogos": [
+        "d",
+        "e",
+        "e",
+        "d",
+        "d"
+      ],
+      "por_modelo": {
+        "poisson": 3.1,
+        "dixon_coles": 2.9,
+        "elo": 1.3
+      },
+      "titulo": 2.4,
+      "acesso_direto": 7.2,
+      "playoff": 30.3,
+      "z4": 3.7
+    },
+    {
+      "posicao_atual": 9,
+      "time": "CRB",
+      "slug": "crb",
+      "pts": 29,
+      "j": 20,
+      "gp": 31,
+      "gc": 32,
+      "sg": -1,
+      "vitorias": 8,
+      "empates": 5,
+      "derrotas": 7,
+      "aproveitamento": 48,
+      "ultimos_jogos": [
+        "d",
+        "e",
+        "v",
+        "v",
+        "v"
+      ],
+      "por_modelo": {
+        "poisson": 2.2,
+        "dixon_coles": 2.1,
+        "elo": 0.9
+      },
+      "titulo": 1.7,
+      "acesso_direto": 4.9,
+      "playoff": 22.0,
+      "z4": 6.9
+    },
+    {
+      "posicao_atual": 11,
+      "time": "Athletic Club",
+      "slug": "athletic-club",
+      "pts": 28,
+      "j": 20,
+      "gp": 19,
+      "gc": 18,
+      "sg": 1,
+      "vitorias": 6,
+      "empates": 10,
+      "derrotas": 4,
+      "aproveitamento": 46,
+      "ultimos_jogos": [
+        "d",
+        "e",
+        "e",
+        "v",
+        "e"
+      ],
+      "por_modelo": {
+        "poisson": 1.0,
+        "dixon_coles": 1.2,
+        "elo": 0.5
+      },
+      "titulo": 0.9,
+      "acesso_direto": 3.0,
+      "playoff": 19.1,
+      "z4": 6.3
+    },
+    {
+      "posicao_atual": 10,
+      "time": "Goiás",
+      "slug": "goias",
+      "pts": 29,
+      "j": 20,
+      "gp": 21,
+      "gc": 26,
+      "sg": -5,
+      "vitorias": 8,
+      "empates": 5,
+      "derrotas": 7,
+      "aproveitamento": 48,
+      "ultimos_jogos": [
+        "v",
+        "e",
+        "v",
+        "e",
+        "d"
+      ],
+      "por_modelo": {
+        "poisson": 0.6,
+        "dixon_coles": 0.5,
+        "elo": 0.3
+      },
+      "titulo": 0.5,
+      "acesso_direto": 1.8,
+      "playoff": 13.1,
+      "z4": 12.9
+    },
+    {
+      "posicao_atual": 15,
+      "time": "Botafogo-SP",
+      "slug": "botafogo-sp",
+      "pts": 24,
+      "j": 20,
+      "gp": 24,
+      "gc": 21,
+      "sg": 3,
+      "vitorias": 6,
+      "empates": 6,
+      "derrotas": 8,
+      "aproveitamento": 40,
+      "ultimos_jogos": [
+        "v",
+        "e",
+        "e",
+        "v",
+        "d"
+      ],
+      "por_modelo": {
+        "poisson": 0.6,
+        "dixon_coles": 0.6,
+        "elo": 0.2
+      },
+      "titulo": 0.5,
+      "acesso_direto": 1.7,
+      "playoff": 14.8,
+      "z4": 9.9
+    },
+    {
+      "posicao_atual": 13,
+      "time": "Náutico",
+      "slug": "nautico",
+      "pts": 25,
+      "j": 20,
+      "gp": 24,
+      "gc": 24,
+      "sg": 0,
+      "vitorias": 7,
+      "empates": 4,
+      "derrotas": 9,
+      "aproveitamento": 41,
+      "ultimos_jogos": [
+        "e",
+        "d",
+        "d",
+        "v",
+        "e"
+      ],
+      "por_modelo": {
+        "poisson": 0.5,
+        "dixon_coles": 0.5,
+        "elo": 0.2
+      },
+      "titulo": 0.4,
+      "acesso_direto": 1.3,
+      "playoff": 11.2,
+      "z4": 14.0
+    },
+    {
+      "posicao_atual": 14,
+      "time": "Cuiabá",
+      "slug": "cuiaba",
+      "pts": 25,
+      "j": 20,
+      "gp": 15,
+      "gc": 15,
+      "sg": 0,
+      "vitorias": 5,
+      "empates": 10,
+      "derrotas": 5,
+      "aproveitamento": 41,
+      "ultimos_jogos": [
+        "v",
+        "e",
+        "d",
+        "d",
+        "e"
+      ],
+      "por_modelo": {
+        "poisson": 0.2,
+        "dixon_coles": 0.1,
+        "elo": 0.1
+      },
+      "titulo": 0.1,
+      "acesso_direto": 0.6,
+      "playoff": 7.1,
+      "z4": 17.1
+    },
+    {
+      "posicao_atual": 17,
+      "time": "Londrina",
+      "slug": "londrina",
+      "pts": 20,
+      "j": 20,
+      "gp": 27,
+      "gc": 31,
+      "sg": -4,
+      "vitorias": 5,
+      "empates": 5,
+      "derrotas": 10,
+      "aproveitamento": 33,
+      "ultimos_jogos": [
+        "v",
+        "e",
+        "e",
+        "d",
+        "d"
+      ],
+      "por_modelo": {
+        "poisson": 0.1,
+        "dixon_coles": 0.1,
+        "elo": 0.0
+      },
+      "titulo": 0.1,
+      "acesso_direto": 0.4,
+      "playoff": 5.8,
+      "z4": 29.5
+    },
+    {
+      "posicao_atual": 8,
+      "time": "Sport",
+      "slug": "sport",
+      "pts": 29,
+      "j": 20,
+      "gp": 25,
+      "gc": 19,
+      "sg": 6,
+      "vitorias": 6,
+      "empates": 11,
+      "derrotas": 3,
+      "aproveitamento": 48,
+      "ultimos_jogos": [
+        "d",
+        "e",
+        "e",
+        "e",
+        "e"
+      ],
+      "por_modelo": {
+        "poisson": 0.1,
+        "dixon_coles": 0.1,
+        "elo": 0.0
+      },
+      "titulo": 0.0,
+      "acesso_direto": 0.3,
+      "playoff": 8.1,
+      "z4": 9.5
+    },
+    {
+      "posicao_atual": 18,
+      "time": "Avaí",
+      "slug": "avai",
+      "pts": 20,
+      "j": 20,
+      "gp": 21,
+      "gc": 27,
+      "sg": -6,
+      "vitorias": 5,
+      "empates": 5,
+      "derrotas": 10,
+      "aproveitamento": 33,
+      "ultimos_jogos": [
+        "d",
+        "v",
+        "e",
+        "v",
+        "d"
+      ],
+      "por_modelo": {
+        "poisson": 0.0,
+        "dixon_coles": 0.1,
+        "elo": 0.0
+      },
+      "titulo": 0.0,
+      "acesso_direto": 0.1,
+      "playoff": 2.6,
+      "z4": 43.8
+    },
+    {
+      "posicao_atual": 16,
+      "time": "Ceará",
+      "slug": "ceara",
+      "pts": 22,
+      "j": 20,
+      "gp": 20,
+      "gc": 25,
+      "sg": -5,
+      "vitorias": 5,
+      "empates": 7,
+      "derrotas": 8,
+      "aproveitamento": 36,
+      "ultimos_jogos": [
+        "d",
+        "e",
+        "e",
+        "d",
+        "v"
+      ],
+      "por_modelo": {
+        "poisson": 0.0,
+        "dixon_coles": 0.0,
+        "elo": 0.0
+      },
+      "titulo": 0.0,
+      "acesso_direto": 0.1,
+      "playoff": 2.1,
+      "z4": 46.1
+    },
+    {
+      "posicao_atual": 19,
+      "time": "América-MG",
+      "slug": "america-mg",
+      "pts": 11,
+      "j": 20,
+      "gp": 14,
+      "gc": 31,
+      "sg": -17,
+      "vitorias": 2,
+      "empates": 5,
+      "derrotas": 13,
+      "aproveitamento": 18,
+      "ultimos_jogos": [
+        "d",
+        "e",
+        "e",
+        "d",
+        "v"
+      ],
+      "por_modelo": {
+        "poisson": 0.0,
+        "dixon_coles": 0.0,
+        "elo": 0.0
+      },
+      "titulo": 0.0,
+      "acesso_direto": 0.0,
+      "playoff": 0.0,
+      "z4": 96.7
+    },
+    {
+      "posicao_atual": 20,
+      "time": "Ponte Preta",
+      "slug": "ponte-preta",
+      "pts": 9,
+      "j": 20,
+      "gp": 15,
+      "gc": 39,
+      "sg": -24,
+      "vitorias": 2,
+      "empates": 3,
+      "derrotas": 15,
+      "aproveitamento": 15,
+      "ultimos_jogos": [
+        "d",
+        "d",
+        "d",
+        "d",
+        "e"
+      ],
+      "por_modelo": {
+        "poisson": 0.0,
+        "dixon_coles": 0.0,
+        "elo": 0.0
+      },
+      "titulo": 0.0,
+      "acesso_direto": 0.0,
+      "playoff": 0.0,
+      "z4": 98.5
+    }
+  ],
+  "proximos_jogos": []
+}
