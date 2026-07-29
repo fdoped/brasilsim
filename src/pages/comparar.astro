@@ -146,40 +146,45 @@ const padraoB = tabela[1]?.time ?? '';
     border-radius: 8px;
     padding: 1.25rem;
   }
-  .cabecalho {
-    display: flex; justify-content: space-between;
-    padding-bottom: 0.9rem; margin-bottom: 1rem;
-    border-bottom: 1px solid var(--borda);
-  }
-  .time-nome { font-weight: 700; font-size: 1.05rem; }
-  .time-nome .pos {
-    color: var(--cinza); font-weight: 500; font-size: 0.85rem; margin-left: 0.4rem;
-  }
-  .metrica { margin-bottom: 1.1rem; }
-  .metrica:last-child { margin-bottom: 0; }
-  .metrica-nome {
-    text-align: center; font-size: 0.85rem; color: var(--cinza);
-    font-weight: 600; margin-bottom: 0.4rem;
-  }
-  .metrica-linha { display: flex; gap: 0.75rem; align-items: center; }
-  .lado { display: flex; align-items: center; gap: 0.5rem; flex: 1; }
-  .lado.esq { flex-direction: row-reverse; }
-  .lado .num {
-    font-weight: 700; font-size: 0.95rem; min-width: 52px;
-    color: var(--cinza);
-  }
-  .lado.esq .num { text-align: right; }
-  .lado.vantagem .num { color: var(--texto); }
-  .barra-comp {
-    flex: 1; height: 18px; background: #f0f2f5;
-    border-radius: 4px; overflow: hidden; display: flex;
-  }
-  .lado.esq .barra-comp { justify-content: flex-end; }
-  .preench { height: 100%; border-radius: 4px; opacity: 0.85; }
-  .aviso { color: var(--cinza); text-align: center; padding: 1rem; }
   .disclaimer {
     margin-top: 2rem; padding: 1rem;
     background: #f6f7f9; border-radius: 6px;
     font-size: 0.9rem; color: var(--cinza);
   }
+</style>
+
+<!-- Estes elementos são criados por JavaScript no navegador, então o CSS
+     precisa ser global (o escopo do Astro não os alcança). -->
+<style is:global>
+  .comparacao .cabecalho {
+    display: flex; justify-content: space-between;
+    padding-bottom: 0.9rem; margin-bottom: 1rem;
+    border-bottom: 1px solid var(--borda);
+  }
+  .comparacao .time-nome { font-weight: 700; font-size: 1.05rem; }
+  .comparacao .time-nome .pos {
+    color: var(--cinza); font-weight: 500; font-size: 0.85rem; margin-left: 0.4rem;
+  }
+  .comparacao .metrica { margin-bottom: 1.1rem; }
+  .comparacao .metrica:last-child { margin-bottom: 0; }
+  .comparacao .metrica-nome {
+    text-align: center; font-size: 0.85rem; color: var(--cinza);
+    font-weight: 600; margin-bottom: 0.4rem;
+  }
+  .comparacao .metrica-linha { display: flex; gap: 0.75rem; align-items: center; }
+  .comparacao .lado { display: flex; align-items: center; gap: 0.5rem; flex: 1; }
+  .comparacao .lado.esq { flex-direction: row-reverse; }
+  .comparacao .lado .num {
+    font-weight: 700; font-size: 0.95rem; min-width: 52px;
+    color: var(--cinza);
+  }
+  .comparacao .lado.esq .num { text-align: right; }
+  .comparacao .lado.vantagem .num { color: var(--texto); }
+  .comparacao .barra-comp {
+    flex: 1; height: 18px; background: #f0f2f5;
+    border-radius: 4px; overflow: hidden; display: flex;
+  }
+  .comparacao .lado.esq .barra-comp { justify-content: flex-end; }
+  .comparacao .preench { height: 100%; border-radius: 4px; opacity: 0.85; }
+  .comparacao .aviso { color: var(--cinza); text-align: center; padding: 1rem; }
 </style>

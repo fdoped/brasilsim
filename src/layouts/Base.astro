@@ -141,6 +141,16 @@ const urlAtual = new URL(Astro.url.pathname, site);
     .share-btn.wpp { background: #25D366; }
     .share-btn.x   { background: #000000; }
     .share-btn.fb  { background: #1877F2; }
+	/* Legenda do gráfico (criada por JS, precisa de estilo global) */
+    .grafico-legenda {
+      display: flex; flex-wrap: wrap; gap: 1rem;
+      margin-top: 0.75rem; justify-content: center;
+    }
+    .leg-item {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      font-size: 0.85rem; color: var(--texto);
+    }
+    .leg-cor { width: 14px; height: 3px; border-radius: 2px; display: inline-block; }
 
     @media (max-width: 640px) {
       .compartilhar {
