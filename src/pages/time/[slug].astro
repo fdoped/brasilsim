@@ -34,10 +34,36 @@ const outros = tabela
   .sort((a, b) => a.nome.localeCompare(b.nome, 'pt-BR'));
 
 const resultadoLabel = { v: 'Vitória', e: 'Empate', d: 'Derrota' };
+
+// Dados estruturados: time + trilha de navegação
+const site = Astro.site?.href ?? 'https://bolaverso.com';
+const urlTime = `${site}time/${time.slug}/`;
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsTeam",
+    name: time.time,
+    sport: "Futebol",
+    url: urlTime,
+    memberOf: {
+      "@type": "SportsOrganization",
+      name: "Campeonato Brasileiro Série A",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Série A", item: site },
+      { "@type": "ListItem", position: 2, name: time.time, item: urlTime },
+    ],
+  },
+];
 ---
 <Base
   title={`Chances do ${time.time} no Brasileirão 2026 | Bolaverso`}
   description={`Probabilidades atualizadas do ${time.time}: ${time.titulo.toFixed(1)}% de título, ${time.g5.toFixed(1)}% de Libertadores e ${time.z4.toFixed(1)}% de rebaixamento no Brasileirão Série A.`}
+  schema={schema}
 >
   <nav class="migalha"><a href="/">Simulador</a> › {time.time}</nav>
 

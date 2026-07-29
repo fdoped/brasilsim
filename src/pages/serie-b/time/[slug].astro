@@ -31,10 +31,37 @@ const outros = tabela
   .sort((a, b) => a.nome.localeCompare(b.nome, 'pt-BR'));
 
 const resultadoLabel = { v: 'Vitória', e: 'Empate', d: 'Derrota' };
+
+// Dados estruturados: time + trilha de navegação
+const site = Astro.site?.href ?? 'https://bolaverso.com';
+const urlTime = `${site}serie-b/time/${time.slug}/`;
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsTeam",
+    name: time.time,
+    sport: "Futebol",
+    url: urlTime,
+    memberOf: {
+      "@type": "SportsOrganization",
+      name: "Campeonato Brasileiro Série B",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Início", item: site },
+      { "@type": "ListItem", position: 2, name: "Série B", item: `${site}serie-b/` },
+      { "@type": "ListItem", position: 3, name: time.time, item: urlTime },
+    ],
+  },
+];
 ---
 <Base
   title={`Chances do ${time.time} na Série B 2026 | Bolaverso`}
   description={`Probabilidades do ${time.time} na Série B: ${time.titulo.toFixed(1)}% de título, ${time.acesso_direto.toFixed(1)}% de acesso direto e ${time.z4.toFixed(1)}% de rebaixamento.`}
+  schema={schema}
 >
   <nav class="migalha"><a href="/serie-b/">Série B</a> › {time.time}</nav>
 

@@ -25,10 +25,47 @@ const linhasTabela = temCurva
       }))
       .filter((l) => l.pts % 2 === 0)
   : [];
+
+// Dados estruturados: perguntas frequentes com as respostas do modelo
+const perguntas = [];
+if (limiares?.salvo_99) {
+  perguntas.push({
+    "@type": "Question",
+    name: "Quantos pontos são necessários para não cair no Brasileirão?",
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: `Segundo a simulação atual, ${limiares.salvo_99} pontos deixam um time praticamente salvo, com risco de rebaixamento abaixo de 1%. Com ${limiares.risco_50} pontos, o risco fica em torno de 50%.`,
+    },
+  });
+}
+if (limiares?.g5_90) {
+  perguntas.push({
+    "@type": "Question",
+    name: "Quantos pontos garantem vaga na Libertadores?",
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: `Com ${limiares.g5_90} pontos, a chance de terminar no G5 e conquistar vaga na Libertadores é de aproximadamente 90%. Com ${limiares.g5_50} pontos, a chance é de cerca de 50%.`,
+    },
+  });
+}
+if (limiares?.titulo_50) {
+  perguntas.push({
+    "@type": "Question",
+    name: "Quantos pontos são necessários para ser campeão brasileiro?",
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: `A partir de ${limiares.titulo_50} pontos um time passa a ser favorito ao título, com mais de 50% de chance. Com ${limiares.titulo_90} pontos, a chance sobe para cerca de 90%.`,
+    },
+  });
+}
+const schema = perguntas.length
+  ? { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: perguntas }
+  : undefined;
 ---
 <Base
   title="Quantos pontos para não cair, subir ou ser campeão? | Bolaverso"
   description="Quantos pontos garantem a permanência, a vaga na Libertadores ou o título do Brasileirão 2026, segundo 30 mil simulações."
+  schema={schema}
 >
   <h1>Quantos pontos preciso?</h1>
   <p class="lead">
