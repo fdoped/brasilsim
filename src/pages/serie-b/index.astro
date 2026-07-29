@@ -59,7 +59,7 @@ const graficoDados = JSON.stringify({ historico, times: top5, cores: cores5 });
         {tabela.map((t) => (
           <tr>
             <td class="pos">{t.posicao_atual}</td>
-            <td class="left nome">{t.time}</td>
+            <td class="left nome"><a href={`/serie-b/time/${t.slug}/`}>{t.time}</a></td>
             <td>{t.pts}</td>
             <td>{t.j}</td>
             <td>
@@ -238,6 +238,8 @@ const graficoDados = JSON.stringify({ historico, times: top5, cores: cores5 });
   .tabela th { background: #f6f7f9; font-weight: 600; color: var(--cinza); }
   .tabela .left { text-align: left; }
   .tabela .nome { font-weight: 600; }
+  .tabela .nome a { color: var(--texto); }
+  .tabela .nome a:hover { color: var(--verde); }
   .tabela .pos { color: var(--cinza); }
   .tabela .prob { min-width: 95px; }
   .tabela tr:last-child td { border-bottom: none; }

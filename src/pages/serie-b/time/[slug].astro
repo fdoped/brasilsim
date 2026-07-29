@@ -1,0 +1,354 @@
+---
+// Página por time da Série B: gera uma página para cada clube.
+// Ex: /serie-b/time/criciuma/
+import Base from '../../../layouts/Base.astro';
+import dados from '../../../data/probabilidades-b.json';
+import historico from '../../../data/historico-b.json';
+
+export async function getStaticPaths() {
+  const { tabela } = (await import('../../../data/probabilidades-b.json')).default;
+  return tabela.map((t) => ({ params: { slug: t.slug }, props: { time: t } }));
+}
+
+const { time } = Astro.props;
+const { atualizado_em, proximos_jogos, tabela } = dados;
+const atualizadoBR = new Date(atualizado_em).toLocaleString('pt-BR', {
+  day: '2-digit', month: '2-digit', year: 'numeric',
+  hour: '2-digit', minute: '2-digit', timeZone: 'America/Sao_Paulo',
+});
+
+const jogosDoTime = proximos_jogos.filter(
+  (j) => j.mandante === time.time || j.visitante === time.time
+);
+
+const histTime = historico
+  .filter((r) => r.times && r.times[time.time])
+  .map((r) => ({ data: r.data, ...r.times[time.time] }));
+const dadosGraficoTime = JSON.stringify(histTime);
+
+const outros = tabela
+  .map((t) => ({ nome: t.time, slug: t.slug }))
+  .sort((a, b) => a.nome.localeCompare(b.nome, 'pt-BR'));
+
+const resultadoLabel = { v: 'Vitória', e: 'Empate', d: 'Derrota' };
+---
+<Base
+  title={`Chances do ${time.time} na Série B 2026 | Bolaverso`}
+  description={`Probabilidades do ${time.time} na Série B: ${time.titulo.toFixed(1)}% de título, ${time.acesso_direto.toFixed(1)}% de acesso direto e ${time.z4.toFixed(1)}% de rebaixamento.`}
+>
+  <nav class="migalha"><a href="/serie-b/">Série B</a> › {time.time}</nav>
+
+  <div class="cabecalho-time">
+    <div>
+      <h1>{time.time}</h1>
+      <p class="sub">
+        <strong>{time.posicao_atual}º colocado</strong> · {time.pts} pontos em {time.j} jogos
+      </p>
+    </div>
+    {time.ultimos_jogos && time.ultimos_jogos.length > 0 && (
+      <div class="ultimos">
+        <span class="ultimos-label">Últimos jogos</span>
+        <div class="bolinhas">
+          {time.ultimos_jogos.map((r) => (
+            <span class={`bola ${r}`} title={resultadoLabel[r] || r}>{r.toUpperCase()}</span>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+
+  <h2>Probabilidades</h2>
+  <div class="cards">
+    <div class="card">
+      <span class="card-rotulo">🏆 Título</span>
+      <span class="card-valor verde">{time.titulo.toFixed(1)}%</span>
+      <div class="card-barra"><div style={`width:${time.titulo}%;background:var(--verde)`}></div></div>
+    </div>
+    <div class="card">
+      <span class="card-rotulo">⬆️ Acesso direto (1º-2º)</span>
+      <span class="card-valor azul">{time.acesso_direto.toFixed(1)}%</span>
+      <div class="card-barra"><div style={`width:${time.acesso_direto}%;background:#2a78d6`}></div></div>
+    </div>
+    <div class="card">
+      <span class="card-rotulo">🎯 Zona de playoff (3º-6º)</span>
+      <span class="card-valor ambar">{time.playoff.toFixed(1)}%</span>
+      <div class="card-barra"><div style={`width:${time.playoff}%;background:#e0a020`}></div></div>
+    </div>
+    <div class="card">
+      <span class="card-rotulo">⬇️ Rebaixamento (Z4)</span>
+      <span class="card-valor vermelho">{time.z4.toFixed(1)}%</span>
+      <div class="card-barra"><div style={`width:${time.z4}%;background:var(--vermelho)`}></div></div>
+    </div>
+  </div>
+  <p class="meta">Atualizado em <strong>{atualizadoBR}</strong></p>
+
+  <div class="explica-formato">
+    Na Série B, apenas o <strong>1º e 2º</strong> sobem direto. Quem termina entre
+    <strong>3º e 6º</strong> disputa playoffs em mata-mata pelas outras duas vagas.
+    Os quatro últimos caem para a Série C.
+  </div>
+
+  {time.por_modelo && (
+    <>
+      <h2>Chance de título por modelo</h2>
+      <p class="explica">
+        O número principal é a média de três modelos. Quando eles discordam, o cenário
+        é mais incerto. <a href="/metodologia/">Entenda os modelos</a>.
+      </p>
+      <div class="modelos">
+        <div class="modelo">
+          <span class="modelo-nome">Poisson</span>
+          <span class="modelo-valor">{time.por_modelo.poisson.toFixed(1)}%</span>
+        </div>
+        <div class="modelo">
+          <span class="modelo-nome">Dixon-Coles</span>
+          <span class="modelo-valor">{time.por_modelo.dixon_coles.toFixed(1)}%</span>
+        </div>
+        <div class="modelo">
+          <span class="modelo-nome">Elo</span>
+          <span class="modelo-valor">{time.por_modelo.elo.toFixed(1)}%</span>
+        </div>
+      </div>
+    </>
+  )}
+
+  <h2>Campanha</h2>
+  <div class="campanha">
+    {time.vitorias !== null && time.vitorias !== undefined && (
+      <div class="stat"><span class="stat-num">{time.vitorias}</span><span class="stat-lbl">Vitórias</span></div>
+    )}
+    {time.empates !== null && time.empates !== undefined && (
+      <div class="stat"><span class="stat-num">{time.empates}</span><span class="stat-lbl">Empates</span></div>
+    )}
+    {time.derrotas !== null && time.derrotas !== undefined && (
+      <div class="stat"><span class="stat-num">{time.derrotas}</span><span class="stat-lbl">Derrotas</span></div>
+    )}
+    <div class="stat"><span class="stat-num">{time.gp}</span><span class="stat-lbl">Gols pró</span></div>
+    <div class="stat"><span class="stat-num">{time.gc}</span><span class="stat-lbl">Gols contra</span></div>
+    <div class="stat"><span class="stat-num">{time.sg > 0 ? '+' : ''}{time.sg}</span><span class="stat-lbl">Saldo</span></div>
+    {time.aproveitamento !== null && time.aproveitamento !== undefined && (
+      <div class="stat"><span class="stat-num">{time.aproveitamento}%</span><span class="stat-lbl">Aproveitamento</span></div>
+    )}
+  </div>
+
+  {jogosDoTime.length > 0 && (
+    <>
+      <h2>Próximos jogos</h2>
+      <div class="jogos-time">
+        {jogosDoTime.map((j) => {
+          const emCasa = j.mandante === time.time;
+          const adversario = emCasa ? j.visitante : j.mandante;
+          const pVitoria = emCasa ? j.casa : j.fora;
+          const pDerrota = emCasa ? j.fora : j.casa;
+          return (
+            <div class="jogo-linha">
+              <div class="jogo-info">
+                <span class={`mando ${emCasa ? 'casa' : 'fora'}`}>{emCasa ? 'Casa' : 'Fora'}</span>
+                <span class="adv">{adversario}</span>
+              </div>
+              <div class="jogo-probs">
+                <span class="jp">Vitória <strong>{pVitoria.toFixed(0)}%</strong></span>
+                <span class="jp">Empate <strong>{j.empate.toFixed(0)}%</strong></span>
+                <span class="jp">Derrota <strong>{pDerrota.toFixed(0)}%</strong></span>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </>
+  )}
+
+  {histTime.length >= 2 && (
+    <>
+      <h2>Evolução das chances</h2>
+      <div class="grafico-controles">
+        <button class="tbtn ativo" data-metrica="titulo">Título</button>
+        <button class="tbtn" data-metrica="acesso_direto">Acesso direto</button>
+        <button class="tbtn" data-metrica="playoff">Playoff</button>
+        <button class="tbtn" data-metrica="z4">Rebaixamento</button>
+      </div>
+      <div id="grafico-time" class="grafico-area"></div>
+    </>
+  )}
+
+  <h2>Ver outro time</h2>
+  <div class="outros-times">
+    {outros.map((o) => (
+      <a class={`chip ${o.slug === time.slug ? 'atual' : ''}`} href={`/serie-b/time/${o.slug}/`}>{o.nome}</a>
+    ))}
+  </div>
+
+  <p class="disclaimer">
+    Probabilidades calculadas por simulação de Monte Carlo, atualizadas diariamente.
+    <a href="/metodologia/">Entenda a metodologia</a> ·
+    <a href="/serie-b/">voltar à Série B</a>.
+  </p>
+
+  <script is:inline set:html={`window.HIST_TIME = ${dadosGraficoTime};`}></script>
+  <script is:inline>
+    (function () {
+      const hist = window.HIST_TIME;
+      if (!hist || hist.length < 2) return;
+      const area = document.getElementById('grafico-time');
+      if (!area) return;
+      const W = 700, H = 260, ML = 40, MR = 20, MT = 20, MB = 36;
+      const iw = W - ML - MR, ih = H - MT - MB;
+      let metrica = 'titulo';
+      const cores = {
+        titulo: '#1baf7a', acesso_direto: '#2a78d6',
+        playoff: '#e0a020', z4: '#e34948',
+      };
+
+      function desenhar() {
+        let maxV = 10;
+        hist.forEach(r => { if (r[metrica] > maxV) maxV = r[metrica]; });
+        maxV = Math.ceil(maxV / 10) * 10;
+        const x = i => ML + (hist.length === 1 ? iw/2 : (i/(hist.length-1))*iw);
+        const y = v => MT + ih - (v/maxV)*ih;
+        let svg = '<svg viewBox="0 0 '+W+' '+H+'" style="width:100%;height:auto;">';
+        for (let g = 0; g <= maxV; g += (maxV/4)) {
+          const gy = y(g);
+          svg += '<line x1="'+ML+'" y1="'+gy+'" x2="'+(W-MR)+'" y2="'+gy+'" stroke="#e5e7eb"/>';
+          svg += '<text x="'+(ML-6)+'" y="'+(gy+4)+'" text-anchor="end" font-size="11" fill="#9ca3af">'+Math.round(g)+'%</text>';
+        }
+        const passo = Math.ceil(hist.length/6);
+        hist.forEach((r,i) => {
+          if (i % passo !== 0 && i !== hist.length-1) return;
+          const dd = r.data.slice(8,10)+'/'+r.data.slice(5,7);
+          svg += '<text x="'+x(i)+'" y="'+(H-MB+18)+'" text-anchor="middle" font-size="11" fill="#9ca3af">'+dd+'</text>';
+        });
+        let d = '';
+        hist.forEach((r,i) => { d += (i===0?'M':'L')+x(i)+' '+y(r[metrica])+' '; });
+        svg += '<path d="'+d+'" fill="none" stroke="'+cores[metrica]+'" stroke-width="2.5"/>';
+        svg += '<circle cx="'+x(hist.length-1)+'" cy="'+y(hist[hist.length-1][metrica])+'" r="4" fill="'+cores[metrica]+'"/>';
+        svg += '</svg>';
+        area.innerHTML = svg;
+      }
+      document.querySelectorAll('.tbtn').forEach(b => {
+        b.addEventListener('click', () => {
+          document.querySelectorAll('.tbtn').forEach(x => x.classList.remove('ativo'));
+          b.classList.add('ativo');
+          metrica = b.getAttribute('data-metrica');
+          desenhar();
+        });
+      });
+      desenhar();
+    })();
+  </script>
+</Base>
+
+<style>
+  .migalha { font-size: 0.85rem; color: var(--cinza); margin-bottom: 0.5rem; }
+  .cabecalho-time {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;
+  }
+  .cabecalho-time h1 { margin-bottom: 0.25rem; }
+  .sub { color: var(--cinza); margin: 0; }
+  .ultimos { text-align: right; }
+  .ultimos-label {
+    display: block; font-size: 0.75rem; color: var(--cinza);
+    text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 0.35rem;
+  }
+  .bolinhas { display: flex; gap: 4px; }
+  .bola {
+    width: 24px; height: 24px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.7rem; font-weight: 700; color: #fff;
+  }
+  .bola.v { background: #1baf7a; }
+  .bola.e { background: #c8a415; }
+  .bola.d { background: #e34948; }
+
+  .cards {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 1rem; margin-bottom: 0.5rem;
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--borda);
+    border-radius: 8px; padding: 1rem;
+  }
+  .card-rotulo { display: block; font-size: 0.82rem; color: var(--cinza); margin-bottom: 0.35rem; }
+  .card-valor { display: block; font-size: 1.9rem; font-weight: 800; line-height: 1; }
+  .card-valor.verde { color: #1baf7a; }
+  .card-valor.azul { color: #2a78d6; }
+  .card-valor.ambar { color: #c8890f; }
+  .card-valor.vermelho { color: #e34948; }
+  .card-barra {
+    height: 6px; background: #f0f2f5; border-radius: 3px;
+    margin-top: 0.6rem; overflow: hidden;
+  }
+  .card-barra div { height: 100%; border-radius: 3px; }
+  .meta { color: var(--cinza); font-size: 0.85rem; }
+
+  .explica-formato {
+    background: #eef3fb; border-left: 3px solid var(--azul);
+    padding: 0.8rem 1rem; border-radius: 0 6px 6px 0;
+    font-size: 0.9rem; margin: 1rem 0 1.5rem; line-height: 1.5;
+  }
+
+  .explica { color: var(--cinza); font-size: 0.92rem; max-width: 65ch; }
+  .modelos { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .modelo {
+    background: var(--card); border: 1px solid var(--borda);
+    border-radius: 8px; padding: 0.8rem 1.2rem; flex: 1; min-width: 130px;
+  }
+  .modelo-nome { display: block; font-size: 0.8rem; color: var(--cinza); }
+  .modelo-valor { display: block; font-size: 1.4rem; font-weight: 700; }
+
+  .campanha {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 0.75rem;
+  }
+  .stat {
+    background: var(--card); border: 1px solid var(--borda);
+    border-radius: 8px; padding: 0.8rem; text-align: center;
+  }
+  .stat-num { display: block; font-size: 1.35rem; font-weight: 700; }
+  .stat-lbl { display: block; font-size: 0.75rem; color: var(--cinza); margin-top: 0.15rem; }
+
+  .jogos-time { display: flex; flex-direction: column; gap: 0.6rem; }
+  .jogo-linha {
+    background: var(--card); border: 1px solid var(--borda);
+    border-radius: 8px; padding: 0.85rem 1rem;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 0.75rem;
+  }
+  .jogo-info { display: flex; align-items: center; gap: 0.6rem; }
+  .mando {
+    font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+    padding: 0.2rem 0.5rem; border-radius: 4px;
+  }
+  .mando.casa { background: #e8f6ef; color: #0d7a52; }
+  .mando.fora { background: #eef3fb; color: #1c5aa8; }
+  .adv { font-weight: 600; }
+  .jogo-probs { display: flex; gap: 1rem; font-size: 0.85rem; color: var(--cinza); }
+  .jp strong { color: var(--texto); }
+
+  .grafico-controles { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+  .tbtn {
+    padding: 0.35rem 0.8rem; border: 1px solid var(--borda);
+    background: var(--fundo); color: var(--cinza); border-radius: 6px;
+    font-size: 0.85rem; font-weight: 600; cursor: pointer;
+  }
+  .tbtn.ativo { background: var(--verde); color: #fff; border-color: var(--verde); }
+  .grafico-area {
+    background: var(--card); border: 1px solid var(--borda);
+    border-radius: 8px; padding: 1rem;
+  }
+
+  .outros-times { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .chip {
+    padding: 0.35rem 0.75rem; border: 1px solid var(--borda);
+    border-radius: 20px; font-size: 0.85rem; color: var(--texto);
+    background: var(--card);
+  }
+  .chip:hover { border-color: var(--verde); color: var(--verde); text-decoration: none; }
+  .chip.atual { background: var(--verde); color: #fff; border-color: var(--verde); }
+
+  .disclaimer {
+    margin-top: 2rem; padding: 1rem;
+    background: #f6f7f9; border-radius: 6px;
+    font-size: 0.9rem; color: var(--cinza);
+  }
+</style>
