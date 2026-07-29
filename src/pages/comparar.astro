@@ -1,0 +1,185 @@
+---
+// Comparador: escolhe dois times e mostra as probabilidades lado a lado.
+// Os dados vêm do JSON estático; a troca é feita por JavaScript no cliente.
+import Base from '../layouts/Base.astro';
+import dados from '../data/probabilidades.json';
+
+const { tabela, atualizado_em } = dados;
+const atualizadoBR = new Date(atualizado_em).toLocaleString('pt-BR', {
+  day: '2-digit', month: '2-digit', year: 'numeric',
+  hour: '2-digit', minute: '2-digit', timeZone: 'America/Sao_Paulo',
+});
+
+// nomes em ordem alfabética para os seletores
+const nomes = tabela.map((t) => t.time).sort((a, b) => a.localeCompare(b, 'pt-BR'));
+// dados enxutos para o JS
+const dadosComparador = JSON.stringify(
+  Object.fromEntries(tabela.map((t) => [t.time, {
+    titulo: t.titulo, g5: t.g5, z4: t.z4, pos: t.posicao_atual,
+  }]))
+);
+// padrão: os dois primeiros colocados
+const padraoA = tabela[0]?.time ?? '';
+const padraoB = tabela[1]?.time ?? '';
+---
+<Base
+  title="Comparar times — Chances no Brasileirão 2026 | Bolaverso"
+  description="Compare dois times do Brasileirão lado a lado: chances de título, Libertadores e rebaixamento, atualizadas diariamente."
+>
+  <h1>Comparar times</h1>
+  <p class="lead">
+    Escolha dois times e veja lado a lado as chances de <strong>título</strong>,
+    <strong>Libertadores</strong> e <strong>rebaixamento</strong>.
+  </p>
+  <p class="meta">Atualizado em <strong>{atualizadoBR}</strong></p>
+
+  <div class="seletores">
+    <div class="sel-box">
+      <label for="timeA">Time 1</label>
+      <select id="timeA">
+        {nomes.map((n) => <option value={n} selected={n === padraoA}>{n}</option>)}
+      </select>
+    </div>
+    <span class="versus">×</span>
+    <div class="sel-box">
+      <label for="timeB">Time 2</label>
+      <select id="timeB">
+        {nomes.map((n) => <option value={n} selected={n === padraoB}>{n}</option>)}
+      </select>
+    </div>
+  </div>
+
+  <div id="resultado" class="comparacao"></div>
+
+  <p class="disclaimer">
+    Probabilidades calculadas por simulação de Monte Carlo.
+    <a href="/metodologia/">Entenda a metodologia</a>.
+  </p>
+
+  <script is:inline set:html={`window.DADOS_COMPARADOR = ${dadosComparador};`}></script>
+  <script is:inline>
+    (function () {
+      const dados = window.DADOS_COMPARADOR;
+      if (!dados) return;
+      const selA = document.getElementById('timeA');
+      const selB = document.getElementById('timeB');
+      const alvo = document.getElementById('resultado');
+
+      const METRICAS = [
+        { chave: 'titulo', rotulo: 'Título', cor: 'var(--verde)' },
+        { chave: 'g5', rotulo: 'Libertadores (G5)', cor: 'var(--azul)' },
+        { chave: 'z4', rotulo: 'Rebaixamento (Z4)', cor: 'var(--vermelho)' },
+      ];
+
+      function linha(m, a, b, nomeA, nomeB) {
+        const va = a[m.chave], vb = b[m.chave];
+        // barra proporcional ao maior dos dois (mínimo 1 para não dividir por zero)
+        const max = Math.max(va, vb, 1);
+        const la = (va / max) * 100, lb = (vb / max) * 100;
+        // destaca quem tem vantagem (no Z4, menor é melhor)
+        const melhorA = m.chave === 'z4' ? va < vb : va > vb;
+        const melhorB = m.chave === 'z4' ? vb < va : vb > va;
+        return (
+          '<div class="metrica">' +
+            '<div class="metrica-nome">' + m.rotulo + '</div>' +
+            '<div class="metrica-linha">' +
+              '<div class="lado esq ' + (melhorA ? 'vantagem' : '') + '">' +
+                '<span class="num">' + va.toFixed(1) + '%</span>' +
+                '<div class="barra-comp"><div class="preench" style="width:' + la + '%;background:' + m.cor + '"></div></div>' +
+              '</div>' +
+              '<div class="lado dir ' + (melhorB ? 'vantagem' : '') + '">' +
+                '<div class="barra-comp"><div class="preench" style="width:' + lb + '%;background:' + m.cor + '"></div></div>' +
+                '<span class="num">' + vb.toFixed(1) + '%</span>' +
+              '</div>' +
+            '</div>' +
+          '</div>'
+        );
+      }
+
+      function render() {
+        const nomeA = selA.value, nomeB = selB.value;
+        const a = dados[nomeA], b = dados[nomeB];
+        if (!a || !b) return;
+        if (nomeA === nomeB) {
+          alvo.innerHTML = '<p class="aviso">Escolha dois times diferentes para comparar.</p>';
+          return;
+        }
+        let html = '<div class="cabecalho">' +
+          '<div class="time-nome">' + nomeA + '<span class="pos">' + a.pos + 'º</span></div>' +
+          '<div class="time-nome">' + nomeB + '<span class="pos">' + b.pos + 'º</span></div>' +
+        '</div>';
+        METRICAS.forEach(m => { html += linha(m, a, b, nomeA, nomeB); });
+        alvo.innerHTML = html;
+      }
+
+      selA.addEventListener('change', render);
+      selB.addEventListener('change', render);
+      render();
+    })();
+  </script>
+</Base>
+
+<style>
+  .lead { font-size: 1.1rem; max-width: 62ch; }
+  .meta { color: var(--cinza); font-size: 0.9rem; margin-top: -0.25rem; }
+
+  .seletores {
+    display: flex; align-items: flex-end; gap: 1rem;
+    flex-wrap: wrap; margin: 1.5rem 0;
+  }
+  .sel-box { display: flex; flex-direction: column; gap: 0.3rem; flex: 1; min-width: 160px; }
+  .sel-box label { font-size: 0.85rem; color: var(--cinza); font-weight: 600; }
+  .sel-box select {
+    padding: 0.55rem 0.7rem;
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    background: var(--card);
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  .versus { color: var(--cinza); font-size: 1.3rem; padding-bottom: 0.5rem; }
+
+  .comparacao {
+    background: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    padding: 1.25rem;
+  }
+  .cabecalho {
+    display: flex; justify-content: space-between;
+    padding-bottom: 0.9rem; margin-bottom: 1rem;
+    border-bottom: 1px solid var(--borda);
+  }
+  .time-nome { font-weight: 700; font-size: 1.05rem; }
+  .time-nome .pos {
+    color: var(--cinza); font-weight: 500; font-size: 0.85rem; margin-left: 0.4rem;
+  }
+  .metrica { margin-bottom: 1.1rem; }
+  .metrica:last-child { margin-bottom: 0; }
+  .metrica-nome {
+    text-align: center; font-size: 0.85rem; color: var(--cinza);
+    font-weight: 600; margin-bottom: 0.4rem;
+  }
+  .metrica-linha { display: flex; gap: 0.75rem; align-items: center; }
+  .lado { display: flex; align-items: center; gap: 0.5rem; flex: 1; }
+  .lado.esq { flex-direction: row-reverse; }
+  .lado .num {
+    font-weight: 700; font-size: 0.95rem; min-width: 52px;
+    color: var(--cinza);
+  }
+  .lado.esq .num { text-align: right; }
+  .lado.vantagem .num { color: var(--texto); }
+  .barra-comp {
+    flex: 1; height: 18px; background: #f0f2f5;
+    border-radius: 4px; overflow: hidden; display: flex;
+  }
+  .lado.esq .barra-comp { justify-content: flex-end; }
+  .preench { height: 100%; border-radius: 4px; opacity: 0.85; }
+  .aviso { color: var(--cinza); text-align: center; padding: 1rem; }
+  .disclaimer {
+    margin-top: 2rem; padding: 1rem;
+    background: #f6f7f9; border-radius: 6px;
+    font-size: 0.9rem; color: var(--cinza);
+  }
+</style>
