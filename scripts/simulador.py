@@ -308,7 +308,7 @@ def carregar_do_ge(url="https://ge.globo.com/futebol/brasileirao-serie-a/",
         html = r.text
 
     # extrai classificacao e listaJogos dos blocos JS embutidos
-    times, _confrontos, _proximos = _extrai_ge_json(html)
+    times, _confrontos, _proximos, _extras = _extrai_ge_json(html)
     if len(times) < 16:
         raise ErroAPI(
             f"Só achei {len(times)} times no HTML do GE. A página pode ter "
@@ -367,6 +367,7 @@ def _extrai_ge_json(html):
 
     # --- classificação ---
     times = []
+    extras = {}
     raw = _extrai_bloco(r'const\s+classificacao\s*=\s*', 'classificacao')
     if raw:
         try:
@@ -385,7 +386,16 @@ def _extrai_ge_json(html):
                     continue
                 if not (0 <= j <= 38 and 0 <= p <= 114):
                     continue
-                times.append(Time(_alias.get(nome, nome), p, j, gp, gc))
+                nome_final = _alias.get(nome, nome)
+                times.append(Time(nome_final, p, j, gp, gc))
+                # dados extras usados nas páginas por time
+                extras[nome_final] = {
+                    "ultimos_jogos": entry.get("ultimos_jogos") or [],
+                    "aproveitamento": entry.get("aproveitamento"),
+                    "vitorias": entry.get("vitorias"),
+                    "empates": entry.get("empates"),
+                    "derrotas": entry.get("derrotas"),
+                }
         except json.JSONDecodeError:
             pass
 
@@ -421,7 +431,7 @@ def _extrai_ge_json(html):
         if confrontos or proximos:
             break
 
-    return times, confrontos, proximos
+    return times, confrontos, proximos, extras
 
 
 def carregar_de_texto(texto: str) -> Estado:

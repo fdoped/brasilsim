@@ -65,7 +65,7 @@ function corProvavel(p: string): string {
         {tabela.map((t) => (
           <tr>
             <td class="pos">{t.posicao_atual}</td>
-            <td class="left nome">{t.time}</td>
+            <td class="left nome"><a href={`/time/${t.slug}/`}>{t.time}</a></td>
             <td>{t.pts}</td>
             <td>{t.j}</td>
             <td>
@@ -349,6 +349,8 @@ function corProvavel(p: string): string {
   }
   .tabela .left { text-align: left; }
   .tabela .nome { font-weight: 600; }
+  .tabela .nome a { color: var(--texto); }
+  .tabela .nome a:hover { color: var(--verde); }
   .tabela .pos { color: var(--cinza); }
   .tabela .prob { min-width: 100px; }
   .tabela tr:last-child td { border-bottom: none; }
