@@ -137,7 +137,9 @@ const graficoDados = JSON.stringify({ historico, times: top5, cores: cores5 });
                 <div class="prob-barra" style={`background: var(--azul); width: ${j.fora}%`}></div>
               </div>
             </div>
-            <div class="placar-provavel">Placar mais provável: <strong>{j.placar_provavel}</strong></div>
+            <div class="placar-provavel">
+              Gols esperados: <strong>{j.gols_esperados ? `${j.gols_esperados[0].toFixed(2).replace('.', ',')} × ${j.gols_esperados[1].toFixed(2).replace('.', ',')}` : '—'}</strong>
+            </div>
           </div>
         ))}
       </div>

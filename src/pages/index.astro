@@ -117,7 +117,11 @@ function corProvavel(p: string): string {
   {proximos_jogos.length > 0 && (
     <>
       <h2>Probabilidades da próxima rodada</h2>
-      <p>Chance de cada resultado calculada pelo modelo Dixon-Coles.</p>
+      <p class="explica-jogos">
+        Chance de cada resultado pelo modelo Dixon-Coles. Os <strong>gols esperados</strong>
+        são a média de gols que o modelo projeta para cada time no confronto — quanto maior
+        a diferença, mais favorito é o time.
+      </p>
       <div class="jogos">
         {proximos_jogos.map((j) => (
           <div class="jogo">
@@ -143,7 +147,9 @@ function corProvavel(p: string): string {
                 <div class="prob-barra" style={`background: var(--azul); width: ${j.fora}%`}></div>
               </div>
             </div>
-            <div class="placar-provavel">Placar mais provável: <strong>{j.placar_provavel}</strong></div>
+            <div class="placar-provavel">
+              Gols esperados: <strong>{j.gols_esperados ? `${j.gols_esperados[0].toFixed(2).replace('.', ',')} × ${j.gols_esperados[1].toFixed(2).replace('.', ',')}` : '—'}</strong>
+            </div>
           </div>
         ))}
       </div>
@@ -409,6 +415,9 @@ function corProvavel(p: string): string {
   }
   .placar-provavel {
     margin-top: 0.75rem; font-size: 0.85rem; color: var(--cinza);
+  }
+  .explica-jogos {
+    color: var(--cinza); font-size: 0.92rem; max-width: 68ch; margin-top: -0.25rem;
   }
   .disclaimer {
     margin-top: 2rem; padding: 1rem;

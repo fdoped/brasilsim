@@ -912,8 +912,13 @@ def probabilidades_por_jogo(e: Estado, jogos, maxg=6, rho=-0.05, mando=0.25):
         p_casa = float(M[idx_i > idx_j].sum())
         p_empate = float(np.diag(M).sum())
         p_fora = float(M[idx_i < idx_j].sum())
-        # placar mais provável
-        placar = np.unravel_index(int(np.argmax(M)), M.shape)
+        # três placares mais prováveis (com suas probabilidades)
+        planos = [(float(M[a, b]), a, b) for a in range(maxg + 1) for b in range(maxg + 1)]
+        planos.sort(reverse=True)
+        top_placares = [
+            {"placar": f"{a}x{b}", "prob": round(100 * p, 1)}
+            for p, a, b in planos[:3]
+        ]
         provavel = ("casa" if p_casa > max(p_empate, p_fora)
                     else "empate" if p_empate > p_fora else "fora")
         resultado.append({
@@ -922,7 +927,9 @@ def probabilidades_por_jogo(e: Estado, jogos, maxg=6, rho=-0.05, mando=0.25):
             "casa": round(100*p_casa, 1),
             "empate": round(100*p_empate, 1),
             "fora": round(100*p_fora, 1),
-            "placar_provavel": f"{placar[0]}x{placar[1]}",
+            "gols_esperados": [round(lc, 2), round(lf, 2)],
+            "top_placares": top_placares,
+            "placar_provavel": top_placares[0]["placar"],
             "provavel": provavel,
         })
     return resultado
