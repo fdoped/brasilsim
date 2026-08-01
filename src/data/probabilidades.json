@@ -1,6 +1,6 @@
 {
   "competicao": "Série A",
-  "atualizado_em": "2026-07-31T08:32:31.212206-03:00",
+  "atualizado_em": "2026-08-01T07:44:18.047753-03:00",
   "fonte": "ge.globo",
   "nsim": 30000,
   "sigma": 0.4,
@@ -40,12 +40,12 @@
         "v"
       ],
       "por_modelo": {
-        "poisson": 61.9,
-        "dixon_coles": 62.2,
-        "elo": 74.0
+        "poisson": 62.2,
+        "dixon_coles": 62.4,
+        "elo": 73.8
       },
-      "titulo": 66.0,
-      "g5": 98.9,
+      "titulo": 66.1,
+      "g5": 98.8,
       "z4": 0.0
     },
     {
@@ -69,12 +69,12 @@
         "e"
       ],
       "por_modelo": {
-        "poisson": 27.1,
-        "dixon_coles": 27.2,
-        "elo": 22.1
+        "poisson": 26.9,
+        "dixon_coles": 27.0,
+        "elo": 22.5
       },
-      "titulo": 25.4,
-      "g5": 93.6,
+      "titulo": 25.5,
+      "g5": 93.7,
       "z4": 0.0
     },
     {
@@ -98,12 +98,12 @@
         "e"
       ],
       "por_modelo": {
-        "poisson": 4.5,
+        "poisson": 4.6,
         "dixon_coles": 4.5,
-        "elo": 2.3
+        "elo": 2.1
       },
-      "titulo": 3.8,
-      "g5": 65.4,
+      "titulo": 3.7,
+      "g5": 65.6,
       "z4": 0.1
     },
     {
@@ -127,11 +127,11 @@
         "e"
       ],
       "por_modelo": {
-        "poisson": 1.9,
-        "dixon_coles": 1.8,
-        "elo": 0.7
+        "poisson": 2.0,
+        "dixon_coles": 2.0,
+        "elo": 0.6
       },
-      "titulo": 1.4,
+      "titulo": 1.5,
       "g5": 40.9,
       "z4": 1.4
     },
@@ -156,11 +156,11 @@
         "e"
       ],
       "por_modelo": {
-        "poisson": 1.2,
-        "dixon_coles": 1.1,
+        "poisson": 1.1,
+        "dixon_coles": 1.0,
         "elo": 0.3
       },
-      "titulo": 0.9,
+      "titulo": 0.8,
       "g5": 36.2,
       "z4": 1.2
     },
@@ -185,9 +185,9 @@
         "e"
       ],
       "por_modelo": {
-        "poisson": 0.9,
-        "dixon_coles": 1.0,
-        "elo": 0.3
+        "poisson": 1.0,
+        "dixon_coles": 0.9,
+        "elo": 0.2
       },
       "titulo": 0.7,
       "g5": 39.1,
@@ -214,13 +214,13 @@
         "v"
       ],
       "por_modelo": {
-        "poisson": 1.0,
-        "dixon_coles": 0.9,
+        "poisson": 0.9,
+        "dixon_coles": 0.8,
         "elo": 0.1
       },
-      "titulo": 0.7,
-      "g5": 28.9,
-      "z4": 4.6
+      "titulo": 0.6,
+      "g5": 28.8,
+      "z4": 4.7
     },
     {
       "posicao_atual": 12,
@@ -244,12 +244,12 @@
       ],
       "por_modelo": {
         "poisson": 0.4,
-        "dixon_coles": 0.4,
-        "elo": 0.0
+        "dixon_coles": 0.3,
+        "elo": 0.1
       },
       "titulo": 0.3,
       "g5": 17.3,
-      "z4": 7.5
+      "z4": 7.4
     },
     {
       "posicao_atual": 10,
@@ -273,11 +273,11 @@
       ],
       "por_modelo": {
         "poisson": 0.3,
-        "dixon_coles": 0.4,
+        "dixon_coles": 0.3,
         "elo": 0.1
       },
-      "titulo": 0.3,
-      "g5": 19.3,
+      "titulo": 0.2,
+      "g5": 19.5,
       "z4": 7.7
     },
     {
@@ -306,7 +306,7 @@
         "elo": 0.1
       },
       "titulo": 0.2,
-      "g5": 17.3,
+      "g5": 17.2,
       "z4": 6.1
     },
     {
@@ -330,13 +330,13 @@
         "e"
       ],
       "por_modelo": {
-        "poisson": 0.1,
+        "poisson": 0.2,
         "dixon_coles": 0.2,
         "elo": 0.0
       },
       "titulo": 0.1,
       "g5": 13.9,
-      "z4": 6.5
+      "z4": 6.6
     },
     {
       "posicao_atual": 11,
@@ -359,13 +359,13 @@
         "d"
       ],
       "por_modelo": {
-        "poisson": 0.1,
-        "dixon_coles": 0.0,
+        "poisson": 0.0,
+        "dixon_coles": 0.1,
         "elo": 0.0
       },
       "titulo": 0.0,
       "g5": 9.0,
-      "z4": 14.3
+      "z4": 14.5
     },
     {
       "posicao_atual": 15,
@@ -451,8 +451,8 @@
         "elo": 0.0
       },
       "titulo": 0.0,
-      "g5": 3.5,
-      "z4": 34.2
+      "g5": 3.6,
+      "z4": 34.5
     },
     {
       "posicao_atual": 13,
@@ -510,7 +510,7 @@
       },
       "titulo": 0.0,
       "g5": 2.1,
-      "z4": 41.2
+      "z4": 40.8
     },
     {
       "posicao_atual": 16,
@@ -538,7 +538,7 @@
         "elo": 0.0
       },
       "titulo": 0.0,
-      "g5": 1.4,
+      "g5": 1.5,
       "z4": 42.6
     },
     {
@@ -567,7 +567,7 @@
         "elo": 0.0
       },
       "titulo": 0.0,
-      "g5": 0.8,
+      "g5": 0.7,
       "z4": 53.8
     },
     {
@@ -597,86 +597,28 @@
       },
       "titulo": 0.0,
       "g5": 0.0,
-      "z4": 95.5
+      "z4": 95.4
     }
   ],
   "proximos_jogos": [
     {
-      "mandante": "Botafogo",
-      "visitante": "Grêmio",
-      "casa": 50.8,
-      "empate": 23.0,
-      "fora": 26.2,
+      "mandante": "Grêmio",
+      "visitante": "São Paulo",
+      "casa": 35.1,
+      "empate": 28.4,
+      "fora": 36.4,
       "gols_esperados": [
-        1.96,
-        1.36
-      ],
-      "top_placares": [
-        {
-          "placar": "1x1",
-          "prob": 10.2
-        },
-        {
-          "placar": "2x1",
-          "prob": 9.5
-        },
-        {
-          "placar": "2x0",
-          "prob": 7.0
-        }
-      ],
-      "placar_provavel": "1x1",
-      "provavel": "casa",
-      "data": null,
-      "sede": "Nilton Santos (Engenhão)"
-    },
-    {
-      "mandante": "São Paulo",
-      "visitante": "Santos",
-      "casa": 49.8,
-      "empate": 23.9,
-      "fora": 26.3,
-      "gols_esperados": [
-        1.84,
-        1.29
-      ],
-      "top_placares": [
-        {
-          "placar": "1x1",
-          "prob": 10.9
-        },
-        {
-          "placar": "2x1",
-          "prob": 9.6
-        },
-        {
-          "placar": "1x0",
-          "prob": 7.6
-        }
-      ],
-      "placar_provavel": "1x1",
-      "provavel": "casa",
-      "data": null,
-      "sede": null
-    },
-    {
-      "mandante": "Atlético-MG",
-      "visitante": "RB Bragantino",
-      "casa": 34.8,
-      "empate": 28.5,
-      "fora": 36.7,
-      "gols_esperados": [
-        1.21,
+        1.23,
         1.25
       ],
       "top_placares": [
         {
           "placar": "1x1",
-          "prob": 13.6
+          "prob": 13.5
         },
         {
           "placar": "0x1",
-          "prob": 10.0
+          "prob": 9.9
         },
         {
           "placar": "1x0",
@@ -685,37 +627,269 @@
       ],
       "placar_provavel": "1x1",
       "provavel": "fora",
-      "data": null,
-      "sede": "Arena MRV"
+      "data": "2026-08-08T16:00",
+      "sede": "Arena do Grêmio"
     },
     {
-      "mandante": "Chapecoense",
-      "visitante": "Vasco",
-      "casa": 28.9,
-      "empate": 23.9,
-      "fora": 47.1,
+      "mandante": "Remo",
+      "visitante": "Atlético-MG",
+      "casa": 32.5,
+      "empate": 25.7,
+      "fora": 41.8,
       "gols_esperados": [
-        1.39,
-        1.82
+        1.35,
+        1.56
       ],
       "top_placares": [
         {
           "placar": "1x1",
-          "prob": 10.8
+          "prob": 12.0
         },
         {
           "placar": "1x2",
-          "prob": 9.3
+          "prob": 9.0
         },
         {
-          "placar": "2x1",
-          "prob": 7.1
+          "placar": "0x1",
+          "prob": 7.9
         }
       ],
       "placar_provavel": "1x1",
       "provavel": "fora",
-      "data": null,
-      "sede": "Arena Condá"
+      "data": "2026-08-08T18:30",
+      "sede": "Mangueirão"
+    },
+    {
+      "mandante": "Coritiba",
+      "visitante": "Chapecoense",
+      "casa": 63.1,
+      "empate": 20.9,
+      "fora": 15.9,
+      "gols_esperados": [
+        2.13,
+        0.98
+      ],
+      "top_placares": [
+        {
+          "placar": "2x0",
+          "prob": 10.2
+        },
+        {
+          "placar": "2x1",
+          "prob": 10.0
+        },
+        {
+          "placar": "1x1",
+          "prob": 9.8
+        }
+      ],
+      "placar_provavel": "2x0",
+      "provavel": "casa",
+      "data": "2026-08-08T20:30",
+      "sede": "Couto Pereira"
+    },
+    {
+      "mandante": "Botafogo",
+      "visitante": "Fluminense",
+      "casa": 39.4,
+      "empate": 23.0,
+      "fora": 37.5,
+      "gols_esperados": [
+        1.81,
+        1.76
+      ],
+      "top_placares": [
+        {
+          "placar": "1x1",
+          "prob": 9.4
+        },
+        {
+          "placar": "2x1",
+          "prob": 8.1
+        },
+        {
+          "placar": "1x2",
+          "prob": 7.9
+        }
+      ],
+      "placar_provavel": "1x1",
+      "provavel": "casa",
+      "data": "2026-08-08T21:00",
+      "sede": "Nilton Santos (Engenhão)"
+    },
+    {
+      "mandante": "Cruzeiro",
+      "visitante": "Mirassol",
+      "casa": 44.3,
+      "empate": 25.8,
+      "fora": 29.9,
+      "gols_esperados": [
+        1.59,
+        1.27
+      ],
+      "top_placares": [
+        {
+          "placar": "1x1",
+          "prob": 12.2
+        },
+        {
+          "placar": "2x1",
+          "prob": 9.2
+        },
+        {
+          "placar": "1x0",
+          "prob": 8.6
+        }
+      ],
+      "placar_provavel": "1x1",
+      "provavel": "casa",
+      "data": "2026-08-09T11:00",
+      "sede": "Mineirão"
+    },
+    {
+      "mandante": "Palmeiras",
+      "visitante": "Internacional",
+      "casa": 69.7,
+      "empate": 20.1,
+      "fora": 10.2,
+      "gols_esperados": [
+        2.05,
+        0.64
+      ],
+      "top_placares": [
+        {
+          "placar": "2x0",
+          "prob": 14.3
+        },
+        {
+          "placar": "1x0",
+          "prob": 13.5
+        },
+        {
+          "placar": "3x0",
+          "prob": 9.7
+        }
+      ],
+      "placar_provavel": "2x0",
+      "provavel": "casa",
+      "data": "2026-08-09T16:00",
+      "sede": "Nubank Parque"
+    },
+    {
+      "mandante": "Bahia",
+      "visitante": "Vasco",
+      "casa": 56.4,
+      "empate": 23.3,
+      "fora": 20.3,
+      "gols_esperados": [
+        1.9,
+        1.06
+      ],
+      "top_placares": [
+        {
+          "placar": "1x1",
+          "prob": 11.0
+        },
+        {
+          "placar": "2x1",
+          "prob": 10.0
+        },
+        {
+          "placar": "2x0",
+          "prob": 9.4
+        }
+      ],
+      "placar_provavel": "1x1",
+      "provavel": "casa",
+      "data": "2026-08-09T16:00",
+      "sede": "Casa de Apostas Arena Fonte Nova"
+    },
+    {
+      "mandante": "Santos",
+      "visitante": "Athletico-PR",
+      "casa": 28.0,
+      "empate": 25.0,
+      "fora": 47.0,
+      "gols_esperados": [
+        1.26,
+        1.7
+      ],
+      "top_placares": [
+        {
+          "placar": "1x1",
+          "prob": 11.7
+        },
+        {
+          "placar": "1x2",
+          "prob": 9.4
+        },
+        {
+          "placar": "0x1",
+          "prob": 8.3
+        }
+      ],
+      "placar_provavel": "1x1",
+      "provavel": "fora",
+      "data": "2026-08-09T18:30",
+      "sede": "Vila Belmiro"
+    },
+    {
+      "mandante": "RB Bragantino",
+      "visitante": "Corinthians",
+      "casa": 44.7,
+      "empate": 31.2,
+      "fora": 24.1,
+      "gols_esperados": [
+        1.21,
+        0.81
+      ],
+      "top_placares": [
+        {
+          "placar": "1x0",
+          "prob": 15.4
+        },
+        {
+          "placar": "0x0",
+          "prob": 14.0
+        },
+        {
+          "placar": "1x1",
+          "prob": 13.7
+        }
+      ],
+      "placar_provavel": "1x0",
+      "provavel": "casa",
+      "data": "2026-08-09T18:30",
+      "sede": "Cícero de Souza Marques"
+    },
+    {
+      "mandante": "Flamengo",
+      "visitante": "Vitória",
+      "casa": 73.1,
+      "empate": 17.5,
+      "fora": 9.4,
+      "gols_esperados": [
+        2.36,
+        0.73
+      ],
+      "top_placares": [
+        {
+          "placar": "2x0",
+          "prob": 12.8
+        },
+        {
+          "placar": "1x0",
+          "prob": 10.5
+        },
+        {
+          "placar": "3x0",
+          "prob": 10.1
+        }
+      ],
+      "placar_provavel": "2x0",
+      "provavel": "casa",
+      "data": "2026-08-09T19:30",
+      "sede": "Maracanã"
     }
   ],
   "curva_pontos": {
@@ -810,94 +984,94 @@
       98
     ],
     "amostras": [
-      111,
-      232,
-      305,
-      456,
-      629,
-      771,
-      874,
-      1088,
-      1254,
-      1171,
-      1304,
-      1364,
-      1509,
-      1638,
-      1887,
-      2163,
-      2469,
-      2852,
-      3255,
-      3832,
-      4390,
-      5169,
-      5943,
-      6881,
-      7705,
-      8346,
-      9530,
-      10309,
-      11476,
-      12046,
-      13149,
-      14058,
-      14784,
-      15731,
-      15943,
-      16833,
+      120,
+      266,
+      325,
+      433,
+      625,
+      806,
+      892,
+      1021,
+      1139,
+      1143,
+      1315,
+      1406,
+      1545,
+      1678,
+      1845,
+      2154,
+      2496,
+      2814,
+      3194,
+      3882,
+      4366,
+      5239,
+      5989,
+      6833,
+      7480,
+      8236,
+      9463,
+      10382,
+      11555,
+      12324,
+      13305,
+      14035,
+      14995,
+      15527,
+      16370,
       17055,
-      17481,
-      17683,
-      18026,
-      18013,
-      17851,
-      17546,
-      17246,
-      17059,
-      16497,
-      15771,
-      15078,
-      14543,
-      13908,
-      12873,
-      12214,
-      11396,
-      10760,
-      9927,
-      9097,
-      8409,
-      7934,
-      7124,
-      6596,
-      6015,
-      5493,
-      5190,
-      4690,
-      4444,
-      4152,
-      3880,
-      3668,
-      3367,
-      3180,
-      2932,
-      2793,
-      2476,
-      2418,
-      2108,
-      1968,
-      1869,
-      1512,
-      1379,
-      1190,
-      847,
-      896,
-      522,
-      528,
-      394,
-      155,
-      269,
-      121
+      16935,
+      17310,
+      17669,
+      17671,
+      17783,
+      17925,
+      17563,
+      17314,
+      16872,
+      16341,
+      16041,
+      15088,
+      14309,
+      13592,
+      12933,
+      12288,
+      11378,
+      10757,
+      9902,
+      9261,
+      8533,
+      7728,
+      7246,
+      6683,
+      6164,
+      5626,
+      5195,
+      4741,
+      4380,
+      4140,
+      3797,
+      3610,
+      3472,
+      3062,
+      3021,
+      2764,
+      2554,
+      2454,
+      2177,
+      1917,
+      1812,
+      1506,
+      1366,
+      1132,
+      901,
+      945,
+      486,
+      497,
+      356,
+      143,
+      288,
+      119
     ],
     "titulo": [
       0.0,
@@ -955,35 +1129,35 @@
       0.0,
       0.0,
       0.0,
-      0.2,
-      0.3,
+      0.1,
+      0.4,
       0.7,
-      1.4,
+      1.5,
       2.5,
-      4.8,
-      7.2,
-      11.1,
-      14.9,
-      20.8,
-      26.4,
-      33.0,
-      39.6,
-      46.7,
-      54.7,
-      59.1,
-      66.8,
-      69.7,
-      75.6,
-      79.6,
-      85.2,
-      86.0,
-      91.2,
-      93.9,
+      3.9,
+      7.6,
+      10.8,
+      15.5,
+      20.6,
+      26.9,
+      33.2,
+      39.0,
+      46.9,
+      54.1,
+      59.6,
+      65.8,
+      72.6,
+      75.4,
+      81.9,
+      84.1,
+      86.8,
+      91.0,
+      92.8,
       95.3,
-      97.0,
-      96.7,
-      99.8,
-      99.2,
+      96.4,
+      97.9,
+      99.6,
+      99.0,
       100.0,
       100.0,
       100.0,
@@ -1034,22 +1208,22 @@
       0.0,
       0.0,
       0.1,
-      0.3,
+      0.4,
       1.2,
       3.3,
       7.8,
       14.5,
-      25.7,
-      38.8,
-      53.2,
-      66.3,
-      77.7,
-      86.4,
-      92.5,
-      96.2,
+      25.2,
+      37.7,
+      52.6,
+      65.5,
+      77.6,
+      87.0,
+      91.7,
+      96.3,
       98.0,
-      99.2,
-      99.6,
+      99.4,
+      99.7,
       100.0,
       100.0,
       100.0,
@@ -1102,21 +1276,21 @@
       100.0,
       100.0,
       99.9,
-      99.8,
-      99.6,
-      98.7,
-      97.3,
-      93.5,
-      87.4,
-      78.9,
-      66.0,
-      50.4,
-      35.9,
-      21.4,
-      11.6,
+      99.9,
+      99.5,
+      98.8,
+      97.1,
+      93.4,
+      88.4,
+      79.0,
+      65.2,
+      51.3,
+      34.9,
+      21.7,
+      11.2,
       4.9,
-      1.7,
-      0.6,
+      1.9,
+      0.5,
       0.1,
       0.0,
       0.0,
