@@ -22,14 +22,15 @@ const cores5 = ['#1baf7a', '#2a78d6', '#e0a020', '#e34948', '#8e44ad'];
 const graficoDados = JSON.stringify({ historico, times: top5, cores: cores5 });
 ---
 <Base
-  title="Chances no Brasileirão Série B 2026 — Acesso e Rebaixamento | Bolaverso"
-  description="Probabilidades de título, acesso à Série A e rebaixamento no Brasileirão Série B 2026. Simulação de Monte Carlo atualizada diariamente."
+  title="Probabilidades Série B 2026: chances de acesso e rebaixamento | Bolaverso"
+  description="Probabilidades atualizadas da Série B 2026: chance de título, acesso à Série A, zona de playoff e rebaixamento para a Série C. Simulação diária com 30 mil cenários."
 >
-  <h1>Chances na Série B 2026</h1>
+  <h1>Probabilidades da Série B 2026</h1>
   <p class="lead">
-    Probabilidades de <strong>título</strong>, <strong>acesso</strong> e
-    <strong>rebaixamento</strong> na Série B, calculadas por Monte Carlo
-    com {nsim.toLocaleString('pt-BR')} simulações do restante do campeonato.
+    Chances de <strong>título</strong>, <strong>acesso à Série A</strong> e
+    <strong>rebaixamento para a Série C</strong> de cada clube do Brasileirão Série B,
+    calculadas por simulação de Monte Carlo com {nsim.toLocaleString('pt-BR')} cenários
+    do restante do campeonato. Atualizado todos os dias.
   </p>
   <p class="meta">Atualizado em <strong>{atualizadoBR}</strong></p>
 
@@ -145,6 +146,46 @@ const graficoDados = JSON.stringify({ historico, times: top5, cores: cores5 });
       </div>
     </>
   )}
+  
+  
+  <h2>Como funciona a disputa pelo acesso</h2>
+  <p class="texto">
+    A Série B do Campeonato Brasileiro distribui quatro vagas para a primeira divisão,
+    mas o caminho mudou: apenas os dois primeiros colocados garantem o acesso direto ao
+    fim das 38 rodadas. As outras duas vagas saem de um mata-mata entre os times que
+    terminarem entre a terceira e a sexta posição, em confrontos de ida e volta
+    (3º contra 6º e 4º contra 5º), com os melhores colocados decidindo em casa.
+  </p>
+  <p class="texto">
+    Isso torna a briga na parte de cima muito mais aberta do que na Série A. Um time
+    que termina em quinto ainda pode subir, e um que termina em terceiro não tem nada
+    garantido. Por isso mostramos as faixas separadamente: a chance de acesso direto
+    (1º e 2º) e a chance de alcançar a zona de playoff (3º ao 6º).
+  </p>
+
+  <h2>A luta contra o rebaixamento</h2>
+  <p class="texto">
+    Na outra ponta, os quatro últimos colocados caem para a Série C. Como a Série B é
+    historicamente equilibrada — com poucos pontos separando o meio da tabela da zona
+    de perigo —, as probabilidades de rebaixamento mudam bastante a cada rodada. Um
+    time que hoje aparece com risco baixo pode entrar na zona com duas derrotas
+    seguidas.
+  </p>
+
+  <h2>Como calculamos as probabilidades</h2>
+  <p class="texto">
+    Não usamos palpite nem regra fixa. A cada dia, o modelo simula milhares de vezes
+    todos os jogos que faltam no campeonato, usando a força de ataque e defesa que cada
+    time demonstrou até aqui, além da vantagem de jogar em casa. Contando em quantos
+    desses cenários cada clube terminou campeão, no G2, na zona de playoff ou no Z4,
+    chegamos às probabilidades exibidas na tabela.
+  </p>
+  <p class="texto">
+    O número principal é a média de três modelos estatísticos independentes — Poisson,
+    Dixon-Coles e Elo. Você pode ver o resultado de cada um separadamente clicando no
+    nome de qualquer time na tabela acima. Entenda melhor na
+    <a href="/metodologia/">página de metodologia</a>.
+  </p>
 
   <p class="disclaimer">
     Simulação estatística baseada em Poisson, Dixon-Coles e Elo — não é previsão oficial.
@@ -220,6 +261,7 @@ const graficoDados = JSON.stringify({ historico, times: top5, cores: cores5 });
 
 <style>
   .lead { font-size: 1.1rem; max-width: 62ch; }
+  .texto { max-width: 68ch; line-height: 1.7; }
   .meta { color: var(--cinza); font-size: 0.9rem; margin-top: -0.25rem; }
   .explica-formato {
     background: #eef3fb; border-left: 3px solid var(--azul);
