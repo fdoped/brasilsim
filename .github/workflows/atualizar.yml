@@ -34,7 +34,7 @@ jobs:
         run: |
           git config user.name "brasilsim-bot"
           git config user.email "bot@brasilsim.com.br"
-          git add src/data/probabilidades.json
+          git add src/data/
           if git diff --staged --quiet; then
             echo "Sem mudanças nos dados"
           else
