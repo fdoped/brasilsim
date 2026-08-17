@@ -1258,5 +1258,110 @@
         "z4": 96.8
       }
     }
+  },
+  {
+    "data": "2026-08-17",
+    "times": {
+      "Flamengo": {
+        "titulo": 50.4,
+        "g5": 98.0,
+        "z4": 0.0
+      },
+      "Palmeiras": {
+        "titulo": 41.2,
+        "g5": 98.1,
+        "z4": 0.0
+      },
+      "Athletico-PR": {
+        "titulo": 5.4,
+        "g5": 77.4,
+        "z4": 0.0
+      },
+      "Fluminense": {
+        "titulo": 1.1,
+        "g5": 43.8,
+        "z4": 0.3
+      },
+      "Cruzeiro": {
+        "titulo": 0.5,
+        "g5": 31.9,
+        "z4": 1.0
+      },
+      "Bahia": {
+        "titulo": 0.4,
+        "g5": 31.5,
+        "z4": 1.3
+      },
+      "Atlético-MG": {
+        "titulo": 0.4,
+        "g5": 31.0,
+        "z4": 2.1
+      },
+      "RB Bragantino": {
+        "titulo": 0.3,
+        "g5": 25.1,
+        "z4": 2.2
+      },
+      "Botafogo": {
+        "titulo": 0.2,
+        "g5": 20.8,
+        "z4": 5.5
+      },
+      "Corinthians": {
+        "titulo": 0.1,
+        "g5": 17.2,
+        "z4": 3.3
+      },
+      "São Paulo": {
+        "titulo": 0.0,
+        "g5": 8.3,
+        "z4": 11.6
+      },
+      "Santos": {
+        "titulo": 0.0,
+        "g5": 3.1,
+        "z4": 34.5
+      },
+      "Vitória": {
+        "titulo": 0.0,
+        "g5": 3.3,
+        "z4": 19.8
+      },
+      "Coritiba": {
+        "titulo": 0.0,
+        "g5": 4.0,
+        "z4": 13.7
+      },
+      "Mirassol": {
+        "titulo": 0.0,
+        "g5": 0.6,
+        "z4": 53.1
+      },
+      "Grêmio": {
+        "titulo": 0.0,
+        "g5": 2.5,
+        "z4": 26.8
+      },
+      "Internacional": {
+        "titulo": 0.0,
+        "g5": 1.7,
+        "z4": 32.9
+      },
+      "Vasco": {
+        "titulo": 0.0,
+        "g5": 0.5,
+        "z4": 53.8
+      },
+      "Remo": {
+        "titulo": 0.0,
+        "g5": 1.2,
+        "z4": 42.3
+      },
+      "Chapecoense": {
+        "titulo": 0.0,
+        "g5": 0.0,
+        "z4": 95.7
+      }
+    }
   }
 ]
