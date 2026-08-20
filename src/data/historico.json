@@ -1473,34 +1473,34 @@
     "data": "2026-08-19",
     "times": {
       "Flamengo": {
-        "titulo": 48.9,
+        "titulo": 49.3,
         "g5": 98.1,
         "z4": 0.0
       },
       "Palmeiras": {
-        "titulo": 43.4,
-        "g5": 98.2,
+        "titulo": 43.1,
+        "g5": 98.3,
         "z4": 0.0
       },
       "Athletico-PR": {
         "titulo": 4.3,
-        "g5": 73.2,
+        "g5": 73.1,
         "z4": 0.0
       },
       "Fluminense": {
         "titulo": 1.3,
-        "g5": 46.7,
+        "g5": 46.9,
         "z4": 0.3
-      },
-      "Atlético-MG": {
-        "titulo": 0.5,
-        "g5": 31.6,
-        "z4": 2.2
       },
       "Bahia": {
         "titulo": 0.5,
-        "g5": 32.5,
-        "z4": 1.3
+        "g5": 32.3,
+        "z4": 1.2
+      },
+      "Atlético-MG": {
+        "titulo": 0.5,
+        "g5": 31.5,
+        "z4": 2.2
       },
       "Cruzeiro": {
         "titulo": 0.4,
@@ -1509,63 +1509,63 @@
       },
       "RB Bragantino": {
         "titulo": 0.4,
-        "g5": 28.8,
-        "z4": 2.0
+        "g5": 29.1,
+        "z4": 1.9
       },
       "Botafogo": {
         "titulo": 0.1,
-        "g5": 17.7,
-        "z4": 6.8
+        "g5": 17.8,
+        "z4": 7.0
       },
       "Corinthians": {
         "titulo": 0.1,
-        "g5": 19.3,
-        "z4": 3.1
+        "g5": 19.2,
+        "z4": 3.2
       },
       "São Paulo": {
         "titulo": 0.0,
-        "g5": 8.3,
-        "z4": 12.2
+        "g5": 8.2,
+        "z4": 12.4
       },
       "Santos": {
         "titulo": 0.0,
-        "g5": 5.4,
-        "z4": 24.0
+        "g5": 5.3,
+        "z4": 24.2
       },
       "Grêmio": {
         "titulo": 0.0,
         "g5": 2.7,
-        "z4": 25.8
+        "z4": 25.7
       },
       "Vitória": {
         "titulo": 0.0,
         "g5": 3.1,
-        "z4": 20.1
+        "z4": 20.3
       },
       "Mirassol": {
         "titulo": 0.0,
         "g5": 1.0,
         "z4": 45.8
       },
-      "Coritiba": {
-        "titulo": 0.0,
-        "g5": 1.3,
-        "z4": 18.9
-      },
       "Internacional": {
         "titulo": 0.0,
         "g5": 0.8,
-        "z4": 43.2
+        "z4": 43.0
+      },
+      "Vasco": {
+        "titulo": 0.0,
+        "g5": 0.5,
+        "z4": 54.7
+      },
+      "Coritiba": {
+        "titulo": 0.0,
+        "g5": 1.4,
+        "z4": 19.0
       },
       "Remo": {
         "titulo": 0.0,
         "g5": 0.9,
-        "z4": 43.1
-      },
-      "Vasco": {
-        "titulo": 0.0,
-        "g5": 0.6,
-        "z4": 54.7
+        "z4": 42.7
       },
       "Chapecoense": {
         "titulo": 0.0,
