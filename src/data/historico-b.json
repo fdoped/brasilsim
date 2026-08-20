@@ -1878,112 +1878,112 @@
     "data": "2026-08-20",
     "times": {
       "Criciúma": {
-        "titulo": 32.5,
-        "acesso_direto": 52.5,
-        "playoff": 36.2,
+        "titulo": 32.7,
+        "acesso_direto": 52.6,
+        "playoff": 36.0,
         "z4": 0.0
       },
       "Juventude": {
-        "titulo": 23.3,
-        "acesso_direto": 43.6,
-        "playoff": 41.3,
+        "titulo": 23.1,
+        "acesso_direto": 43.2,
+        "playoff": 41.8,
         "z4": 0.0
       },
       "Vila Nova": {
-        "titulo": 13.8,
-        "acesso_direto": 27.3,
-        "playoff": 41.1,
+        "titulo": 14.0,
+        "acesso_direto": 27.7,
+        "playoff": 40.8,
         "z4": 0.2
       },
       "Novorizontino": {
-        "titulo": 11.0,
-        "acesso_direto": 23.7,
-        "playoff": 42.7,
-        "z4": 0.5
+        "titulo": 10.8,
+        "acesso_direto": 23.5,
+        "playoff": 42.6,
+        "z4": 0.4
       },
       "Athletic Club": {
-        "titulo": 4.8,
-        "acesso_direto": 11.7,
-        "playoff": 35.9,
-        "z4": 1.1
+        "titulo": 4.7,
+        "acesso_direto": 11.8,
+        "playoff": 35.6,
+        "z4": 1.2
       },
       "Sport": {
-        "titulo": 3.7,
+        "titulo": 3.6,
         "acesso_direto": 9.0,
-        "playoff": 31.6,
+        "playoff": 31.5,
         "z4": 1.1
       },
       "Fortaleza": {
-        "titulo": 3.5,
-        "acesso_direto": 9.1,
+        "titulo": 3.6,
+        "acesso_direto": 9.3,
         "playoff": 31.9,
-        "z4": 0.8
+        "z4": 0.9
       },
       "Operário-PR": {
         "titulo": 2.1,
-        "acesso_direto": 6.2,
-        "playoff": 28.0,
-        "z4": 2.6
+        "acesso_direto": 6.1,
+        "playoff": 27.7,
+        "z4": 2.8
       },
       "CRB": {
         "titulo": 1.7,
         "acesso_direto": 4.7,
-        "playoff": 19.4,
-        "z4": 8.4
+        "playoff": 19.5,
+        "z4": 8.5
       },
       "São Bernardo": {
         "titulo": 1.2,
-        "acesso_direto": 3.8,
-        "playoff": 21.5,
-        "z4": 4.9
+        "acesso_direto": 3.7,
+        "playoff": 21.9,
+        "z4": 5.0
       },
       "Cuiabá": {
-        "titulo": 1.0,
-        "acesso_direto": 3.6,
+        "titulo": 1.1,
+        "acesso_direto": 3.5,
         "playoff": 25.1,
         "z4": 2.4
       },
       "Botafogo-SP": {
         "titulo": 0.7,
         "acesso_direto": 2.3,
-        "playoff": 16.4,
+        "playoff": 16.3,
         "z4": 6.5
       },
       "Náutico": {
         "titulo": 0.4,
         "acesso_direto": 1.3,
-        "playoff": 11.8,
+        "playoff": 11.7,
         "z4": 9.4
       },
       "Goiás": {
         "titulo": 0.3,
         "acesso_direto": 1.0,
-        "playoff": 8.6,
-        "z4": 14.0
+        "playoff": 8.8,
+        "z4": 13.8
       },
       "Avaí": {
         "titulo": 0.0,
         "acesso_direto": 0.2,
         "playoff": 3.3,
-        "z4": 29.8
+        "z4": 30.0
       },
       "Ceará": {
         "titulo": 0.0,
         "acesso_direto": 0.1,
-        "playoff": 1.8,
+        "playoff": 1.9,
         "z4": 41.4
       },
       "Atlético-GO": {
         "titulo": 0.0,
         "acesso_direto": 0.0,
-        "playoff": 2.5,
-        "z4": 18.7
+        "playoff": 2.6,
+        "z4": 18.6
       },
       "Londrina": {
         "titulo": 0.0,
         "acesso_direto": 0.0,
-        "playoff": 0.9,
-        "z4": 59.5
+        "playoff": 0.8,
+        "z4": 59.2
       },
       "América-MG": {
         "titulo": 0.0,
