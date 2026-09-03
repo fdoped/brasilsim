@@ -27,25 +27,41 @@ abriu 63,1% contra 29,3%, a maior vantagem da temporada. Depois veio a reação 
 e a diferença caiu para 54,4% contra 37,6%. Agora, com o jogo atrasado disputado e
 vencido, chegamos ao momento mais equilibrado de todos.
 
-## Por que o Palmeiras ainda é favorito
+## Por que o Palmeiras ainda é favorito — mesmo com campanha inferior
 
-Com apenas um ponto de vantagem, por que o modelo ainda dá 8 pontos percentuais a mais ao
-Palmeiras?
+Aqui está o ponto que merece atenção, porque contraria a intuição: **o Flamengo tem a
+melhor campanha dos dois**.
 
-A resposta está em dois fatores. O primeiro é o próprio ponto de diferença: em caso de
-igualdade na reta final, quem chega na frente tem vantagem em qualquer critério de
-desempate. O segundo, e mais relevante, é a força de ataque e defesa demonstrada ao longo
-da temporada — o modelo projeta os jogos restantes a partir dela, e nesse quesito o
-Palmeiras mantém ligeira superioridade.
+| | Palmeiras | Flamengo |
+|---|---|---|
+| Gols marcados | 45 | **50** |
+| Gols sofridos | 21 | 21 |
+| Saldo | +24 | **+29** |
+| Vitórias | 15 | 15 |
 
-Mas 8 pontos percentuais é uma margem estreita. Em termos práticos, significa que em
-quatro de cada dez cenários simulados o Flamengo termina campeão.
+O Flamengo marca 11% mais gols, tem defesa idêntica e saldo cinco gols melhor. Em força
+de ataque e defesa — que é o que o modelo usa para projetar os jogos restantes — ele leva
+vantagem.
+
+Então por que o Palmeiras ainda aparece à frente nas probabilidades?
+
+A resposta está na **posição na tabela**. Com 52 pontos contra 51, o Palmeiras não precisa
+superar ninguém: basta acompanhar. O Flamengo precisa tirar a diferença. Faltando 13
+rodadas, esse único ponto vale mais do que a superioridade em gols, porque define quem
+depende de si e quem depende do outro tropeçar.
+
+Há ainda um segundo fator, ligado à metodologia: o modelo assume que 25 jogos não revelam
+a força verdadeira de um time com precisão absoluta. Ele reamostra essa força a cada
+simulação, o que impede que uma vantagem de 11% no ataque se converta integralmente em
+vantagem de probabilidade. É uma forma de reconhecer que parte do desempenho até aqui
+pode ser variação, não qualidade permanente.
 
 ## O que decide daqui pra frente
 
-Restam **13 rodadas** e um confronto direto ainda pode acontecer no returno, dependendo
-do calendário. Com um ponto separando os dois, qualquer tropeço de um lado transfere
-imediatamente o favoritismo para o outro.
+Restam **13 rodadas**. Com um ponto separando os dois, qualquer tropeço de um lado
+transfere imediatamente o favoritismo para o outro — e, dada a campanha superior do
+Flamengo em gols, uma virada na tabela provavelmente faria as probabilidades penderem
+com força para o lado rubro-negro.
 
 É o cenário mais aberto que o campeonato apresentou desde o primeiro turno.
 
