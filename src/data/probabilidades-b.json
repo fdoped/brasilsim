@@ -1,6 +1,6 @@
 {
   "competicao": "Série B",
-  "atualizado_em": "2026-09-08T10:26:35.672331-03:00",
+  "atualizado_em": "2026-09-09T10:37:17.460160-03:00",
   "fonte": "ge.globo",
   "nsim": 30000,
   "sigma": 0.4,
@@ -27,30 +27,30 @@
       "posicao_atual": 1,
       "time": "Juventude",
       "slug": "juventude",
-      "pts": 47,
-      "j": 26,
-      "gp": 28,
+      "pts": 50,
+      "j": 27,
+      "gp": 30,
       "gc": 15,
-      "sg": 13,
-      "vitorias": 13,
+      "sg": 15,
+      "vitorias": 14,
       "empates": 8,
       "derrotas": 5,
-      "aproveitamento": 60,
+      "aproveitamento": 61,
       "ultimos_jogos": [
-        "e",
         "v",
         "v",
         "e",
-        "e"
+        "e",
+        "v"
       ],
       "por_modelo": {
-        "poisson": 29.0,
-        "dixon_coles": 28.5,
-        "elo": 33.1
+        "poisson": 37.9,
+        "dixon_coles": 38.4,
+        "elo": 43.8
       },
-      "titulo": 30.2,
-      "acesso_direto": 51.6,
-      "playoff": 38.4,
+      "titulo": 40.1,
+      "acesso_direto": 62.8,
+      "playoff": 32.2,
       "z4": 0.0
     },
     {
@@ -74,43 +74,13 @@
         "v"
       ],
       "por_modelo": {
-        "poisson": 29.5,
-        "dixon_coles": 29.8,
-        "elo": 23.4
+        "poisson": 25.2,
+        "dixon_coles": 25.5,
+        "elo": 19.7
       },
-      "titulo": 27.6,
-      "acesso_direto": 46.4,
-      "playoff": 38.9,
-      "z4": 0.0
-    },
-    {
-      "posicao_atual": 2,
-      "time": "Criciúma",
-      "slug": "criciuma",
-      "pts": 47,
-      "j": 26,
-      "gp": 28,
-      "gc": 19,
-      "sg": 9,
-      "vitorias": 13,
-      "empates": 8,
-      "derrotas": 5,
-      "aproveitamento": 60,
-      "ultimos_jogos": [
-        "v",
-        "e",
-        "d",
-        "d",
-        "v"
-      ],
-      "por_modelo": {
-        "poisson": 13.9,
-        "dixon_coles": 14.3,
-        "elo": 18.1
-      },
-      "titulo": 15.5,
-      "acesso_direto": 31.7,
-      "playoff": 46.2,
+      "titulo": 23.5,
+      "acesso_direto": 41.6,
+      "playoff": 39.7,
       "z4": 0.0
     },
     {
@@ -134,13 +104,43 @@
         "v"
       ],
       "por_modelo": {
-        "poisson": 7.2,
-        "dixon_coles": 7.3,
-        "elo": 8.5
+        "poisson": 9.2,
+        "dixon_coles": 9.4,
+        "elo": 12.2
       },
-      "titulo": 7.7,
-      "acesso_direto": 18.3,
-      "playoff": 43.9,
+      "titulo": 10.2,
+      "acesso_direto": 23.8,
+      "playoff": 47.3,
+      "z4": 0.0
+    },
+    {
+      "posicao_atual": 2,
+      "time": "Criciúma",
+      "slug": "criciuma",
+      "pts": 47,
+      "j": 27,
+      "gp": 28,
+      "gc": 21,
+      "sg": 7,
+      "vitorias": 13,
+      "empates": 8,
+      "derrotas": 6,
+      "aproveitamento": 58,
+      "ultimos_jogos": [
+        "e",
+        "d",
+        "d",
+        "v",
+        "d"
+      ],
+      "por_modelo": {
+        "poisson": 8.2,
+        "dixon_coles": 8.2,
+        "elo": 9.1
+      },
+      "titulo": 8.5,
+      "acesso_direto": 21.3,
+      "playoff": 48.3,
       "z4": 0.0
     },
     {
@@ -164,13 +164,13 @@
         "d"
       ],
       "por_modelo": {
-        "poisson": 7.2,
-        "dixon_coles": 7.2,
-        "elo": 7.1
+        "poisson": 6.8,
+        "dixon_coles": 6.5,
+        "elo": 6.0
       },
-      "titulo": 7.2,
-      "acesso_direto": 16.3,
-      "playoff": 39.2,
+      "titulo": 6.4,
+      "acesso_direto": 15.6,
+      "playoff": 38.8,
       "z4": 0.1
     },
     {
@@ -194,13 +194,13 @@
         "v"
       ],
       "por_modelo": {
-        "poisson": 5.9,
-        "dixon_coles": 5.8,
-        "elo": 5.2
+        "poisson": 5.4,
+        "dixon_coles": 5.2,
+        "elo": 4.7
       },
-      "titulo": 5.6,
-      "acesso_direto": 14.4,
-      "playoff": 41.4,
+      "titulo": 5.1,
+      "acesso_direto": 13.4,
+      "playoff": 41.1,
       "z4": 0.2
     },
     {
@@ -224,14 +224,44 @@
         "e"
       ],
       "por_modelo": {
-        "poisson": 2.2,
-        "dixon_coles": 1.9,
-        "elo": 1.5
+        "poisson": 2.4,
+        "dixon_coles": 2.4,
+        "elo": 2.0
       },
-      "titulo": 1.9,
-      "acesso_direto": 5.9,
-      "playoff": 29.9,
-      "z4": 0.7
+      "titulo": 2.3,
+      "acesso_direto": 7.3,
+      "playoff": 34.6,
+      "z4": 0.5
+    },
+    {
+      "posicao_atual": 10,
+      "time": "Sport",
+      "slug": "sport",
+      "pts": 38,
+      "j": 26,
+      "gp": 34,
+      "gc": 26,
+      "sg": 8,
+      "vitorias": 9,
+      "empates": 11,
+      "derrotas": 6,
+      "aproveitamento": 48,
+      "ultimos_jogos": [
+        "v",
+        "d",
+        "v",
+        "d",
+        "d"
+      ],
+      "por_modelo": {
+        "poisson": 1.8,
+        "dixon_coles": 1.7,
+        "elo": 0.9
+      },
+      "titulo": 1.5,
+      "acesso_direto": 5.0,
+      "playoff": 26.4,
+      "z4": 1.7
     },
     {
       "posicao_atual": 8,
@@ -254,74 +284,14 @@
         "v"
       ],
       "por_modelo": {
-        "poisson": 1.3,
-        "dixon_coles": 1.4,
-        "elo": 1.2
+        "poisson": 1.1,
+        "dixon_coles": 1.0,
+        "elo": 0.7
       },
-      "titulo": 1.3,
-      "acesso_direto": 3.6,
-      "playoff": 20.2,
-      "z4": 1.7
-    },
-    {
-      "posicao_atual": 9,
-      "time": "Sport",
-      "slug": "sport",
-      "pts": 38,
-      "j": 26,
-      "gp": 34,
-      "gc": 26,
-      "sg": 8,
-      "vitorias": 9,
-      "empates": 11,
-      "derrotas": 6,
-      "aproveitamento": 48,
-      "ultimos_jogos": [
-        "v",
-        "d",
-        "v",
-        "d",
-        "d"
-      ],
-      "por_modelo": {
-        "poisson": 1.0,
-        "dixon_coles": 0.9,
-        "elo": 0.5
-      },
-      "titulo": 0.8,
-      "acesso_direto": 3.0,
-      "playoff": 22.1,
-      "z4": 2.5
-    },
-    {
-      "posicao_atual": 10,
-      "time": "Athletic Club",
-      "slug": "athletic-club",
-      "pts": 37,
-      "j": 26,
-      "gp": 31,
-      "gc": 27,
-      "sg": 4,
-      "vitorias": 9,
-      "empates": 10,
-      "derrotas": 7,
-      "aproveitamento": 47,
-      "ultimos_jogos": [
-        "v",
-        "d",
-        "d",
-        "d",
-        "v"
-      ],
-      "por_modelo": {
-        "poisson": 0.8,
-        "dixon_coles": 0.9,
-        "elo": 0.4
-      },
-      "titulo": 0.7,
-      "acesso_direto": 2.3,
-      "playoff": 16.6,
-      "z4": 3.5
+      "titulo": 0.9,
+      "acesso_direto": 3.1,
+      "playoff": 19.6,
+      "z4": 2.4
     },
     {
       "posicao_atual": 11,
@@ -345,13 +315,13 @@
       ],
       "por_modelo": {
         "poisson": 0.8,
-        "dixon_coles": 0.9,
+        "dixon_coles": 0.7,
         "elo": 0.4
       },
       "titulo": 0.7,
-      "acesso_direto": 2.5,
-      "playoff": 18.2,
-      "z4": 4.3
+      "acesso_direto": 2.2,
+      "playoff": 16.0,
+      "z4": 3.7
     },
     {
       "posicao_atual": 14,
@@ -374,34 +344,34 @@
         "v"
       ],
       "por_modelo": {
-        "poisson": 0.7,
-        "dixon_coles": 0.7,
-        "elo": 0.3
+        "poisson": 0.5,
+        "dixon_coles": 0.5,
+        "elo": 0.2
       },
-      "titulo": 0.6,
-      "acesso_direto": 2.2,
-      "playoff": 17.6,
-      "z4": 3.6
+      "titulo": 0.4,
+      "acesso_direto": 1.5,
+      "playoff": 14.6,
+      "z4": 4.2
     },
     {
-      "posicao_atual": 12,
+      "posicao_atual": 9,
       "time": "Cuiabá",
       "slug": "cuiaba",
-      "pts": 36,
-      "j": 26,
-      "gp": 23,
+      "pts": 39,
+      "j": 27,
+      "gp": 26,
       "gc": 21,
-      "sg": 2,
-      "vitorias": 8,
+      "sg": 5,
+      "vitorias": 9,
       "empates": 12,
       "derrotas": 6,
-      "aproveitamento": 46,
+      "aproveitamento": 48,
       "ultimos_jogos": [
-        "v",
         "v",
         "e",
         "v",
-        "d"
+        "d",
+        "v"
       ],
       "por_modelo": {
         "poisson": 0.2,
@@ -409,9 +379,39 @@
         "elo": 0.2
       },
       "titulo": 0.2,
+      "acesso_direto": 1.0,
+      "playoff": 13.8,
+      "z4": 2.6
+    },
+    {
+      "posicao_atual": 12,
+      "time": "Athletic Club",
+      "slug": "athletic-club",
+      "pts": 37,
+      "j": 27,
+      "gp": 31,
+      "gc": 30,
+      "sg": 1,
+      "vitorias": 9,
+      "empates": 10,
+      "derrotas": 8,
+      "aproveitamento": 45,
+      "ultimos_jogos": [
+        "d",
+        "d",
+        "d",
+        "v",
+        "d"
+      ],
+      "por_modelo": {
+        "poisson": 0.2,
+        "dixon_coles": 0.3,
+        "elo": 0.1
+      },
+      "titulo": 0.2,
       "acesso_direto": 0.9,
-      "playoff": 12.4,
-      "z4": 3.6
+      "playoff": 14.8,
+      "z4": 3.1
     },
     {
       "posicao_atual": 13,
@@ -434,14 +434,14 @@
         "d"
       ],
       "por_modelo": {
-        "poisson": 0.2,
+        "poisson": 0.1,
         "dixon_coles": 0.1,
         "elo": 0.1
       },
       "titulo": 0.1,
-      "acesso_direto": 0.7,
-      "playoff": 10.0,
-      "z4": 6.6
+      "acesso_direto": 0.5,
+      "playoff": 7.9,
+      "z4": 7.6
     },
     {
       "posicao_atual": 15,
@@ -470,8 +470,8 @@
       },
       "titulo": 0.0,
       "acesso_direto": 0.1,
-      "playoff": 2.1,
-      "z4": 24.0
+      "playoff": 2.2,
+      "z4": 23.0
     },
     {
       "posicao_atual": 16,
@@ -500,8 +500,8 @@
       },
       "titulo": 0.0,
       "acesso_direto": 0.0,
-      "playoff": 1.5,
-      "z4": 34.6
+      "playoff": 1.4,
+      "z4": 35.7
     },
     {
       "posicao_atual": 17,
@@ -530,8 +530,8 @@
       },
       "titulo": 0.0,
       "acesso_direto": 0.0,
-      "playoff": 1.5,
-      "z4": 31.2
+      "playoff": 1.2,
+      "z4": 32.3
     },
     {
       "posicao_atual": 18,
@@ -561,7 +561,7 @@
       "titulo": 0.0,
       "acesso_direto": 0.0,
       "playoff": 0.0,
-      "z4": 83.5
+      "z4": 83.0
     },
     {
       "posicao_atual": 19,
@@ -626,64 +626,6 @@
   ],
   "proximos_jogos": [
     {
-      "mandante": "Cuiabá",
-      "visitante": "Athletic Club",
-      "casa": 39.1,
-      "empate": 33.0,
-      "fora": 27.8,
-      "gols_esperados": [
-        1.05,
-        0.84
-      ],
-      "top_placares": [
-        {
-          "placar": "0x0",
-          "prob": 15.8
-        },
-        {
-          "placar": "1x0",
-          "prob": 15.2
-        },
-        {
-          "placar": "1x1",
-          "prob": 14.0
-        }
-      ],
-      "placar_provavel": "0x0",
-      "provavel": "casa",
-      "data": "2026-09-08T20:30",
-      "sede": "Arena Pantanal"
-    },
-    {
-      "mandante": "Criciúma",
-      "visitante": "Juventude",
-      "casa": 34.0,
-      "empate": 38.3,
-      "fora": 27.7,
-      "gols_esperados": [
-        0.79,
-        0.68
-      ],
-      "top_placares": [
-        {
-          "placar": "0x0",
-          "prob": 23.5
-        },
-        {
-          "placar": "1x0",
-          "prob": 17.5
-        },
-        {
-          "placar": "0x1",
-          "prob": 15.0
-        }
-      ],
-      "placar_provavel": "0x0",
-      "provavel": "empate",
-      "data": "2026-09-08T21:00",
-      "sede": "Heriberto Hülse"
-    },
-    {
       "mandante": "Botafogo-SP",
       "visitante": "Novorizontino",
       "casa": 25.1,
@@ -700,7 +642,7 @@
         },
         {
           "placar": "0x1",
-          "prob": 9.9
+          "prob": 10.0
         },
         {
           "placar": "1x2",
@@ -715,7 +657,7 @@
     {
       "mandante": "Fortaleza",
       "visitante": "Avaí",
-      "casa": 53.9,
+      "casa": 53.8,
       "empate": 27.2,
       "fora": 19.0,
       "gols_esperados": [
@@ -733,7 +675,7 @@
         },
         {
           "placar": "2x0",
-          "prob": 11.4
+          "prob": 11.5
         }
       ],
       "placar_provavel": "1x0",
@@ -746,7 +688,7 @@
       "visitante": "Náutico",
       "casa": 18.9,
       "empate": 24.2,
-      "fora": 57.0,
+      "fora": 56.9,
       "gols_esperados": [
         0.93,
         1.79
@@ -783,7 +725,7 @@
       "top_placares": [
         {
           "placar": "1x1",
-          "prob": 9.8
+          "prob": 9.9
         },
         {
           "placar": "2x1",
@@ -812,7 +754,7 @@
       "top_placares": [
         {
           "placar": "1x0",
-          "prob": 13.3
+          "prob": 13.4
         },
         {
           "placar": "1x1",
@@ -832,7 +774,7 @@
       "mandante": "São Bernardo",
       "visitante": "Londrina",
       "casa": 57.3,
-      "empate": 22.4,
+      "empate": 22.5,
       "fora": 20.3,
       "gols_esperados": [
         2.01,
@@ -861,10 +803,10 @@
       "mandante": "Vila Nova",
       "visitante": "Goiás",
       "casa": 54.6,
-      "empate": 24.9,
+      "empate": 25.0,
       "fora": 20.5,
       "gols_esperados": [
-        1.73,
+        1.72,
         0.96
       ],
       "top_placares": [
@@ -894,7 +836,7 @@
       "fora": 5.3,
       "gols_esperados": [
         2.61,
-        0.54
+        0.53
       ],
       "top_placares": [
         {
@@ -994,80 +936,80 @@
       83
     ],
     "amostras": [
-      481,
-      994,
-      1080,
-      1472,
-      2168,
-      2860,
-      3127,
-      3572,
-      4015,
-      4151,
-      4239,
-      4227,
-      3893,
-      3829,
-      3559,
-      3268,
-      3074,
-      2863,
-      2562,
-      2449,
-      2382,
-      2347,
-      2620,
-      2673,
-      2822,
-      3179,
-      3541,
-      3987,
-      4775,
-      5587,
-      6380,
-      7416,
-      8600,
-      9676,
-      10838,
-      12392,
-      13935,
-      14939,
-      16510,
-      17834,
-      19046,
-      20127,
-      20548,
-      21627,
-      21764,
-      22042,
-      22193,
-      21684,
-      21165,
-      20628,
-      19529,
-      18713,
-      17625,
-      16640,
-      15212,
-      13575,
-      12669,
-      11212,
-      9883,
-      8636,
-      7467,
-      6286,
-      5140,
-      4217,
-      3327,
-      2586,
-      2054,
-      1414,
-      1152,
-      646,
-      440,
-      275,
-      102,
-      60
+      510,
+      1015,
+      1162,
+      1619,
+      2353,
+      2767,
+      3151,
+      3672,
+      4034,
+      4025,
+      4034,
+      4135,
+      3908,
+      3763,
+      3557,
+      3233,
+      2920,
+      2796,
+      2528,
+      2428,
+      2340,
+      2420,
+      2526,
+      2715,
+      2907,
+      3190,
+      3806,
+      4148,
+      4917,
+      5582,
+      6449,
+      7340,
+      8587,
+      9707,
+      11062,
+      12375,
+      13786,
+      14922,
+      16496,
+      17494,
+      18945,
+      19903,
+      20584,
+      21158,
+      21520,
+      21885,
+      21686,
+      21326,
+      20972,
+      20446,
+      19717,
+      18709,
+      17585,
+      16739,
+      15007,
+      13972,
+      12824,
+      11534,
+      10302,
+      8850,
+      7540,
+      6387,
+      5367,
+      4355,
+      3532,
+      2619,
+      2182,
+      1370,
+      1101,
+      607,
+      454,
+      262,
+      100,
+      81
     ],
     "titulo": [
       0.0,
@@ -1124,24 +1066,24 @@
       0.0,
       0.0,
       0.2,
-      0.9,
-      2.4,
-      5.9,
-      12.0,
-      19.0,
-      29.5,
-      39.8,
-      50.4,
-      61.8,
-      70.4,
-      79.1,
-      85.5,
-      91.6,
-      95.5,
-      97.2,
-      98.9,
-      98.2,
-      99.6,
+      0.8,
+      2.0,
+      5.0,
+      10.1,
+      17.4,
+      27.2,
+      38.8,
+      50.7,
+      60.0,
+      71.6,
+      80.9,
+      87.9,
+      92.6,
+      95.6,
+      97.3,
+      99.5,
+      99.3,
+      100.0,
       100.0,
       100.0
     ],
@@ -1196,23 +1138,23 @@
       0.0,
       0.0,
       0.0,
-      0.0,
-      0.3,
-      1.1,
-      4.2,
-      9.8,
-      19.5,
-      32.5,
-      47.9,
-      61.2,
-      74.3,
-      84.0,
-      90.3,
-      95.0,
-      97.5,
-      99.0,
-      99.6,
-      99.9,
+      0.1,
+      0.2,
+      1.0,
+      3.4,
+      8.5,
+      17.3,
+      30.2,
+      44.7,
+      60.2,
+      73.5,
+      83.8,
+      91.0,
+      95.5,
+      97.7,
+      99.1,
+      99.8,
+      100.0,
       100.0,
       100.0,
       100.0,
@@ -1267,28 +1209,28 @@
       0.0,
       0.0,
       0.1,
-      0.5,
-      2.1,
-      7.2,
-      18.8,
-      39.7,
-      60.8,
-      80.4,
-      91.0,
-      93.4,
-      89.6,
-      80.4,
-      67.4,
-      52.1,
-      38.8,
-      25.7,
-      16.0,
-      9.7,
-      5.0,
-      2.5,
-      1.0,
       0.4,
-      0.1,
+      1.7,
+      6.5,
+      18.0,
+      36.9,
+      59.5,
+      77.9,
+      89.7,
+      93.7,
+      90.6,
+      82.5,
+      69.8,
+      55.2,
+      39.8,
+      26.5,
+      16.2,
+      9.0,
+      4.5,
+      2.3,
+      0.9,
+      0.2,
+      0.0,
       0.0,
       0.0,
       0.0,
@@ -1324,19 +1266,19 @@
       100.0,
       99.9,
       99.7,
-      99.4,
-      98.3,
-      96.4,
-      91.8,
-      85.1,
-      75.8,
-      62.8,
-      46.8,
-      31.8,
-      18.6,
-      9.3,
-      3.9,
-      1.4,
+      99.2,
+      98.4,
+      96.0,
+      91.0,
+      84.4,
+      74.3,
+      61.0,
+      47.1,
+      33.0,
+      18.2,
+      8.7,
+      3.8,
+      1.2,
       0.4,
       0.1,
       0.0,
@@ -1381,7 +1323,7 @@
     "acesso_50": 68,
     "acesso_90": 71,
     "playoff_50": 60,
-    "playoff_90": 62,
+    "playoff_90": 63,
     "titulo_50": 71,
     "titulo_90": 76
   }
