@@ -1,6 +1,6 @@
 {
   "competicao": "Série B",
-  "atualizado_em": "2026-09-28T14:31:00.935949-03:00",
+  "atualizado_em": "2026-09-29T12:35:07.702393-03:00",
   "fonte": "ge.globo",
   "nsim": 30000,
   "sigma": 0.4,
@@ -44,17 +44,47 @@
         "v"
       ],
       "por_modelo": {
-        "poisson": 37.3,
-        "dixon_coles": 37.1,
-        "elo": 44.3
+        "poisson": 38.0,
+        "dixon_coles": 37.3,
+        "elo": 43.6
       },
       "titulo": 39.6,
-      "acesso_direto": 59.7,
-      "playoff": 33.6,
+      "acesso_direto": 60.9,
+      "playoff": 32.6,
       "z4": 0.0
     },
     {
-      "posicao_atual": 3,
+      "posicao_atual": 2,
+      "time": "Juventude",
+      "slug": "juventude",
+      "pts": 53,
+      "j": 30,
+      "gp": 32,
+      "gc": 19,
+      "sg": 13,
+      "vitorias": 15,
+      "empates": 8,
+      "derrotas": 7,
+      "aproveitamento": 58,
+      "ultimos_jogos": [
+        "e",
+        "v",
+        "d",
+        "d",
+        "v"
+      ],
+      "por_modelo": {
+        "poisson": 18.9,
+        "dixon_coles": 19.1,
+        "elo": 19.5
+      },
+      "titulo": 19.2,
+      "acesso_direto": 38.3,
+      "playoff": 46.2,
+      "z4": 0.0
+    },
+    {
+      "posicao_atual": 4,
       "time": "Novorizontino",
       "slug": "novorizontino",
       "pts": 51,
@@ -74,47 +104,17 @@
         "e"
       ],
       "por_modelo": {
-        "poisson": 18.8,
-        "dixon_coles": 19.6,
-        "elo": 13.7
+        "poisson": 15.3,
+        "dixon_coles": 15.8,
+        "elo": 10.4
       },
-      "titulo": 17.4,
-      "acesso_direto": 30.9,
-      "playoff": 44.4,
+      "titulo": 13.8,
+      "acesso_direto": 29.7,
+      "playoff": 46.6,
       "z4": 0.0
     },
     {
-      "posicao_atual": 4,
-      "time": "Juventude",
-      "slug": "juventude",
-      "pts": 50,
-      "j": 29,
-      "gp": 31,
-      "gc": 19,
-      "sg": 12,
-      "vitorias": 14,
-      "empates": 8,
-      "derrotas": 7,
-      "aproveitamento": 57,
-      "ultimos_jogos": [
-        "e",
-        "e",
-        "v",
-        "d",
-        "d"
-      ],
-      "por_modelo": {
-        "poisson": 11.3,
-        "dixon_coles": 11.4,
-        "elo": 11.8
-      },
-      "titulo": 11.5,
-      "acesso_direto": 25.0,
-      "playoff": 44.8,
-      "z4": 0.0
-    },
-    {
-      "posicao_atual": 2,
+      "posicao_atual": 3,
       "time": "Fortaleza",
       "slug": "fortaleza",
       "pts": 52,
@@ -134,13 +134,13 @@
         "e"
       ],
       "por_modelo": {
-        "poisson": 10.6,
-        "dixon_coles": 10.4,
-        "elo": 10.5
+        "poisson": 9.5,
+        "dixon_coles": 9.3,
+        "elo": 10.2
       },
-      "titulo": 10.5,
-      "acesso_direto": 24.0,
-      "playoff": 46.9,
+      "titulo": 9.7,
+      "acesso_direto": 19.7,
+      "playoff": 45.7,
       "z4": 0.0
     },
     {
@@ -164,13 +164,13 @@
         "v"
       ],
       "por_modelo": {
-        "poisson": 9.8,
-        "dixon_coles": 9.8,
-        "elo": 10.2
+        "poisson": 7.4,
+        "dixon_coles": 7.7,
+        "elo": 7.4
       },
-      "titulo": 10.0,
-      "acesso_direto": 25.6,
-      "playoff": 50.9,
+      "titulo": 7.5,
+      "acesso_direto": 19.9,
+      "playoff": 51.4,
       "z4": 0.0
     },
     {
@@ -194,13 +194,13 @@
         "v"
       ],
       "por_modelo": {
-        "poisson": 5.2,
-        "dixon_coles": 5.1,
-        "elo": 6.1
+        "poisson": 5.5,
+        "dixon_coles": 5.6,
+        "elo": 6.3
       },
-      "titulo": 5.5,
-      "acesso_direto": 15.1,
-      "playoff": 45.2,
+      "titulo": 5.8,
+      "acesso_direto": 15.7,
+      "playoff": 47.9,
       "z4": 0.0
     },
     {
@@ -224,13 +224,13 @@
         "e"
       ],
       "por_modelo": {
-        "poisson": 4.0,
-        "dixon_coles": 3.7,
-        "elo": 1.9
+        "poisson": 3.0,
+        "dixon_coles": 3.1,
+        "elo": 1.7
       },
-      "titulo": 3.2,
-      "acesso_direto": 9.7,
-      "playoff": 40.1,
+      "titulo": 2.6,
+      "acesso_direto": 8.1,
+      "playoff": 38.8,
       "z4": 0.0
     },
     {
@@ -254,13 +254,13 @@
         "v"
       ],
       "por_modelo": {
-        "poisson": 2.1,
-        "dixon_coles": 2.0,
-        "elo": 1.1
+        "poisson": 1.5,
+        "dixon_coles": 1.5,
+        "elo": 0.7
       },
-      "titulo": 1.8,
-      "acesso_direto": 6.0,
-      "playoff": 30.1,
+      "titulo": 1.2,
+      "acesso_direto": 4.2,
+      "playoff": 26.5,
       "z4": 0.0
     },
     {
@@ -285,12 +285,12 @@
       ],
       "por_modelo": {
         "poisson": 0.4,
-        "dixon_coles": 0.4,
-        "elo": 0.2
+        "dixon_coles": 0.3,
+        "elo": 0.1
       },
       "titulo": 0.3,
-      "acesso_direto": 1.6,
-      "playoff": 17.7,
+      "acesso_direto": 1.4,
+      "playoff": 17.1,
       "z4": 0.1
     },
     {
@@ -314,14 +314,14 @@
         "e"
       ],
       "por_modelo": {
-        "poisson": 0.2,
-        "dixon_coles": 0.2,
-        "elo": 0.1
+        "poisson": 0.1,
+        "dixon_coles": 0.1,
+        "elo": 0.0
       },
       "titulo": 0.1,
-      "acesso_direto": 1.0,
-      "playoff": 17.3,
-      "z4": 0.3
+      "acesso_direto": 0.9,
+      "playoff": 18.9,
+      "z4": 0.2
     },
     {
       "posicao_atual": 10,
@@ -349,8 +349,8 @@
         "elo": 0.1
       },
       "titulo": 0.1,
-      "acesso_direto": 0.6,
-      "playoff": 8.5,
+      "acesso_direto": 0.5,
+      "playoff": 9.5,
       "z4": 0.3
     },
     {
@@ -379,9 +379,9 @@
         "elo": 0.0
       },
       "titulo": 0.1,
-      "acesso_direto": 0.5,
-      "playoff": 11.8,
-      "z4": 0.3
+      "acesso_direto": 0.4,
+      "playoff": 10.6,
+      "z4": 0.2
     },
     {
       "posicao_atual": 14,
@@ -409,9 +409,9 @@
         "elo": 0.0
       },
       "titulo": 0.0,
-      "acesso_direto": 0.2,
-      "playoff": 4.2,
-      "z4": 2.1
+      "acesso_direto": 0.1,
+      "playoff": 4.7,
+      "z4": 1.9
     },
     {
       "posicao_atual": 13,
@@ -440,8 +440,8 @@
       },
       "titulo": 0.0,
       "acesso_direto": 0.1,
-      "playoff": 4.4,
-      "z4": 1.4
+      "playoff": 3.3,
+      "z4": 1.7
     },
     {
       "posicao_atual": 15,
@@ -471,7 +471,7 @@
       "titulo": 0.0,
       "acesso_direto": 0.0,
       "playoff": 0.1,
-      "z4": 15.6
+      "z4": 17.9
     },
     {
       "posicao_atual": 16,
@@ -501,7 +501,7 @@
       "titulo": 0.0,
       "acesso_direto": 0.0,
       "playoff": 0.0,
-      "z4": 41.2
+      "z4": 39.7
     },
     {
       "posicao_atual": 17,
@@ -531,7 +531,7 @@
       "titulo": 0.0,
       "acesso_direto": 0.0,
       "playoff": 0.0,
-      "z4": 61.9
+      "z4": 61.5
     },
     {
       "posicao_atual": 18,
@@ -561,25 +561,25 @@
       "titulo": 0.0,
       "acesso_direto": 0.0,
       "playoff": 0.0,
-      "z4": 76.9
+      "z4": 76.5
     },
     {
       "posicao_atual": 19,
       "time": "América-MG",
       "slug": "america-mg",
       "pts": 17,
-      "j": 29,
+      "j": 30,
       "gp": 21,
-      "gc": 49,
-      "sg": -28,
+      "gc": 50,
+      "sg": -29,
       "vitorias": 4,
       "empates": 5,
-      "derrotas": 20,
-      "aproveitamento": 19,
+      "derrotas": 21,
+      "aproveitamento": 18,
       "ultimos_jogos": [
-        "v",
         "d",
         "v",
+        "d",
         "d",
         "d"
       ],
@@ -625,35 +625,6 @@
     }
   ],
   "proximos_jogos": [
-    {
-      "mandante": "América-MG",
-      "visitante": "Juventude",
-      "casa": 15.2,
-      "empate": 26.7,
-      "fora": 58.1,
-      "gols_esperados": [
-        0.65,
-        1.54
-      ],
-      "top_placares": [
-        {
-          "placar": "0x1",
-          "prob": 16.6
-        },
-        {
-          "placar": "0x2",
-          "prob": 13.2
-        },
-        {
-          "placar": "1x1",
-          "prob": 11.8
-        }
-      ],
-      "placar_provavel": "0x1",
-      "provavel": "fora",
-      "data": "2026-09-28T19:30",
-      "sede": "Independência"
-    },
     {
       "mandante": "Botafogo-SP",
       "visitante": "Ponte Preta",
@@ -750,74 +721,76 @@
       74,
       75,
       76,
+      77,
       78
     ],
     "amostras": [
-      1866,
-      2826,
-      2293,
-      2924,
-      4198,
-      4452,
-      4278,
-      4609,
-      4696,
-      4187,
-      3942,
-      3872,
-      3282,
-      2724,
-      2354,
-      1982,
-      1693,
-      1574,
-      1662,
-      2119,
-      2494,
-      3106,
-      4022,
-      4805,
-      5604,
-      6595,
-      7142,
-      7760,
-      8492,
-      8891,
-      9451,
-      10003,
-      10358,
-      11245,
-      11869,
-      12981,
-      14427,
-      15291,
-      16613,
-      18940,
-      19094,
-      20202,
-      22264,
-      22163,
-      23363,
-      24307,
-      23797,
-      23719,
-      23975,
-      21930,
-      20792,
-      19548,
-      16584,
-      14921,
-      12362,
-      10568,
-      8070,
-      6642,
-      4664,
-      3288,
-      2817,
-      1242,
-      994,
-      703,
-      330
+      1803,
+      2737,
+      2404,
+      2937,
+      4649,
+      4884,
+      4740,
+      5165,
+      5376,
+      4569,
+      4233,
+      3856,
+      3116,
+      2497,
+      2002,
+      1616,
+      1294,
+      1270,
+      1322,
+      1761,
+      2221,
+      2906,
+      3781,
+      4677,
+      5668,
+      6482,
+      7025,
+      7882,
+      8597,
+      9104,
+      9652,
+      10150,
+      10457,
+      11406,
+      12005,
+      13023,
+      14412,
+      15420,
+      16402,
+      18621,
+      18759,
+      20078,
+      21962,
+      22011,
+      22452,
+      23804,
+      22938,
+      22985,
+      23348,
+      21626,
+      20557,
+      19743,
+      16839,
+      15388,
+      13386,
+      10580,
+      8494,
+      7166,
+      5144,
+      3620,
+      3037,
+      1440,
+      1160,
+      883,
+      88,
+      390
     ],
     "titulo": [
       0.0,
@@ -869,21 +842,22 @@
       0.0,
       0.0,
       0.0,
-      0.1,
-      0.4,
-      1.5,
-      4.8,
-      11.3,
-      21.6,
-      35.2,
-      50.8,
-      64.5,
-      78.0,
-      85.4,
-      94.9,
+      0.0,
+      0.2,
+      0.9,
+      3.5,
+      9.4,
+      18.6,
+      32.1,
+      47.4,
+      60.4,
+      75.4,
+      83.6,
+      90.5,
+      95.6,
       96.1,
-      98.8,
       99.4,
+      98.9,
       100.0
     ],
     "acesso_direto": [
@@ -935,19 +909,20 @@
       0.0,
       0.0,
       0.0,
-      0.2,
-      1.3,
-      4.9,
-      13.5,
-      28.6,
-      46.9,
-      65.6,
-      80.4,
-      90.5,
-      95.7,
-      98.8,
-      99.6,
-      99.9,
+      0.1,
+      0.7,
+      3.3,
+      10.4,
+      24.0,
+      42.5,
+      61.9,
+      77.9,
+      88.7,
+      94.9,
+      98.3,
+      99.4,
+      100.0,
+      100.0,
       100.0,
       100.0,
       100.0,
@@ -997,24 +972,25 @@
       0.0,
       0.0,
       0.0,
-      0.3,
-      1.4,
-      7.5,
-      23.8,
-      48.8,
-      74.0,
-      89.3,
-      92.3,
-      86.0,
-      71.3,
-      53.1,
-      34.4,
-      19.6,
-      9.5,
-      4.3,
-      1.2,
-      0.4,
-      0.1,
+      0.2,
+      1.5,
+      6.5,
+      21.4,
+      44.8,
+      70.9,
+      88.1,
+      93.2,
+      89.0,
+      76.0,
+      57.5,
+      38.1,
+      22.1,
+      11.3,
+      5.1,
+      1.7,
+      0.6,
+      0.0,
+      0.0,
       0.0,
       0.0,
       0.0,
@@ -1043,21 +1019,22 @@
       100.0,
       100.0,
       100.0,
-      100.0,
-      99.6,
-      98.6,
-      96.3,
-      90.9,
-      82.2,
-      70.0,
-      55.0,
+      99.9,
+      99.7,
+      98.4,
+      95.9,
+      91.1,
+      82.9,
+      69.5,
+      55.4,
       39.1,
-      24.9,
-      12.5,
-      6.2,
-      2.0,
-      0.5,
+      24.2,
+      12.4,
+      5.5,
+      1.8,
+      0.4,
       0.1,
+      0.0,
       0.0,
       0.0,
       0.0,
@@ -1093,10 +1070,10 @@
     "salvo_95": 46,
     "risco_50": 42,
     "acesso_50": 67,
-    "acesso_90": 69,
+    "acesso_90": 70,
     "playoff_50": 61,
     "playoff_90": 63,
-    "titulo_50": 69,
+    "titulo_50": 70,
     "titulo_90": 73
   }
 }
