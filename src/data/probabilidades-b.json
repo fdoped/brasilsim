@@ -1,6 +1,6 @@
 {
   "competicao": "Série B",
-  "atualizado_em": "2026-10-12T15:49:36.948634-03:00",
+  "atualizado_em": "2026-10-13T13:49:48.737499-03:00",
   "fonte": "ge.globo",
   "nsim": 30000,
   "sigma": 0.4,
@@ -44,47 +44,47 @@
         "v"
       ],
       "por_modelo": {
-        "poisson": 41.7,
-        "dixon_coles": 41.5,
-        "elo": 47.2
+        "poisson": 37.0,
+        "dixon_coles": 37.3,
+        "elo": 44.4
       },
-      "titulo": 43.5,
-      "acesso_direto": 68.7,
-      "playoff": 30.9,
-      "z4": 0.0
-    },
-    {
-      "posicao_atual": 3,
-      "time": "Novorizontino",
-      "slug": "novorizontino",
-      "pts": 57,
-      "j": 32,
-      "gp": 54,
-      "gc": 27,
-      "sg": 27,
-      "vitorias": 16,
-      "empates": 9,
-      "derrotas": 7,
-      "aproveitamento": 59,
-      "ultimos_jogos": [
-        "e",
-        "d",
-        "e",
-        "v",
-        "v"
-      ],
-      "por_modelo": {
-        "poisson": 25.2,
-        "dixon_coles": 25.3,
-        "elo": 19.7
-      },
-      "titulo": 23.4,
-      "acesso_direto": 43.8,
-      "playoff": 51.5,
+      "titulo": 39.6,
+      "acesso_direto": 66.4,
+      "playoff": 33.4,
       "z4": 0.0
     },
     {
       "posicao_atual": 2,
+      "time": "Novorizontino",
+      "slug": "novorizontino",
+      "pts": 60,
+      "j": 33,
+      "gp": 59,
+      "gc": 28,
+      "sg": 31,
+      "vitorias": 17,
+      "empates": 9,
+      "derrotas": 7,
+      "aproveitamento": 60,
+      "ultimos_jogos": [
+        "d",
+        "e",
+        "v",
+        "v",
+        "v"
+      ],
+      "por_modelo": {
+        "poisson": 36.8,
+        "dixon_coles": 36.2,
+        "elo": 29.2
+      },
+      "titulo": 34.1,
+      "acesso_direto": 64.9,
+      "playoff": 34.2,
+      "z4": 0.0
+    },
+    {
+      "posicao_atual": 3,
       "time": "Juventude",
       "slug": "juventude",
       "pts": 60,
@@ -104,77 +104,77 @@
         "e"
       ],
       "por_modelo": {
-        "poisson": 21.7,
-        "dixon_coles": 21.8,
-        "elo": 21.8
+        "poisson": 20.7,
+        "dixon_coles": 20.8,
+        "elo": 20.9
       },
-      "titulo": 21.8,
-      "acesso_direto": 51.1,
-      "playoff": 47.2,
+      "titulo": 20.8,
+      "acesso_direto": 45.3,
+      "playoff": 52.7,
       "z4": 0.0
     },
     {
       "posicao_atual": 4,
       "time": "Fortaleza",
       "slug": "fortaleza",
-      "pts": 56,
-      "j": 32,
-      "gp": 37,
-      "gc": 27,
+      "pts": 57,
+      "j": 33,
+      "gp": 39,
+      "gc": 29,
       "sg": 10,
       "vitorias": 15,
-      "empates": 11,
+      "empates": 12,
       "derrotas": 6,
-      "aproveitamento": 58,
+      "aproveitamento": 57,
       "ultimos_jogos": [
-        "e",
         "v",
         "e",
         "e",
-        "v"
+        "v",
+        "e"
       ],
       "por_modelo": {
-        "poisson": 9.2,
-        "dixon_coles": 9.4,
-        "elo": 9.6
+        "poisson": 3.2,
+        "dixon_coles": 3.3,
+        "elo": 3.5
       },
-      "titulo": 9.4,
-      "acesso_direto": 25.2,
-      "playoff": 63.9,
-      "z4": 0.0
-    },
-    {
-      "posicao_atual": 6,
-      "time": "Criciúma",
-      "slug": "criciuma",
-      "pts": 53,
-      "j": 32,
-      "gp": 33,
-      "gc": 28,
-      "sg": 5,
-      "vitorias": 15,
-      "empates": 8,
-      "derrotas": 9,
-      "aproveitamento": 55,
-      "ultimos_jogos": [
-        "d",
-        "d",
-        "v",
-        "v",
-        "d"
-      ],
-      "por_modelo": {
-        "poisson": 1.3,
-        "dixon_coles": 1.3,
-        "elo": 1.3
-      },
-      "titulo": 1.3,
-      "acesso_direto": 6.1,
-      "playoff": 53.1,
+      "titulo": 3.3,
+      "acesso_direto": 12.4,
+      "playoff": 72.4,
       "z4": 0.0
     },
     {
       "posicao_atual": 5,
+      "time": "Criciúma",
+      "slug": "criciuma",
+      "pts": 56,
+      "j": 33,
+      "gp": 34,
+      "gc": 28,
+      "sg": 6,
+      "vitorias": 16,
+      "empates": 8,
+      "derrotas": 9,
+      "aproveitamento": 56,
+      "ultimos_jogos": [
+        "d",
+        "v",
+        "v",
+        "d",
+        "v"
+      ],
+      "por_modelo": {
+        "poisson": 1.9,
+        "dixon_coles": 1.9,
+        "elo": 1.8
+      },
+      "titulo": 1.9,
+      "acesso_direto": 8.0,
+      "playoff": 66.5,
+      "z4": 0.0
+    },
+    {
+      "posicao_atual": 6,
       "time": "Atlético-GO",
       "slug": "atletico-go",
       "pts": 53,
@@ -194,47 +194,47 @@
         "e"
       ],
       "por_modelo": {
-        "poisson": 0.5,
-        "dixon_coles": 0.5,
-        "elo": 0.3
-      },
-      "titulo": 0.4,
-      "acesso_direto": 3.0,
-      "playoff": 59.8,
-      "z4": 0.0
-    },
-    {
-      "posicao_atual": 8,
-      "time": "CRB",
-      "slug": "crb",
-      "pts": 51,
-      "j": 32,
-      "gp": 49,
-      "gc": 45,
-      "sg": 4,
-      "vitorias": 15,
-      "empates": 6,
-      "derrotas": 11,
-      "aproveitamento": 53,
-      "ultimos_jogos": [
-        "v",
-        "d",
-        "v",
-        "d",
-        "v"
-      ],
-      "por_modelo": {
         "poisson": 0.3,
-        "dixon_coles": 0.2,
-        "elo": 0.1
+        "dixon_coles": 0.3,
+        "elo": 0.2
       },
-      "titulo": 0.2,
-      "acesso_direto": 1.5,
-      "playoff": 35.3,
+      "titulo": 0.3,
+      "acesso_direto": 2.1,
+      "playoff": 63.3,
       "z4": 0.0
     },
     {
       "posicao_atual": 7,
+      "time": "CRB",
+      "slug": "crb",
+      "pts": 52,
+      "j": 33,
+      "gp": 51,
+      "gc": 47,
+      "sg": 4,
+      "vitorias": 15,
+      "empates": 7,
+      "derrotas": 11,
+      "aproveitamento": 52,
+      "ultimos_jogos": [
+        "d",
+        "v",
+        "d",
+        "v",
+        "e"
+      ],
+      "por_modelo": {
+        "poisson": 0.1,
+        "dixon_coles": 0.1,
+        "elo": 0.0
+      },
+      "titulo": 0.1,
+      "acesso_direto": 0.6,
+      "playoff": 29.5,
+      "z4": 0.0
+    },
+    {
+      "posicao_atual": 8,
       "time": "Sport",
       "slug": "sport",
       "pts": 51,
@@ -255,12 +255,12 @@
       ],
       "por_modelo": {
         "poisson": 0.0,
-        "dixon_coles": 0.1,
+        "dixon_coles": 0.0,
         "elo": 0.0
       },
       "titulo": 0.0,
-      "acesso_direto": 0.7,
-      "playoff": 46.0,
+      "acesso_direto": 0.3,
+      "playoff": 31.4,
       "z4": 0.0
     },
     {
@@ -290,8 +290,8 @@
       },
       "titulo": 0.0,
       "acesso_direto": 0.0,
-      "playoff": 2.4,
-      "z4": 0.2
+      "playoff": 3.9,
+      "z4": 0.0
     },
     {
       "posicao_atual": 9,
@@ -320,8 +320,8 @@
       },
       "titulo": 0.0,
       "acesso_direto": 0.0,
-      "playoff": 4.3,
-      "z4": 0.1
+      "playoff": 6.0,
+      "z4": 0.0
     },
     {
       "posicao_atual": 11,
@@ -350,8 +350,8 @@
       },
       "titulo": 0.0,
       "acesso_direto": 0.0,
-      "playoff": 2.1,
-      "z4": 0.0
+      "playoff": 1.8,
+      "z4": 0.1
     },
     {
       "posicao_atual": 12,
@@ -380,7 +380,7 @@
       },
       "titulo": 0.0,
       "acesso_direto": 0.0,
-      "playoff": 2.8,
+      "playoff": 4.8,
       "z4": 0.1
     },
     {
@@ -411,27 +411,27 @@
       "titulo": 0.0,
       "acesso_direto": 0.0,
       "playoff": 0.0,
-      "z4": 3.2
+      "z4": 5.2
     },
     {
       "posicao_atual": 15,
       "time": "Ceará",
       "slug": "ceara",
       "pts": 42,
-      "j": 32,
+      "j": 33,
       "gp": 35,
-      "gc": 39,
-      "sg": -4,
+      "gc": 40,
+      "sg": -5,
       "vitorias": 11,
       "empates": 9,
-      "derrotas": 12,
-      "aproveitamento": 43,
+      "derrotas": 13,
+      "aproveitamento": 42,
       "ultimos_jogos": [
-        "e",
         "v",
         "e",
         "v",
-        "v"
+        "v",
+        "d"
       ],
       "por_modelo": {
         "poisson": 0.0,
@@ -440,8 +440,8 @@
       },
       "titulo": 0.0,
       "acesso_direto": 0.0,
-      "playoff": 0.2,
-      "z4": 6.4
+      "playoff": 0.0,
+      "z4": 12.8
     },
     {
       "posicao_atual": 13,
@@ -470,27 +470,27 @@
       },
       "titulo": 0.0,
       "acesso_direto": 0.0,
-      "playoff": 0.3,
-      "z4": 2.9
+      "playoff": 0.2,
+      "z4": 3.5
     },
     {
       "posicao_atual": 16,
       "time": "Botafogo-SP",
       "slug": "botafogo-sp",
-      "pts": 38,
-      "j": 32,
-      "gp": 36,
+      "pts": 41,
+      "j": 33,
+      "gp": 37,
       "gc": 38,
-      "sg": -2,
-      "vitorias": 10,
+      "sg": -1,
+      "vitorias": 11,
       "empates": 8,
       "derrotas": 14,
-      "aproveitamento": 39,
+      "aproveitamento": 41,
       "ultimos_jogos": [
-        "d",
         "e",
         "v",
         "d",
+        "v",
         "v"
       ],
       "por_modelo": {
@@ -501,7 +501,7 @@
       "titulo": 0.0,
       "acesso_direto": 0.0,
       "playoff": 0.0,
-      "z4": 33.5
+      "z4": 16.2
     },
     {
       "posicao_atual": 17,
@@ -531,7 +531,7 @@
       "titulo": 0.0,
       "acesso_direto": 0.0,
       "playoff": 0.0,
-      "z4": 57.7
+      "z4": 64.1
     },
     {
       "posicao_atual": 18,
@@ -561,20 +561,20 @@
       "titulo": 0.0,
       "acesso_direto": 0.0,
       "playoff": 0.0,
-      "z4": 95.8
+      "z4": 98.0
     },
     {
       "posicao_atual": 19,
       "time": "América-MG",
       "slug": "america-mg",
       "pts": 17,
-      "j": 32,
+      "j": 33,
       "gp": 21,
-      "gc": 53,
-      "sg": -32,
+      "gc": 54,
+      "sg": -33,
       "vitorias": 4,
       "empates": 5,
-      "derrotas": 23,
+      "derrotas": 24,
       "aproveitamento": 17,
       "ultimos_jogos": [
         "d",
@@ -598,17 +598,17 @@
       "time": "Ponte Preta",
       "slug": "ponte-preta",
       "pts": 13,
-      "j": 32,
-      "gp": 17,
-      "gc": 68,
-      "sg": -51,
+      "j": 33,
+      "gp": 18,
+      "gc": 73,
+      "sg": -55,
       "vitorias": 3,
       "empates": 4,
-      "derrotas": 25,
+      "derrotas": 26,
       "aproveitamento": 13,
       "ultimos_jogos": [
-        "d",
         "v",
+        "d",
         "d",
         "d",
         "d"
@@ -626,135 +626,19 @@
   ],
   "proximos_jogos": [
     {
-      "mandante": "Fortaleza",
-      "visitante": "CRB",
-      "casa": 49.2,
-      "empate": 25.7,
-      "fora": 25.1,
-      "gols_esperados": [
-        1.64,
-        1.11
-      ],
-      "top_placares": [
-        {
-          "placar": "1x1",
-          "prob": 12.2
-        },
-        {
-          "placar": "1x0",
-          "prob": 9.9
-        },
-        {
-          "placar": "2x1",
-          "prob": 9.6
-        }
-      ],
-      "placar_provavel": "1x1",
-      "provavel": "casa",
-      "data": "2026-10-12T16:00",
-      "sede": "Castelão (CE)"
-    },
-    {
-      "mandante": "Novorizontino",
-      "visitante": "Ponte Preta",
-      "casa": 90.6,
-      "empate": 7.4,
-      "fora": 1.9,
-      "gols_esperados": [
-        3.32,
-        0.38
-      ],
-      "top_placares": [
-        {
-          "placar": "3x0",
-          "prob": 15.8
-        },
-        {
-          "placar": "2x0",
-          "prob": 14.3
-        },
-        {
-          "placar": "4x0",
-          "prob": 13.2
-        }
-      ],
-      "placar_provavel": "3x0",
-      "provavel": "casa",
-      "data": "2026-10-12T19:00",
-      "sede": "Jorge Ismael de Biasi"
-    },
-    {
-      "mandante": "Criciúma",
-      "visitante": "América-MG",
-      "casa": 66.9,
-      "empate": 23.4,
-      "fora": 9.7,
-      "gols_esperados": [
-        1.71,
-        0.49
-      ],
-      "top_placares": [
-        {
-          "placar": "1x0",
-          "prob": 18.5
-        },
-        {
-          "placar": "2x0",
-          "prob": 16.2
-        },
-        {
-          "placar": "0x0",
-          "prob": 11.5
-        }
-      ],
-      "placar_provavel": "1x0",
-      "provavel": "casa",
-      "data": "2026-10-12T19:30",
-      "sede": "Heriberto Hülse"
-    },
-    {
-      "mandante": "Botafogo-SP",
-      "visitante": "Ceará",
-      "casa": 43.5,
-      "empate": 27.7,
-      "fora": 28.8,
-      "gols_esperados": [
-        1.42,
-        1.11
-      ],
-      "top_placares": [
-        {
-          "placar": "1x1",
-          "prob": 13.2
-        },
-        {
-          "placar": "1x0",
-          "prob": 10.6
-        },
-        {
-          "placar": "2x1",
-          "prob": 8.9
-        }
-      ],
-      "placar_provavel": "1x1",
-      "provavel": "casa",
-      "data": "2026-10-12T21:00",
-      "sede": "Arena Nicnet (Santa Cruz)"
-    },
-    {
       "mandante": "Athletic Club",
       "visitante": "Londrina",
       "casa": 48.6,
-      "empate": 24.7,
-      "fora": 26.7,
+      "empate": 24.8,
+      "fora": 26.6,
       "gols_esperados": [
         1.74,
-        1.24
+        1.23
       ],
       "top_placares": [
         {
           "placar": "1x1",
-          "prob": 11.5
+          "prob": 11.6
         },
         {
           "placar": "2x1",
@@ -762,7 +646,7 @@
         },
         {
           "placar": "1x0",
-          "prob": 8.3
+          "prob": 8.4
         }
       ],
       "placar_provavel": "1x1",
@@ -839,70 +723,70 @@
       76
     ],
     "amostras": [
-      3257,
-      4442,
-      3321,
-      3879,
-      4881,
-      4393,
-      4098,
-      4685,
-      4859,
-      3937,
-      3883,
-      3716,
-      2819,
-      2310,
-      2012,
-      1807,
-      2000,
-      1878,
-      2052,
-      2821,
-      2492,
-      2794,
-      3204,
-      3008,
-      3373,
-      4343,
-      4875,
-      5528,
-      6244,
-      7307,
-      9229,
-      9261,
-      10518,
-      13287,
-      12071,
-      15579,
-      19813,
-      17951,
-      21471,
-      24360,
-      20967,
-      21588,
-      22752,
-      18409,
-      18712,
-      20307,
-      16560,
-      17538,
-      19869,
-      16183,
-      18910,
-      19014,
-      15326,
-      17906,
-      14171,
-      13522,
-      11337,
-      9558,
-      8227,
-      5237,
-      4921,
-      2705,
-      1310,
-      1213
+      4673,
+      5645,
+      3471,
+      4476,
+      5366,
+      4312,
+      3957,
+      4894,
+      4918,
+      3913,
+      3680,
+      3741,
+      2262,
+      1699,
+      1489,
+      1390,
+      1699,
+      1544,
+      1923,
+      2750,
+      2432,
+      2753,
+      3160,
+      3004,
+      3249,
+      3763,
+      3436,
+      4080,
+      5096,
+      7109,
+      9683,
+      9931,
+      12375,
+      15262,
+      13519,
+      16375,
+      19550,
+      16423,
+      20107,
+      22603,
+      19744,
+      20727,
+      22803,
+      19349,
+      18840,
+      20977,
+      18303,
+      17282,
+      20206,
+      16381,
+      18005,
+      17762,
+      16311,
+      16312,
+      14447,
+      14021,
+      10993,
+      10641,
+      8370,
+      5671,
+      5828,
+      2164,
+      2135,
+      1016
     ],
     "titulo": [
       0.0,
@@ -957,17 +841,17 @@
       0.0,
       0.0,
       0.0,
-      0.4,
-      1.8,
-      6.9,
-      16.3,
-      30.2,
-      45.9,
-      64.4,
-      75.5,
-      86.7,
-      95.9,
-      96.8,
+      0.2,
+      1.5,
+      5.9,
+      14.2,
+      28.1,
+      42.7,
+      60.8,
+      73.2,
+      83.9,
+      94.4,
+      96.0,
       100.0
     ],
     "acesso_direto": [
@@ -1021,18 +905,18 @@
       0.0,
       0.0,
       0.0,
-      0.3,
-      1.7,
-      8.4,
-      18.4,
-      41.4,
-      61.7,
-      79.0,
-      90.4,
-      96.5,
-      98.3,
-      99.8,
-      99.9,
+      0.1,
+      1.1,
+      5.7,
+      16.5,
+      36.7,
+      57.8,
+      77.4,
+      89.2,
+      96.2,
+      98.4,
+      99.6,
+      100.0,
       100.0,
       100.0
     ],
@@ -1081,24 +965,24 @@
       0.0,
       0.0,
       0.1,
-      1.2,
-      5.4,
-      18.5,
-      39.4,
-      64.5,
+      0.8,
+      4.5,
+      16.7,
+      37.8,
+      62.9,
       85.3,
-      94.3,
-      97.0,
-      91.5,
-      81.6,
-      58.6,
-      38.3,
-      21.0,
-      9.6,
-      3.5,
-      1.7,
-      0.2,
-      0.1,
+      95.1,
+      97.9,
+      94.2,
+      83.5,
+      63.3,
+      42.2,
+      22.6,
+      10.8,
+      3.8,
+      1.6,
+      0.4,
+      0.0,
       0.0,
       0.0
     ],
@@ -1128,16 +1012,16 @@
       100.0,
       100.0,
       100.0,
-      99.5,
-      97.2,
-      93.4,
-      85.7,
-      69.4,
-      54.2,
-      37.4,
-      22.9,
-      12.1,
-      5.0,
+      100.0,
+      100.0,
+      100.0,
+      95.3,
+      77.5,
+      60.7,
+      41.6,
+      24.0,
+      12.4,
+      5.2,
       1.8,
       0.4,
       0.0,
@@ -1174,7 +1058,7 @@
     "salvo_95": 47,
     "risco_50": 43,
     "acesso_50": 68,
-    "acesso_90": 70,
+    "acesso_90": 71,
     "playoff_50": 61,
     "playoff_90": 63,
     "titulo_50": 71,
