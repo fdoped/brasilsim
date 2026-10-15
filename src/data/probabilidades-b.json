@@ -1,6 +1,6 @@
 {
   "competicao": "Série B",
-  "atualizado_em": "2026-10-14T11:25:54.578022-03:00",
+  "atualizado_em": "2026-10-15T11:03:58.265164-03:00",
   "fonte": "ge.globo",
   "nsim": 30000,
   "sigma": 0.4,
@@ -44,13 +44,13 @@
         "v"
       ],
       "por_modelo": {
-        "poisson": 40.8,
+        "poisson": 41.5,
         "dixon_coles": 41.1,
-        "elo": 30.2
+        "elo": 30.6
       },
-      "titulo": 37.4,
-      "acesso_direto": 67.7,
-      "playoff": 31.5,
+      "titulo": 37.8,
+      "acesso_direto": 68.0,
+      "playoff": 31.2,
       "z4": 0.0
     },
     {
@@ -74,13 +74,13 @@
         "v"
       ],
       "por_modelo": {
-        "poisson": 33.2,
-        "dixon_coles": 33.0,
-        "elo": 42.1
+        "poisson": 32.4,
+        "dixon_coles": 32.7,
+        "elo": 41.4
       },
-      "titulo": 36.1,
-      "acesso_direto": 63.8,
-      "playoff": 35.8,
+      "titulo": 35.5,
+      "acesso_direto": 63.2,
+      "playoff": 36.4,
       "z4": 0.0
     },
     {
@@ -104,13 +104,13 @@
         "e"
       ],
       "por_modelo": {
-        "poisson": 21.1,
-        "dixon_coles": 21.3,
-        "elo": 22.3
+        "poisson": 21.4,
+        "dixon_coles": 21.6,
+        "elo": 22.6
       },
-      "titulo": 21.6,
-      "acesso_direto": 47.1,
-      "playoff": 51.6,
+      "titulo": 21.9,
+      "acesso_direto": 47.5,
+      "playoff": 51.3,
       "z4": 0.0
     },
     {
@@ -134,13 +134,13 @@
         "e"
       ],
       "por_modelo": {
-        "poisson": 2.9,
-        "dixon_coles": 2.7,
-        "elo": 3.4
+        "poisson": 2.7,
+        "dixon_coles": 2.6,
+        "elo": 3.3
       },
-      "titulo": 3.0,
-      "acesso_direto": 11.5,
-      "playoff": 73.8,
+      "titulo": 2.9,
+      "acesso_direto": 11.4,
+      "playoff": 73.7,
       "z4": 0.0
     },
     {
@@ -164,13 +164,13 @@
         "v"
       ],
       "por_modelo": {
-        "poisson": 1.6,
-        "dixon_coles": 1.5,
-        "elo": 1.7
+        "poisson": 1.7,
+        "dixon_coles": 1.7,
+        "elo": 1.8
       },
-      "titulo": 1.6,
-      "acesso_direto": 7.2,
-      "playoff": 67.2,
+      "titulo": 1.7,
+      "acesso_direto": 7.3,
+      "playoff": 67.0,
       "z4": 0.0
     },
     {
@@ -194,13 +194,13 @@
         "e"
       ],
       "por_modelo": {
-        "poisson": 0.3,
+        "poisson": 0.2,
         "dixon_coles": 0.2,
         "elo": 0.2
       },
       "titulo": 0.2,
       "acesso_direto": 1.8,
-      "playoff": 60.0,
+      "playoff": 59.8,
       "z4": 0.0
     },
     {
@@ -225,12 +225,12 @@
       ],
       "por_modelo": {
         "poisson": 0.1,
-        "dixon_coles": 0.0,
+        "dixon_coles": 0.1,
         "elo": 0.0
       },
       "titulo": 0.0,
-      "acesso_direto": 0.6,
-      "playoff": 30.8,
+      "acesso_direto": 0.5,
+      "playoff": 31.1,
       "z4": 0.0
     },
     {
@@ -260,7 +260,7 @@
       },
       "titulo": 0.0,
       "acesso_direto": 0.2,
-      "playoff": 33.5,
+      "playoff": 33.6,
       "z4": 0.0
     },
     {
@@ -290,7 +290,7 @@
       },
       "titulo": 0.0,
       "acesso_direto": 0.0,
-      "playoff": 2.6,
+      "playoff": 2.5,
       "z4": 0.0
     },
     {
@@ -350,8 +350,8 @@
       },
       "titulo": 0.0,
       "acesso_direto": 0.0,
-      "playoff": 2.5,
-      "z4": 0.0
+      "playoff": 2.6,
+      "z4": 0.1
     },
     {
       "posicao_atual": 12,
@@ -411,7 +411,7 @@
       "titulo": 0.0,
       "acesso_direto": 0.0,
       "playoff": 0.1,
-      "z4": 1.6
+      "z4": 1.7
     },
     {
       "posicao_atual": 14,
@@ -441,7 +441,7 @@
       "titulo": 0.0,
       "acesso_direto": 0.0,
       "playoff": 0.0,
-      "z4": 10.1
+      "z4": 10.2
     },
     {
       "posicao_atual": 15,
@@ -471,7 +471,7 @@
       "titulo": 0.0,
       "acesso_direto": 0.0,
       "playoff": 0.0,
-      "z4": 8.3
+      "z4": 8.2
     },
     {
       "posicao_atual": 16,
@@ -501,7 +501,7 @@
       "titulo": 0.0,
       "acesso_direto": 0.0,
       "playoff": 0.0,
-      "z4": 18.1
+      "z4": 18.0
     },
     {
       "posicao_atual": 17,
@@ -624,7 +624,298 @@
       "z4": 100.0
     }
   ],
-  "proximos_jogos": [],
+  "proximos_jogos": [
+    {
+      "mandante": "Ponte Preta",
+      "visitante": "Atlético-GO",
+      "casa": 8.9,
+      "empate": 17.3,
+      "fora": 73.8,
+      "gols_esperados": [
+        0.69,
+        2.34
+      ],
+      "top_placares": [
+        {
+          "placar": "0x2",
+          "prob": 13.4
+        },
+        {
+          "placar": "0x1",
+          "prob": 11.1
+        },
+        {
+          "placar": "0x3",
+          "prob": 10.5
+        }
+      ],
+      "placar_provavel": "0x2",
+      "provavel": "fora",
+      "data": "2026-10-16T19:30",
+      "sede": "Ítalo Limongi"
+    },
+    {
+      "mandante": "Sport",
+      "visitante": "Fortaleza",
+      "casa": 40.3,
+      "empate": 29.2,
+      "fora": 30.4,
+      "gols_esperados": [
+        1.27,
+        1.07
+      ],
+      "top_placares": [
+        {
+          "placar": "1x1",
+          "prob": 13.8
+        },
+        {
+          "placar": "1x0",
+          "prob": 11.6
+        },
+        {
+          "placar": "0x0",
+          "prob": 10.3
+        }
+      ],
+      "placar_provavel": "1x1",
+      "provavel": "casa",
+      "data": "2026-10-16T20:30",
+      "sede": "Ilha do Retiro"
+    },
+    {
+      "mandante": "Ceará",
+      "visitante": "Juventude",
+      "casa": 24.4,
+      "empate": 30.9,
+      "fora": 44.7,
+      "gols_esperados": [
+        0.82,
+        1.22
+      ],
+      "top_placares": [
+        {
+          "placar": "0x1",
+          "prob": 15.1
+        },
+        {
+          "placar": "1x1",
+          "prob": 13.7
+        },
+        {
+          "placar": "0x0",
+          "prob": 13.6
+        }
+      ],
+      "placar_provavel": "0x1",
+      "provavel": "fora",
+      "data": "2026-10-17T16:30",
+      "sede": "Castelão (CE)"
+    },
+    {
+      "mandante": "América-MG",
+      "visitante": "Operário-PR",
+      "casa": 19.3,
+      "empate": 23.6,
+      "fora": 57.1,
+      "gols_esperados": [
+        0.99,
+        1.86
+      ],
+      "top_placares": [
+        {
+          "placar": "1x1",
+          "prob": 11.2
+        },
+        {
+          "placar": "0x1",
+          "prob": 10.3
+        },
+        {
+          "placar": "0x2",
+          "prob": 10.0
+        }
+      ],
+      "placar_provavel": "1x1",
+      "provavel": "fora",
+      "data": "2026-10-17T18:30",
+      "sede": "Independência"
+    },
+    {
+      "mandante": "São Bernardo",
+      "visitante": "Criciúma",
+      "casa": 42.5,
+      "empate": 29.9,
+      "fora": 27.6,
+      "gols_esperados": [
+        1.26,
+        0.96
+      ],
+      "top_placares": [
+        {
+          "placar": "1x1",
+          "prob": 13.8
+        },
+        {
+          "placar": "1x0",
+          "prob": 13.1
+        },
+        {
+          "placar": "0x0",
+          "prob": 11.6
+        }
+      ],
+      "placar_provavel": "1x1",
+      "provavel": "casa",
+      "data": "2026-10-18T16:00",
+      "sede": "Primeiro de Maio"
+    },
+    {
+      "mandante": "Avaí",
+      "visitante": "Athletic Club",
+      "casa": 34.1,
+      "empate": 27.6,
+      "fora": 38.3,
+      "gols_esperados": [
+        1.26,
+        1.35
+      ],
+      "top_placares": [
+        {
+          "placar": "1x1",
+          "prob": 13.2
+        },
+        {
+          "placar": "0x1",
+          "prob": 9.4
+        },
+        {
+          "placar": "1x0",
+          "prob": 8.7
+        }
+      ],
+      "placar_provavel": "1x1",
+      "provavel": "fora",
+      "data": "2026-10-18T16:00",
+      "sede": "Ressacada"
+    },
+    {
+      "mandante": "CRB",
+      "visitante": "Botafogo-SP",
+      "casa": 46.5,
+      "empate": 24.4,
+      "fora": 29.2,
+      "gols_esperados": [
+        1.77,
+        1.36
+      ],
+      "top_placares": [
+        {
+          "placar": "1x1",
+          "prob": 11.1
+        },
+        {
+          "placar": "2x1",
+          "prob": 9.3
+        },
+        {
+          "placar": "1x0",
+          "prob": 7.2
+        }
+      ],
+      "placar_provavel": "1x1",
+      "provavel": "casa",
+      "data": "2026-10-18T16:00",
+      "sede": "Rei Pelé (AL)"
+    },
+    {
+      "mandante": "Vila Nova",
+      "visitante": "Novorizontino",
+      "casa": 32.5,
+      "empate": 27.0,
+      "fora": 40.5,
+      "gols_esperados": [
+        1.26,
+        1.43
+      ],
+      "top_placares": [
+        {
+          "placar": "1x1",
+          "prob": 12.9
+        },
+        {
+          "placar": "0x1",
+          "prob": 9.1
+        },
+        {
+          "placar": "1x2",
+          "prob": 8.8
+        }
+      ],
+      "placar_provavel": "1x1",
+      "provavel": "fora",
+      "data": "2026-10-18T18:00",
+      "sede": "OBA"
+    },
+    {
+      "mandante": "Goiás",
+      "visitante": "Náutico",
+      "casa": 39.6,
+      "empate": 27.7,
+      "fora": 32.7,
+      "gols_esperados": [
+        1.37,
+        1.22
+      ],
+      "top_placares": [
+        {
+          "placar": "1x1",
+          "prob": 13.2
+        },
+        {
+          "placar": "1x0",
+          "prob": 9.7
+        },
+        {
+          "placar": "2x1",
+          "prob": 8.6
+        }
+      ],
+      "placar_provavel": "1x1",
+      "provavel": "casa",
+      "data": "2026-10-19T19:30",
+      "sede": "Hailé Pinheiro (Serrinha)"
+    },
+    {
+      "mandante": "Londrina",
+      "visitante": "Cuiabá",
+      "casa": 32.3,
+      "empate": 29.4,
+      "fora": 38.3,
+      "gols_esperados": [
+        1.1,
+        1.23
+      ],
+      "top_placares": [
+        {
+          "placar": "1x1",
+          "prob": 13.8
+        },
+        {
+          "placar": "0x1",
+          "prob": 11.3
+        },
+        {
+          "placar": "0x0",
+          "prob": 10.4
+        }
+      ],
+      "placar_provavel": "1x1",
+      "provavel": "fora",
+      "data": "2026-10-20T19:30",
+      "sede": "VGD"
+    }
+  ],
   "curva_pontos": {
     "pontos": [
       13,
@@ -693,70 +984,70 @@
       76
     ],
     "amostras": [
-      4750,
-      5900,
-      3469,
-      4506,
-      5210,
-      4423,
-      3774,
-      4800,
-      4938,
-      3739,
-      3727,
+      4843,
+      5801,
+      3456,
+      4492,
+      5135,
+      4382,
+      3913,
+      4864,
+      5010,
+      3757,
       3626,
-      2214,
-      1733,
-      1546,
-      642,
-      1507,
-      2345,
-      1592,
-      2738,
-      3385,
-      2702,
+      3532,
+      2182,
+      1761,
+      1500,
+      676,
+      1593,
+      2350,
+      1640,
+      2650,
+      3489,
+      2644,
       3058,
-      4040,
-      3204,
-      3410,
-      4116,
-      3554,
-      4861,
-      7479,
-      9479,
-      10077,
-      12612,
-      15054,
-      14316,
-      16690,
-      19661,
-      17278,
-      19747,
-      22202,
-      20381,
-      19448,
-      21993,
-      19603,
-      18025,
-      20564,
-      18018,
-      17136,
-      20123,
-      16691,
-      17959,
-      17680,
-      16056,
-      16390,
-      14342,
-      13804,
-      10937,
-      10468,
-      8602,
-      5854,
-      6275,
-      1979,
-      2672,
-      896
+      3863,
+      3330,
+      3388,
+      4191,
+      3622,
+      4808,
+      7399,
+      9193,
+      10236,
+      12789,
+      15499,
+      14345,
+      16607,
+      19381,
+      17431,
+      19551,
+      21975,
+      20576,
+      19810,
+      22142,
+      19369,
+      17983,
+      20592,
+      17699,
+      17324,
+      19933,
+      16672,
+      17545,
+      18031,
+      15664,
+      16316,
+      14428,
+      13639,
+      10889,
+      11078,
+      8419,
+      5937,
+      6363,
+      2001,
+      2693,
+      935
     ],
     "titulo": [
       0.0,
@@ -812,16 +1103,16 @@
       0.0,
       0.0,
       0.2,
-      1.4,
-      5.6,
-      13.4,
-      26.8,
-      40.9,
-      59.0,
-      72.6,
-      84.1,
-      92.2,
-      95.5,
+      1.3,
+      5.3,
+      13.5,
+      25.8,
+      40.5,
+      59.1,
+      71.3,
+      83.4,
+      92.4,
+      95.1,
       100.0
     ],
     "acesso_direto": [
@@ -876,16 +1167,16 @@
       0.0,
       0.0,
       0.1,
-      1.0,
-      5.4,
-      14.8,
-      36.3,
-      57.0,
-      76.5,
-      88.3,
-      95.9,
-      98.7,
-      99.8,
+      0.9,
+      5.0,
+      14.9,
+      35.4,
+      56.5,
+      75.5,
+      87.7,
+      95.8,
+      98.1,
+      99.7,
       100.0,
       100.0,
       100.0
@@ -934,24 +1225,24 @@
       0.0,
       0.0,
       0.0,
-      0.0,
-      0.8,
+      0.1,
+      0.7,
       4.4,
       16.3,
-      38.9,
-      62.0,
-      84.4,
-      94.9,
-      97.8,
+      38.6,
+      62.7,
+      84.7,
       94.5,
-      85.2,
-      63.7,
-      43.0,
-      23.5,
-      11.7,
-      4.1,
-      1.3,
-      0.2,
+      98.0,
+      94.8,
+      85.1,
+      64.6,
+      43.5,
+      24.5,
+      12.3,
+      4.2,
+      1.9,
+      0.3,
       0.0,
       0.0,
       0.0
@@ -985,14 +1276,14 @@
       100.0,
       100.0,
       100.0,
-      92.8,
-      76.9,
-      58.0,
-      39.7,
-      22.9,
+      93.0,
+      76.3,
+      57.9,
+      40.0,
+      23.5,
       11.7,
-      4.5,
-      1.4,
+      4.3,
+      1.3,
       0.3,
       0.0,
       0.0,
