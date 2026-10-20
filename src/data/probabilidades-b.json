@@ -1,6 +1,6 @@
 {
   "competicao": "Série B",
-  "atualizado_em": "2026-10-19T13:21:10.156702-03:00",
+  "atualizado_em": "2026-10-20T11:12:52.267802-03:00",
   "fonte": "ge.globo",
   "nsim": 30000,
   "sigma": 0.4,
@@ -44,13 +44,13 @@
         "e"
       ],
       "por_modelo": {
-        "poisson": 37.0,
-        "dixon_coles": 37.3,
-        "elo": 44.5
+        "poisson": 36.7,
+        "dixon_coles": 36.8,
+        "elo": 45.4
       },
       "titulo": 39.6,
-      "acesso_direto": 64.2,
-      "playoff": 35.7,
+      "acesso_direto": 64.5,
+      "playoff": 35.4,
       "z4": 0.0
     },
     {
@@ -74,13 +74,13 @@
         "e"
       ],
       "por_modelo": {
-        "poisson": 31.5,
-        "dixon_coles": 31.3,
-        "elo": 22.7
+        "poisson": 34.1,
+        "dixon_coles": 34.3,
+        "elo": 25.0
       },
-      "titulo": 28.5,
-      "acesso_direto": 56.3,
-      "playoff": 43.3,
+      "titulo": 31.1,
+      "acesso_direto": 60.5,
+      "playoff": 39.3,
       "z4": 0.0
     },
     {
@@ -104,13 +104,13 @@
         "e"
       ],
       "por_modelo": {
-        "poisson": 20.2,
-        "dixon_coles": 20.1,
-        "elo": 20.1
+        "poisson": 19.0,
+        "dixon_coles": 19.1,
+        "elo": 18.5
       },
-      "titulo": 20.1,
-      "acesso_direto": 42.0,
-      "playoff": 57.7,
+      "titulo": 18.9,
+      "acesso_direto": 41.2,
+      "playoff": 58.5,
       "z4": 0.0
     },
     {
@@ -134,13 +134,13 @@
         "v"
       ],
       "por_modelo": {
-        "poisson": 6.5,
-        "dixon_coles": 6.5,
-        "elo": 7.4
+        "poisson": 5.3,
+        "dixon_coles": 5.0,
+        "elo": 5.7
       },
-      "titulo": 6.8,
-      "acesso_direto": 19.9,
-      "playoff": 77.9,
+      "titulo": 5.3,
+      "acesso_direto": 16.5,
+      "playoff": 80.8,
       "z4": 0.0
     },
     {
@@ -165,12 +165,12 @@
       ],
       "por_modelo": {
         "poisson": 4.8,
-        "dixon_coles": 4.8,
-        "elo": 5.3
+        "dixon_coles": 4.7,
+        "elo": 5.4
       },
       "titulo": 5.0,
-      "acesso_direto": 17.1,
-      "playoff": 77.9,
+      "acesso_direto": 16.8,
+      "playoff": 78.3,
       "z4": 0.0
     },
     {
@@ -200,7 +200,7 @@
       },
       "titulo": 0.0,
       "acesso_direto": 0.5,
-      "playoff": 70.1,
+      "playoff": 71.0,
       "z4": 0.0
     },
     {
@@ -230,7 +230,7 @@
       },
       "titulo": 0.0,
       "acesso_direto": 0.0,
-      "playoff": 15.3,
+      "playoff": 13.7,
       "z4": 0.0
     },
     {
@@ -260,28 +260,28 @@
       },
       "titulo": 0.0,
       "acesso_direto": 0.0,
-      "playoff": 10.2,
+      "playoff": 14.7,
       "z4": 0.0
     },
     {
-      "posicao_atual": 10,
+      "posicao_atual": 9,
       "time": "Goiás",
       "slug": "goias",
-      "pts": 48,
-      "j": 33,
+      "pts": 49,
+      "j": 34,
       "gp": 34,
       "gc": 40,
       "sg": -6,
       "vitorias": 14,
-      "empates": 6,
+      "empates": 7,
       "derrotas": 13,
       "aproveitamento": 48,
       "ultimos_jogos": [
-        "v",
         "d",
         "d",
         "v",
-        "v"
+        "v",
+        "e"
       ],
       "por_modelo": {
         "poisson": 0.0,
@@ -290,11 +290,11 @@
       },
       "titulo": 0.0,
       "acesso_direto": 0.0,
-      "playoff": 4.2,
+      "playoff": 2.0,
       "z4": 0.0
     },
     {
-      "posicao_atual": 9,
+      "posicao_atual": 10,
       "time": "Operário-PR",
       "slug": "operario-pr",
       "pts": 48,
@@ -320,7 +320,7 @@
       },
       "titulo": 0.0,
       "acesso_direto": 0.0,
-      "playoff": 0.7,
+      "playoff": 0.9,
       "z4": 0.0
     },
     {
@@ -350,7 +350,7 @@
       },
       "titulo": 0.0,
       "acesso_direto": 0.0,
-      "playoff": 6.6,
+      "playoff": 5.1,
       "z4": 0.0
     },
     {
@@ -411,7 +411,7 @@
       "titulo": 0.0,
       "acesso_direto": 0.0,
       "playoff": 0.0,
-      "z4": 2.4
+      "z4": 2.2
     },
     {
       "posicao_atual": 13,
@@ -441,10 +441,40 @@
       "titulo": 0.0,
       "acesso_direto": 0.0,
       "playoff": 0.0,
-      "z4": 3.5
+      "z4": 2.3
     },
     {
       "posicao_atual": 15,
+      "time": "Náutico",
+      "slug": "nautico",
+      "pts": 43,
+      "j": 34,
+      "gp": 39,
+      "gc": 42,
+      "sg": -3,
+      "vitorias": 11,
+      "empates": 10,
+      "derrotas": 13,
+      "aproveitamento": 42,
+      "ultimos_jogos": [
+        "v",
+        "e",
+        "d",
+        "d",
+        "e"
+      ],
+      "por_modelo": {
+        "poisson": 0.0,
+        "dixon_coles": 0.0,
+        "elo": 0.0
+      },
+      "titulo": 0.0,
+      "acesso_direto": 0.0,
+      "playoff": 0.0,
+      "z4": 6.8
+    },
+    {
+      "posicao_atual": 16,
       "time": "Ceará",
       "slug": "ceara",
       "pts": 43,
@@ -471,37 +501,7 @@
       "titulo": 0.0,
       "acesso_direto": 0.0,
       "playoff": 0.0,
-      "z4": 7.6
-    },
-    {
-      "posicao_atual": 16,
-      "time": "Náutico",
-      "slug": "nautico",
-      "pts": 42,
-      "j": 33,
-      "gp": 39,
-      "gc": 42,
-      "sg": -3,
-      "vitorias": 11,
-      "empates": 9,
-      "derrotas": 13,
-      "aproveitamento": 42,
-      "ultimos_jogos": [
-        "d",
-        "v",
-        "e",
-        "d",
-        "d"
-      ],
-      "por_modelo": {
-        "poisson": 0.0,
-        "dixon_coles": 0.0,
-        "elo": 0.0
-      },
-      "titulo": 0.0,
-      "acesso_direto": 0.0,
-      "playoff": 0.0,
-      "z4": 6.2
+      "z4": 8.9
     },
     {
       "posicao_atual": 17,
@@ -531,7 +531,7 @@
       "titulo": 0.0,
       "acesso_direto": 0.0,
       "playoff": 0.0,
-      "z4": 80.8
+      "z4": 80.4
     },
     {
       "posicao_atual": 18,
@@ -561,7 +561,7 @@
       "titulo": 0.0,
       "acesso_direto": 0.0,
       "playoff": 0.0,
-      "z4": 99.4
+      "z4": 99.2
     },
     {
       "posicao_atual": 19,
@@ -626,35 +626,6 @@
   ],
   "proximos_jogos": [
     {
-      "mandante": "Goiás",
-      "visitante": "Náutico",
-      "casa": 39.6,
-      "empate": 27.6,
-      "fora": 32.8,
-      "gols_esperados": [
-        1.37,
-        1.23
-      ],
-      "top_placares": [
-        {
-          "placar": "1x1",
-          "prob": 13.2
-        },
-        {
-          "placar": "1x0",
-          "prob": 9.6
-        },
-        {
-          "placar": "2x1",
-          "prob": 8.6
-        }
-      ],
-      "placar_provavel": "1x1",
-      "provavel": "casa",
-      "data": "2026-10-19T19:30",
-      "sede": "Hailé Pinheiro (Serrinha)"
-    },
-    {
       "mandante": "Londrina",
       "visitante": "Cuiabá",
       "casa": 32.3,
@@ -662,7 +633,7 @@
       "fora": 38.4,
       "gols_esperados": [
         1.11,
-        1.23
+        1.24
       ],
       "top_placares": [
         {
@@ -675,7 +646,7 @@
         },
         {
           "placar": "0x0",
-          "prob": 10.3
+          "prob": 10.2
         }
       ],
       "placar_provavel": "1x1",
@@ -749,67 +720,67 @@
       74
     ],
     "amostras": [
-      7464,
-      7183,
-      3329,
-      4425,
-      3666,
-      1319,
-      4853,
-      6109,
-      3559,
-      4791,
-      4850,
-      2450,
-      2277,
-      1968,
-      601,
-      1033,
-      1418,
-      1074,
-      2089,
-      2913,
-      2611,
-      3134,
-      3798,
-      3439,
-      4324,
-      4749,
-      3950,
-      5514,
-      5132,
-      5601,
-      10770,
-      10579,
-      13309,
-      17613,
-      18934,
-      21739,
-      21339,
-      24214,
-      26028,
-      24405,
-      23050,
-      24213,
-      20546,
-      15537,
-      19099,
-      11925,
-      12582,
-      14822,
-      12584,
-      15398,
-      18628,
-      16236,
-      20158,
-      16498,
-      16452,
-      14240,
-      9592,
-      10187,
-      4040,
-      3737,
-      1923
+      7409,
+      7113,
+      3355,
+      4541,
+      3521,
+      1382,
+      4508,
+      5470,
+      3360,
+      4745,
+      4977,
+      2554,
+      2592,
+      2286,
+      731,
+      1289,
+      1638,
+      1198,
+      2211,
+      3107,
+      2689,
+      3233,
+      3872,
+      3311,
+      4329,
+      4600,
+      3900,
+      5397,
+      4561,
+      6346,
+      12166,
+      10506,
+      14450,
+      19185,
+      17038,
+      20555,
+      22171,
+      21673,
+      24982,
+      26223,
+      22185,
+      24424,
+      22447,
+      14686,
+      18876,
+      12428,
+      11906,
+      15380,
+      12435,
+      15724,
+      18403,
+      15654,
+      19640,
+      15880,
+      16248,
+      13953,
+      9642,
+      10589,
+      4152,
+      4048,
+      2126
     ],
     "titulo": [
       0.0,
@@ -866,12 +837,12 @@
       0.1,
       1.1,
       5.6,
-      15.3,
-      34.9,
-      52.2,
-      72.3,
-      88.1,
-      93.3,
+      15.5,
+      33.0,
+      50.7,
+      69.8,
+      87.5,
+      91.8,
       100.0
     ],
     "acesso_direto": [
@@ -926,14 +897,14 @@
       0.0,
       0.0,
       0.5,
-      4.3,
-      13.9,
+      4.1,
+      13.7,
       36.5,
-      60.5,
-      83.0,
-      92.8,
-      98.6,
-      99.8,
+      59.7,
+      81.8,
+      92.5,
+      98.4,
+      99.5,
       100.0,
       100.0
     ],
@@ -980,23 +951,23 @@
       0.0,
       0.0,
       0.0,
-      0.3,
-      1.9,
-      8.0,
-      23.6,
-      48.4,
-      73.6,
-      91.8,
-      98.2,
-      99.1,
-      95.7,
-      86.1,
+      0.4,
+      2.3,
+      9.0,
+      23.4,
+      51.3,
+      75.1,
+      92.9,
+      98.4,
+      99.2,
+      95.9,
+      86.3,
       63.5,
-      39.5,
-      17.0,
-      7.2,
-      1.4,
-      0.2,
+      40.3,
+      18.2,
+      7.5,
+      1.6,
+      0.5,
       0.0,
       0.0
     ],
@@ -1029,14 +1000,14 @@
       100.0,
       100.0,
       100.0,
-      96.2,
-      76.3,
-      55.2,
-      27.3,
-      14.0,
-      5.9,
-      0.7,
-      0.2,
+      100.0,
+      73.2,
+      48.9,
+      24.9,
+      13.2,
+      4.5,
+      0.5,
+      0.3,
       0.0,
       0.0,
       0.0,
@@ -1066,11 +1037,11 @@
   },
   "limiares": {
     "salvo_99": 47,
-    "salvo_95": 47,
-    "risco_50": 44,
+    "salvo_95": 46,
+    "risco_50": 43,
     "acesso_50": 68,
     "acesso_90": 70,
-    "playoff_50": 61,
+    "playoff_50": 60,
     "playoff_90": 62,
     "titulo_50": 70,
     "titulo_90": 73
