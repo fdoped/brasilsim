@@ -1,6 +1,6 @@
 {
   "competicao": "Série B",
-  "atualizado_em": "2026-10-21T11:25:20.086711-03:00",
+  "atualizado_em": "2026-10-22T11:26:22.324549-03:00",
   "fonte": "ge.globo",
   "nsim": 30000,
   "sigma": 0.4,
@@ -44,9 +44,9 @@
         "e"
       ],
       "por_modelo": {
-        "poisson": 36.3,
-        "dixon_coles": 36.3,
-        "elo": 45.1
+        "poisson": 36.8,
+        "dixon_coles": 36.5,
+        "elo": 44.3
       },
       "titulo": 39.2,
       "acesso_direto": 63.9,
@@ -74,13 +74,13 @@
         "e"
       ],
       "por_modelo": {
-        "poisson": 32.6,
-        "dixon_coles": 33.0,
-        "elo": 24.0
+        "poisson": 32.5,
+        "dixon_coles": 32.5,
+        "elo": 24.5
       },
-      "titulo": 29.9,
-      "acesso_direto": 58.6,
-      "playoff": 41.3,
+      "titulo": 29.8,
+      "acesso_direto": 58.8,
+      "playoff": 41.1,
       "z4": 0.0
     },
     {
@@ -105,12 +105,12 @@
       ],
       "por_modelo": {
         "poisson": 20.3,
-        "dixon_coles": 20.4,
-        "elo": 19.4
+        "dixon_coles": 20.5,
+        "elo": 19.8
       },
-      "titulo": 20.0,
-      "acesso_direto": 42.2,
-      "playoff": 57.7,
+      "titulo": 20.2,
+      "acesso_direto": 42.5,
+      "playoff": 57.5,
       "z4": 0.0
     },
     {
@@ -134,13 +134,13 @@
         "v"
       ],
       "por_modelo": {
-        "poisson": 5.6,
-        "dixon_coles": 5.5,
+        "poisson": 5.4,
+        "dixon_coles": 5.6,
         "elo": 5.9
       },
-      "titulo": 5.7,
-      "acesso_direto": 17.4,
-      "playoff": 81.6,
+      "titulo": 5.6,
+      "acesso_direto": 17.2,
+      "playoff": 81.8,
       "z4": 0.0
     },
     {
@@ -164,13 +164,13 @@
         "v"
       ],
       "por_modelo": {
-        "poisson": 5.1,
-        "dixon_coles": 4.9,
-        "elo": 5.5
+        "poisson": 5.0,
+        "dixon_coles": 4.8,
+        "elo": 5.4
       },
-      "titulo": 5.2,
-      "acesso_direto": 17.4,
-      "playoff": 80.1,
+      "titulo": 5.1,
+      "acesso_direto": 17.1,
+      "playoff": 80.4,
       "z4": 0.0
     },
     {
@@ -260,7 +260,7 @@
       },
       "titulo": 0.0,
       "acesso_direto": 0.0,
-      "playoff": 11.2,
+      "playoff": 11.1,
       "z4": 0.0
     },
     {
@@ -290,7 +290,7 @@
       },
       "titulo": 0.0,
       "acesso_direto": 0.0,
-      "playoff": 3.1,
+      "playoff": 3.2,
       "z4": 0.0
     },
     {
@@ -411,7 +411,7 @@
       "titulo": 0.0,
       "acesso_direto": 0.0,
       "playoff": 0.0,
-      "z4": 2.5
+      "z4": 2.6
     },
     {
       "posicao_atual": 13,
@@ -441,7 +441,7 @@
       "titulo": 0.0,
       "acesso_direto": 0.0,
       "playoff": 0.0,
-      "z4": 2.8
+      "z4": 2.7
     },
     {
       "posicao_atual": 15,
@@ -471,7 +471,7 @@
       "titulo": 0.0,
       "acesso_direto": 0.0,
       "playoff": 0.0,
-      "z4": 7.3
+      "z4": 7.4
     },
     {
       "posicao_atual": 16,
@@ -531,7 +531,7 @@
       "titulo": 0.0,
       "acesso_direto": 0.0,
       "playoff": 0.0,
-      "z4": 82.7
+      "z4": 82.6
     },
     {
       "posicao_atual": 18,
@@ -624,7 +624,298 @@
       "z4": 100.0
     }
   ],
-  "proximos_jogos": [],
+  "proximos_jogos": [
+    {
+      "mandante": "Operário-PR",
+      "visitante": "Athletic Club",
+      "casa": 40.5,
+      "empate": 25.9,
+      "fora": 33.5,
+      "gols_esperados": [
+        1.53,
+        1.37
+      ],
+      "top_placares": [
+        {
+          "placar": "1x1",
+          "prob": 12.2
+        },
+        {
+          "placar": "2x1",
+          "prob": 8.8
+        },
+        {
+          "placar": "1x2",
+          "prob": 7.9
+        }
+      ],
+      "placar_provavel": "1x1",
+      "provavel": "casa",
+      "data": "2026-10-23T19:30",
+      "sede": "Germano Krüger"
+    },
+    {
+      "mandante": "Sport",
+      "visitante": "Criciúma",
+      "casa": 40.4,
+      "empate": 30.6,
+      "fora": 29.0,
+      "gols_esperados": [
+        1.19,
+        0.96
+      ],
+      "top_placares": [
+        {
+          "placar": "1x1",
+          "prob": 14.0
+        },
+        {
+          "placar": "1x0",
+          "prob": 13.2
+        },
+        {
+          "placar": "0x0",
+          "prob": 12.3
+        }
+      ],
+      "placar_provavel": "1x1",
+      "provavel": "casa",
+      "data": "2026-10-23T21:00",
+      "sede": "Ilha do Retiro"
+    },
+    {
+      "mandante": "Avaí",
+      "visitante": "Botafogo-SP",
+      "casa": 34.7,
+      "empate": 29.0,
+      "fora": 36.3,
+      "gols_esperados": [
+        1.18,
+        1.22
+      ],
+      "top_placares": [
+        {
+          "placar": "1x1",
+          "prob": 13.7
+        },
+        {
+          "placar": "0x1",
+          "prob": 10.4
+        },
+        {
+          "placar": "1x0",
+          "prob": 10.1
+        }
+      ],
+      "placar_provavel": "1x1",
+      "provavel": "fora",
+      "data": "2026-10-24T16:00",
+      "sede": "Ressacada"
+    },
+    {
+      "mandante": "São Bernardo",
+      "visitante": "Vila Nova",
+      "casa": 37.8,
+      "empate": 27.1,
+      "fora": 35.1,
+      "gols_esperados": [
+        1.38,
+        1.32
+      ],
+      "top_placares": [
+        {
+          "placar": "1x1",
+          "prob": 12.9
+        },
+        {
+          "placar": "1x0",
+          "prob": 8.7
+        },
+        {
+          "placar": "2x1",
+          "prob": 8.4
+        }
+      ],
+      "placar_provavel": "1x1",
+      "provavel": "casa",
+      "data": "2026-10-24T16:30",
+      "sede": "Primeiro de Maio"
+    },
+    {
+      "mandante": "Atlético-GO",
+      "visitante": "Novorizontino",
+      "casa": 30.3,
+      "empate": 27.2,
+      "fora": 42.5,
+      "gols_esperados": [
+        1.19,
+        1.45
+      ],
+      "top_placares": [
+        {
+          "placar": "1x1",
+          "prob": 12.9
+        },
+        {
+          "placar": "0x1",
+          "prob": 9.8
+        },
+        {
+          "placar": "1x2",
+          "prob": 8.9
+        }
+      ],
+      "placar_provavel": "1x1",
+      "provavel": "fora",
+      "data": "2026-10-24T16:30",
+      "sede": "Antônio Accioly"
+    },
+    {
+      "mandante": "Ponte Preta",
+      "visitante": "Fortaleza",
+      "casa": 9.0,
+      "empate": 18.0,
+      "fora": 73.0,
+      "gols_esperados": [
+        0.66,
+        2.26
+      ],
+      "top_placares": [
+        {
+          "placar": "0x2",
+          "prob": 13.9
+        },
+        {
+          "placar": "0x1",
+          "prob": 11.9
+        },
+        {
+          "placar": "0x3",
+          "prob": 10.5
+        }
+      ],
+      "placar_provavel": "0x2",
+      "provavel": "fora",
+      "data": "2026-10-24T18:30",
+      "sede": "Ítalo Limongi"
+    },
+    {
+      "mandante": "CRB",
+      "visitante": "Londrina",
+      "casa": 50.3,
+      "empate": 22.0,
+      "fora": 27.8,
+      "gols_esperados": [
+        2.11,
+        1.53
+      ],
+      "top_placares": [
+        {
+          "placar": "2x1",
+          "prob": 9.0
+        },
+        {
+          "placar": "1x1",
+          "prob": 9.0
+        },
+        {
+          "placar": "2x2",
+          "prob": 6.9
+        }
+      ],
+      "placar_provavel": "2x1",
+      "provavel": "casa",
+      "data": "2026-10-24T18:30",
+      "sede": "Rei Pelé (AL)"
+    },
+    {
+      "mandante": "América-MG",
+      "visitante": "Cuiabá",
+      "casa": 19.5,
+      "empate": 30.4,
+      "fora": 50.1,
+      "gols_esperados": [
+        0.69,
+        1.29
+      ],
+      "top_placares": [
+        {
+          "placar": "0x1",
+          "prob": 17.2
+        },
+        {
+          "placar": "0x0",
+          "prob": 14.5
+        },
+        {
+          "placar": "1x1",
+          "prob": 12.9
+        }
+      ],
+      "placar_provavel": "0x1",
+      "provavel": "fora",
+      "data": "2026-10-26T19:30",
+      "sede": "Independência"
+    },
+    {
+      "mandante": "Juventude",
+      "visitante": "Náutico",
+      "casa": 57.5,
+      "empate": 26.9,
+      "fora": 15.6,
+      "gols_esperados": [
+        1.53,
+        0.67
+      ],
+      "top_placares": [
+        {
+          "placar": "1x0",
+          "prob": 16.4
+        },
+        {
+          "placar": "2x0",
+          "prob": 13.0
+        },
+        {
+          "placar": "1x1",
+          "prob": 11.9
+        }
+      ],
+      "placar_provavel": "1x0",
+      "provavel": "casa",
+      "data": "2026-10-26T20:30",
+      "sede": "Alfredo Jaconi"
+    },
+    {
+      "mandante": "Ceará",
+      "visitante": "Goiás",
+      "casa": 42.7,
+      "empate": 28.5,
+      "fora": 28.8,
+      "gols_esperados": [
+        1.35,
+        1.06
+      ],
+      "top_placares": [
+        {
+          "placar": "1x1",
+          "prob": 13.5
+        },
+        {
+          "placar": "1x0",
+          "prob": 11.5
+        },
+        {
+          "placar": "0x0",
+          "prob": 9.6
+        }
+      ],
+      "placar_provavel": "1x1",
+      "provavel": "casa",
+      "data": "2026-10-27T20:00",
+      "sede": "Castelão (CE)"
+    }
+  ],
   "curva_pontos": {
     "pontos": [
       14,
@@ -689,66 +980,66 @@
       74
     ],
     "amostras": [
-      7388,
-      7222,
-      3382,
-      4453,
-      3557,
-      1441,
-      4365,
-      5668,
-      3401,
-      4712,
-      4869,
-      2585,
-      2614,
-      2195,
-      796,
-      720,
-      492,
-      1838,
-      2799,
-      2118,
-      3581,
-      4570,
-      3589,
-      5063,
-      5378,
-      4072,
-      5855,
-      4860,
-      5426,
-      11343,
-      9930,
-      13581,
-      19363,
+      7369,
+      7003,
+      3339,
+      4614,
+      3603,
+      1420,
+      4601,
+      5476,
+      3451,
+      4630,
+      4978,
+      2604,
+      2590,
+      2217,
+      701,
+      743,
+      527,
+      1745,
+      2710,
+      2115,
+      3596,
+      4620,
+      3649,
+      5117,
+      5564,
+      4117,
+      5768,
+      4781,
+      5434,
+      11504,
+      9926,
+      13745,
+      19127,
+      17477,
+      20926,
+      23504,
+      23780,
+      30373,
+      30722,
+      22936,
+      29728,
+      22899,
+      11495,
+      18536,
+      7585,
+      9327,
+      12524,
+      10445,
+      15373,
       17587,
-      20781,
-      23680,
-      23785,
-      30202,
-      30596,
-      23218,
-      29703,
-      22649,
-      11787,
-      18572,
-      7648,
-      9121,
-      12620,
-      10507,
-      15385,
-      17658,
-      15879,
-      19789,
-      16084,
-      16444,
-      13933,
-      9259,
-      10463,
-      3893,
-      3569,
-      1962
+      15847,
+      19663,
+      15938,
+      16451,
+      14223,
+      9245,
+      10329,
+      3948,
+      3837,
+      1918
     ],
     "titulo": [
       0.0,
@@ -802,14 +1093,14 @@
       0.0,
       0.0,
       0.2,
-      1.4,
+      1.2,
       6.0,
-      16.5,
-      35.8,
-      52.0,
-      72.0,
-      88.5,
-      91.8,
+      15.6,
+      35.5,
+      51.8,
+      71.9,
+      87.7,
+      92.4,
       100.0
     ],
     "acesso_direto": [
@@ -861,16 +1152,16 @@
       0.0,
       0.0,
       0.0,
-      0.1,
+      0.0,
       0.7,
-      4.4,
-      15.5,
-      37.7,
-      61.8,
-      83.1,
-      92.7,
+      4.6,
+      15.2,
+      37.1,
+      60.5,
+      83.2,
+      93.0,
       98.5,
-      99.6,
+      99.8,
       100.0,
       100.0
     ],
@@ -917,22 +1208,22 @@
       0.0,
       0.1,
       1.0,
-      6.4,
-      16.0,
-      45.3,
-      72.1,
-      89.6,
+      6.6,
+      16.1,
+      44.6,
+      72.4,
+      89.4,
       99.2,
       99.5,
       99.3,
-      95.6,
-      84.5,
-      62.3,
-      38.2,
-      16.9,
-      7.3,
+      95.4,
+      84.8,
+      62.9,
+      39.5,
+      16.8,
+      7.0,
       1.5,
-      0.4,
+      0.2,
       0.0,
       0.0
     ],
@@ -965,11 +1256,11 @@
       100.0,
       100.0,
       100.0,
-      79.3,
-      54.2,
-      27.7,
-      14.3,
-      5.6,
+      79.5,
+      53.7,
+      26.9,
+      13.8,
+      5.7,
       0.6,
       0.4,
       0.0,
