@@ -1,6 +1,6 @@
 {
   "competicao": "Série A",
-  "atualizado_em": "2026-10-24T10:12:10.090103-03:00",
+  "atualizado_em": "2026-10-25T10:38:23.882640-03:00",
   "fonte": "ge.globo",
   "nsim": 30000,
   "sigma": 0.4,
@@ -21,6 +21,35 @@
   "tabela": [
     {
       "posicao_atual": 1,
+      "time": "Palmeiras",
+      "slug": "palmeiras",
+      "pts": 69,
+      "j": 32,
+      "gp": 56,
+      "gc": 22,
+      "sg": 34,
+      "vitorias": 20,
+      "empates": 9,
+      "derrotas": 3,
+      "aproveitamento": 71,
+      "ultimos_jogos": [
+        "e",
+        "v",
+        "v",
+        "v",
+        "v"
+      ],
+      "por_modelo": {
+        "poisson": 54.4,
+        "dixon_coles": 54.4,
+        "elo": 53.3
+      },
+      "titulo": 54.0,
+      "g5": 100.0,
+      "z4": 0.0
+    },
+    {
+      "posicao_atual": 2,
       "time": "Flamengo",
       "slug": "flamengo",
       "pts": 67,
@@ -40,91 +69,33 @@
         "v"
       ],
       "por_modelo": {
-        "poisson": 88.8,
-        "dixon_coles": 89.4,
-        "elo": 95.3
+        "poisson": 45.6,
+        "dixon_coles": 45.6,
+        "elo": 46.7
       },
-      "titulo": 91.1,
+      "titulo": 46.0,
       "g5": 100.0,
-      "z4": 0.0
-    },
-    {
-      "posicao_atual": 2,
-      "time": "Palmeiras",
-      "slug": "palmeiras",
-      "pts": 66,
-      "j": 31,
-      "gp": 54,
-      "gc": 22,
-      "sg": 32,
-      "vitorias": 19,
-      "empates": 9,
-      "derrotas": 3,
-      "aproveitamento": 70,
-      "ultimos_jogos": [
-        "v",
-        "e",
-        "v",
-        "v",
-        "v"
-      ],
-      "por_modelo": {
-        "poisson": 11.2,
-        "dixon_coles": 10.6,
-        "elo": 4.7
-      },
-      "titulo": 8.8,
-      "g5": 100.0,
-      "z4": 0.0
-    },
-    {
-      "posicao_atual": 4,
-      "time": "Athletico-PR",
-      "slug": "athletico-pr",
-      "pts": 53,
-      "j": 31,
-      "gp": 49,
-      "gc": 37,
-      "sg": 12,
-      "vitorias": 15,
-      "empates": 8,
-      "derrotas": 8,
-      "aproveitamento": 56,
-      "ultimos_jogos": [
-        "e",
-        "v",
-        "e",
-        "v",
-        "d"
-      ],
-      "por_modelo": {
-        "poisson": 0.0,
-        "dixon_coles": 0.0,
-        "elo": 0.0
-      },
-      "titulo": 0.0,
-      "g5": 70.4,
       "z4": 0.0
     },
     {
       "posicao_atual": 3,
-      "time": "Cruzeiro",
-      "slug": "cruzeiro",
+      "time": "Athletico-PR",
+      "slug": "athletico-pr",
       "pts": 54,
       "j": 32,
-      "gp": 51,
-      "gc": 46,
-      "sg": 5,
-      "vitorias": 16,
-      "empates": 6,
-      "derrotas": 10,
+      "gp": 50,
+      "gc": 38,
+      "sg": 12,
+      "vitorias": 15,
+      "empates": 9,
+      "derrotas": 8,
       "aproveitamento": 56,
       "ultimos_jogos": [
         "v",
+        "e",
         "v",
         "d",
-        "v",
-        "v"
+        "e"
       ],
       "por_modelo": {
         "poisson": 0.0,
@@ -132,36 +103,7 @@
         "elo": 0.0
       },
       "titulo": 0.0,
-      "g5": 49.4,
-      "z4": 0.0
-    },
-    {
-      "posicao_atual": 5,
-      "time": "Fluminense",
-      "slug": "fluminense",
-      "pts": 51,
-      "j": 31,
-      "gp": 49,
-      "gc": 39,
-      "sg": 10,
-      "vitorias": 14,
-      "empates": 9,
-      "derrotas": 8,
-      "aproveitamento": 54,
-      "ultimos_jogos": [
-        "d",
-        "v",
-        "v",
-        "d",
-        "d"
-      ],
-      "por_modelo": {
-        "poisson": 0.0,
-        "dixon_coles": 0.0,
-        "elo": 0.0
-      },
-      "titulo": 0.0,
-      "g5": 59.4,
+      "g5": 81.0,
       "z4": 0.0
     },
     {
@@ -190,27 +132,56 @@
         "elo": 0.0
       },
       "titulo": 0.0,
-      "g5": 62.1,
+      "g5": 44.0,
       "z4": 0.0
     },
     {
-      "posicao_atual": 7,
-      "time": "Bahia",
-      "slug": "bahia",
-      "pts": 49,
-      "j": 31,
-      "gp": 44,
-      "gc": 39,
+      "posicao_atual": 4,
+      "time": "Cruzeiro",
+      "slug": "cruzeiro",
+      "pts": 54,
+      "j": 32,
+      "gp": 51,
+      "gc": 46,
       "sg": 5,
-      "vitorias": 13,
-      "empates": 10,
-      "derrotas": 8,
-      "aproveitamento": 52,
+      "vitorias": 16,
+      "empates": 6,
+      "derrotas": 10,
+      "aproveitamento": 56,
       "ultimos_jogos": [
         "v",
-        "d",
+        "v",
         "d",
         "v",
+        "v"
+      ],
+      "por_modelo": {
+        "poisson": 0.0,
+        "dixon_coles": 0.0,
+        "elo": 0.0
+      },
+      "titulo": 0.0,
+      "g5": 68.2,
+      "z4": 0.0
+    },
+    {
+      "posicao_atual": 5,
+      "time": "Fluminense",
+      "slug": "fluminense",
+      "pts": 51,
+      "j": 32,
+      "gp": 50,
+      "gc": 41,
+      "sg": 9,
+      "vitorias": 14,
+      "empates": 9,
+      "derrotas": 9,
+      "aproveitamento": 53,
+      "ultimos_jogos": [
+        "v",
+        "v",
+        "d",
+        "d",
         "d"
       ],
       "por_modelo": {
@@ -219,84 +190,55 @@
         "elo": 0.0
       },
       "titulo": 0.0,
-      "g5": 38.7,
+      "g5": 54.2,
+      "z4": 0.0
+    },
+    {
+      "posicao_atual": 7,
+      "time": "Bahia",
+      "slug": "bahia",
+      "pts": 50,
+      "j": 32,
+      "gp": 45,
+      "gc": 40,
+      "sg": 5,
+      "vitorias": 13,
+      "empates": 11,
+      "derrotas": 8,
+      "aproveitamento": 52,
+      "ultimos_jogos": [
+        "d",
+        "d",
+        "v",
+        "d",
+        "e"
+      ],
+      "por_modelo": {
+        "poisson": 0.0,
+        "dixon_coles": 0.0,
+        "elo": 0.0
+      },
+      "titulo": 0.0,
+      "g5": 37.7,
       "z4": 0.0
     },
     {
       "posicao_atual": 8,
       "time": "Santos",
       "slug": "santos",
-      "pts": 45,
-      "j": 31,
-      "gp": 48,
-      "gc": 46,
+      "pts": 46,
+      "j": 32,
+      "gp": 49,
+      "gc": 47,
       "sg": 2,
       "vitorias": 12,
-      "empates": 9,
+      "empates": 10,
       "derrotas": 10,
-      "aproveitamento": 48,
+      "aproveitamento": 47,
       "ultimos_jogos": [
-        "v",
         "v",
         "e",
         "d",
-        "v"
-      ],
-      "por_modelo": {
-        "poisson": 0.0,
-        "dixon_coles": 0.0,
-        "elo": 0.0
-      },
-      "titulo": 0.0,
-      "g5": 14.3,
-      "z4": 0.0
-    },
-    {
-      "posicao_atual": 9,
-      "time": "São Paulo",
-      "slug": "sao-paulo",
-      "pts": 42,
-      "j": 31,
-      "gp": 36,
-      "gc": 35,
-      "sg": 1,
-      "vitorias": 12,
-      "empates": 6,
-      "derrotas": 13,
-      "aproveitamento": 45,
-      "ultimos_jogos": [
-        "d",
-        "v",
-        "d",
-        "v",
-        "v"
-      ],
-      "por_modelo": {
-        "poisson": 0.0,
-        "dixon_coles": 0.0,
-        "elo": 0.0
-      },
-      "titulo": 0.0,
-      "g5": 2.1,
-      "z4": 0.3
-    },
-    {
-      "posicao_atual": 10,
-      "time": "RB Bragantino",
-      "slug": "rb-bragantino",
-      "pts": 41,
-      "j": 31,
-      "gp": 39,
-      "gc": 36,
-      "sg": 3,
-      "vitorias": 11,
-      "empates": 8,
-      "derrotas": 12,
-      "aproveitamento": 44,
-      "ultimos_jogos": [
-        "e",
-        "d",
-        "e",
         "v",
         "e"
       ],
@@ -306,28 +248,28 @@
         "elo": 0.0
       },
       "titulo": 0.0,
-      "g5": 2.9,
-      "z4": 0.3
+      "g5": 12.3,
+      "z4": 0.0
     },
     {
-      "posicao_atual": 11,
-      "time": "Botafogo",
-      "slug": "botafogo",
-      "pts": 39,
-      "j": 31,
-      "gp": 44,
-      "gc": 48,
-      "sg": -4,
-      "vitorias": 10,
-      "empates": 9,
-      "derrotas": 12,
-      "aproveitamento": 41,
+      "posicao_atual": 9,
+      "time": "São Paulo",
+      "slug": "sao-paulo",
+      "pts": 43,
+      "j": 32,
+      "gp": 37,
+      "gc": 36,
+      "sg": 1,
+      "vitorias": 12,
+      "empates": 7,
+      "derrotas": 13,
+      "aproveitamento": 44,
       "ultimos_jogos": [
-        "e",
+        "v",
         "d",
-        "d",
-        "e",
-        "v"
+        "v",
+        "v",
+        "e"
       ],
       "por_modelo": {
         "poisson": 0.0,
@@ -335,8 +277,66 @@
         "elo": 0.0
       },
       "titulo": 0.0,
-      "g5": 0.5,
-      "z4": 3.2
+      "g5": 2.0,
+      "z4": 0.1
+    },
+    {
+      "posicao_atual": 10,
+      "time": "RB Bragantino",
+      "slug": "rb-bragantino",
+      "pts": 41,
+      "j": 32,
+      "gp": 39,
+      "gc": 38,
+      "sg": 1,
+      "vitorias": 11,
+      "empates": 8,
+      "derrotas": 13,
+      "aproveitamento": 42,
+      "ultimos_jogos": [
+        "d",
+        "e",
+        "v",
+        "e",
+        "d"
+      ],
+      "por_modelo": {
+        "poisson": 0.0,
+        "dixon_coles": 0.0,
+        "elo": 0.0
+      },
+      "titulo": 0.0,
+      "g5": 0.0,
+      "z4": 1.6
+    },
+    {
+      "posicao_atual": 11,
+      "time": "Botafogo",
+      "slug": "botafogo",
+      "pts": 39,
+      "j": 32,
+      "gp": 44,
+      "gc": 51,
+      "sg": -7,
+      "vitorias": 10,
+      "empates": 9,
+      "derrotas": 13,
+      "aproveitamento": 40,
+      "ultimos_jogos": [
+        "d",
+        "d",
+        "e",
+        "v",
+        "d"
+      ],
+      "por_modelo": {
+        "poisson": 0.0,
+        "dixon_coles": 0.0,
+        "elo": 0.0
+      },
+      "titulo": 0.0,
+      "g5": 0.1,
+      "z4": 6.1
     },
     {
       "posicao_atual": 12,
@@ -364,27 +364,56 @@
         "elo": 0.0
       },
       "titulo": 0.0,
-      "g5": 0.1,
-      "z4": 4.6
+      "g5": 0.3,
+      "z4": 6.7
     },
     {
       "posicao_atual": 13,
+      "time": "Vasco",
+      "slug": "vasco",
+      "pts": 38,
+      "j": 31,
+      "gp": 39,
+      "gc": 45,
+      "sg": -6,
+      "vitorias": 10,
+      "empates": 8,
+      "derrotas": 13,
+      "aproveitamento": 40,
+      "ultimos_jogos": [
+        "v",
+        "v",
+        "e",
+        "d",
+        "v"
+      ],
+      "por_modelo": {
+        "poisson": 0.0,
+        "dixon_coles": 0.0,
+        "elo": 0.0
+      },
+      "titulo": 0.0,
+      "g5": 0.2,
+      "z4": 6.3
+    },
+    {
+      "posicao_atual": 14,
       "time": "Vitória",
       "slug": "vitoria",
-      "pts": 37,
-      "j": 31,
-      "gp": 34,
-      "gc": 45,
+      "pts": 38,
+      "j": 32,
+      "gp": 35,
+      "gc": 46,
       "sg": -11,
       "vitorias": 10,
-      "empates": 7,
+      "empates": 8,
       "derrotas": 14,
       "aproveitamento": 39,
       "ultimos_jogos": [
-        "e",
         "d",
         "v",
         "d",
+        "e",
         "e"
       ],
       "por_modelo": {
@@ -394,23 +423,52 @@
       },
       "titulo": 0.0,
       "g5": 0.0,
-      "z4": 11.2
+      "z4": 16.3
     },
     {
-      "posicao_atual": 14,
+      "posicao_atual": 15,
       "time": "Mirassol",
       "slug": "mirassol",
-      "pts": 36,
-      "j": 31,
-      "gp": 36,
-      "gc": 44,
+      "pts": 37,
+      "j": 32,
+      "gp": 37,
+      "gc": 45,
       "sg": -8,
       "vitorias": 9,
-      "empates": 9,
+      "empates": 10,
       "derrotas": 13,
       "aproveitamento": 38,
       "ultimos_jogos": [
+        "v",
         "e",
+        "d",
+        "v",
+        "e"
+      ],
+      "por_modelo": {
+        "poisson": 0.0,
+        "dixon_coles": 0.0,
+        "elo": 0.0
+      },
+      "titulo": 0.0,
+      "g5": 0.0,
+      "z4": 22.2
+    },
+    {
+      "posicao_atual": 16,
+      "time": "Internacional",
+      "slug": "internacional",
+      "pts": 35,
+      "j": 32,
+      "gp": 36,
+      "gc": 40,
+      "sg": -4,
+      "vitorias": 8,
+      "empates": 11,
+      "derrotas": 13,
+      "aproveitamento": 36,
+      "ultimos_jogos": [
+        "d",
         "v",
         "e",
         "d",
@@ -423,83 +481,25 @@
       },
       "titulo": 0.0,
       "g5": 0.0,
-      "z4": 22.2
-    },
-    {
-      "posicao_atual": 15,
-      "time": "Vasco",
-      "slug": "vasco",
-      "pts": 35,
-      "j": 30,
-      "gp": 36,
-      "gc": 43,
-      "sg": -7,
-      "vitorias": 9,
-      "empates": 8,
-      "derrotas": 13,
-      "aproveitamento": 38,
-      "ultimos_jogos": [
-        "v",
-        "v",
-        "v",
-        "e",
-        "d"
-      ],
-      "por_modelo": {
-        "poisson": 0.0,
-        "dixon_coles": 0.0,
-        "elo": 0.0
-      },
-      "titulo": 0.0,
-      "g5": 0.0,
-      "z4": 21.4
-    },
-    {
-      "posicao_atual": 16,
-      "time": "Corinthians",
-      "slug": "corinthians",
-      "pts": 33,
-      "j": 31,
-      "gp": 32,
-      "gc": 39,
-      "sg": -7,
-      "vitorias": 8,
-      "empates": 9,
-      "derrotas": 14,
-      "aproveitamento": 35,
-      "ultimos_jogos": [
-        "d",
-        "d",
-        "d",
-        "d",
-        "e"
-      ],
-      "por_modelo": {
-        "poisson": 0.0,
-        "dixon_coles": 0.0,
-        "elo": 0.0
-      },
-      "titulo": 0.0,
-      "g5": 0.0,
-      "z4": 41.8
+      "z4": 36.9
     },
     {
       "posicao_atual": 17,
-      "time": "Internacional",
-      "slug": "internacional",
-      "pts": 32,
-      "j": 31,
-      "gp": 33,
-      "gc": 40,
-      "sg": -7,
-      "vitorias": 7,
-      "empates": 11,
-      "derrotas": 13,
+      "time": "Corinthians",
+      "slug": "corinthians",
+      "pts": 33,
+      "j": 32,
+      "gp": 34,
+      "gc": 42,
+      "sg": -8,
+      "vitorias": 8,
+      "empates": 9,
+      "derrotas": 15,
       "aproveitamento": 34,
       "ultimos_jogos": [
-        "v",
         "d",
-        "v",
+        "d",
+        "d",
         "e",
         "d"
       ],
@@ -510,7 +510,7 @@
       },
       "titulo": 0.0,
       "g5": 0.0,
-      "z4": 35.7
+      "z4": 37.7
     },
     {
       "posicao_atual": 18,
@@ -539,7 +539,7 @@
       },
       "titulo": 0.0,
       "g5": 0.0,
-      "z4": 61.0
+      "z4": 68.8
     },
     {
       "posicao_atual": 19,
@@ -568,27 +568,27 @@
       },
       "titulo": 0.0,
       "g5": 0.0,
-      "z4": 98.3
+      "z4": 97.5
     },
     {
       "posicao_atual": 20,
       "time": "Chapecoense",
       "slug": "chapecoense",
-      "pts": 18,
-      "j": 30,
-      "gp": 30,
-      "gc": 62,
-      "sg": -32,
-      "vitorias": 3,
+      "pts": 21,
+      "j": 31,
+      "gp": 32,
+      "gc": 63,
+      "sg": -31,
+      "vitorias": 4,
       "empates": 9,
       "derrotas": 18,
-      "aproveitamento": 20,
+      "aproveitamento": 22,
       "ultimos_jogos": [
-        "d",
         "e",
         "d",
         "d",
-        "d"
+        "d",
+        "v"
       ],
       "por_modelo": {
         "poisson": 0.0,
@@ -597,213 +597,10 @@
       },
       "titulo": 0.0,
       "g5": 0.0,
-      "z4": 99.9
+      "z4": 99.8
     }
   ],
   "proximos_jogos": [
-    {
-      "mandante": "Mirassol",
-      "visitante": "São Paulo",
-      "casa": 35.7,
-      "empate": 28.5,
-      "fora": 35.9,
-      "gols_esperados": [
-        1.24,
-        1.24
-      ],
-      "top_placares": [
-        {
-          "placar": "1x1",
-          "prob": 13.5
-        },
-        {
-          "placar": "0x1",
-          "prob": 9.8
-        },
-        {
-          "placar": "1x0",
-          "prob": 9.7
-        }
-      ],
-      "placar_provavel": "1x1",
-      "provavel": "fora",
-      "data": "2026-10-24T16:30",
-      "sede": "Maião"
-    },
-    {
-      "mandante": "Internacional",
-      "visitante": "Botafogo",
-      "casa": 39.5,
-      "empate": 26.1,
-      "fora": 34.5,
-      "gols_esperados": [
-        1.49,
-        1.38
-      ],
-      "top_placares": [
-        {
-          "placar": "1x1",
-          "prob": 12.3
-        },
-        {
-          "placar": "2x1",
-          "prob": 8.7
-        },
-        {
-          "placar": "1x2",
-          "prob": 8.0
-        }
-      ],
-      "placar_provavel": "1x1",
-      "provavel": "casa",
-      "data": "2026-10-24T16:30",
-      "sede": "Beira-Rio"
-    },
-    {
-      "mandante": "Vitória",
-      "visitante": "Athletico-PR",
-      "casa": 26.9,
-      "empate": 24.8,
-      "fora": 48.3,
-      "gols_esperados": [
-        1.24,
-        1.73
-      ],
-      "top_placares": [
-        {
-          "placar": "1x1",
-          "prob": 11.6
-        },
-        {
-          "placar": "1x2",
-          "prob": 9.5
-        },
-        {
-          "placar": "0x1",
-          "prob": 8.4
-        }
-      ],
-      "placar_provavel": "1x1",
-      "provavel": "fora",
-      "data": "2026-10-24T16:30",
-      "sede": "Barradão"
-    },
-    {
-      "mandante": "Vasco",
-      "visitante": "Corinthians",
-      "casa": 42.5,
-      "empate": 28.0,
-      "fora": 29.5,
-      "gols_esperados": [
-        1.39,
-        1.11
-      ],
-      "top_placares": [
-        {
-          "placar": "1x1",
-          "prob": 13.3
-        },
-        {
-          "placar": "1x0",
-          "prob": 10.8
-        },
-        {
-          "placar": "0x0",
-          "prob": 8.8
-        }
-      ],
-      "placar_provavel": "1x1",
-      "provavel": "casa",
-      "data": "2026-10-24T18:30",
-      "sede": "São Januário"
-    },
-    {
-      "mandante": "Palmeiras",
-      "visitante": "RB Bragantino",
-      "casa": 63.3,
-      "empate": 23.6,
-      "fora": 13.1,
-      "gols_esperados": [
-        1.77,
-        0.67
-      ],
-      "top_placares": [
-        {
-          "placar": "1x0",
-          "prob": 14.9
-        },
-        {
-          "placar": "2x0",
-          "prob": 13.7
-        },
-        {
-          "placar": "1x1",
-          "prob": 10.9
-        }
-      ],
-      "placar_provavel": "1x0",
-      "provavel": "casa",
-      "data": "2026-10-24T18:30",
-      "sede": "Arena Barueri"
-    },
-    {
-      "mandante": "Chapecoense",
-      "visitante": "Fluminense",
-      "casa": 16.8,
-      "empate": 19.0,
-      "fora": 64.2,
-      "gols_esperados": [
-        1.2,
-        2.46
-      ],
-      "top_placares": [
-        {
-          "placar": "1x2",
-          "prob": 9.5
-        },
-        {
-          "placar": "1x1",
-          "prob": 8.1
-        },
-        {
-          "placar": "0x2",
-          "prob": 7.9
-        }
-      ],
-      "placar_provavel": "1x2",
-      "provavel": "fora",
-      "data": "2026-10-24T19:30",
-      "sede": "Arena Condá"
-    },
-    {
-      "mandante": "Santos",
-      "visitante": "Bahia",
-      "casa": 40.7,
-      "empate": 24.0,
-      "fora": 35.2,
-      "gols_esperados": [
-        1.72,
-        1.59
-      ],
-      "top_placares": [
-        {
-          "placar": "1x1",
-          "prob": 10.6
-        },
-        {
-          "placar": "2x1",
-          "prob": 8.6
-        },
-        {
-          "placar": "1x2",
-          "prob": 8.0
-        }
-      ],
-      "placar_provavel": "1x1",
-      "provavel": "casa",
-      "data": "2026-10-24T21:00",
-      "sede": "Vila Belmiro"
-    },
     {
       "mandante": "Coritiba",
       "visitante": "Grêmio",
@@ -812,7 +609,7 @@
       "fora": 31.4,
       "gols_esperados": [
         1.56,
-        1.31
+        1.3
       ],
       "top_placares": [
         {
@@ -865,9 +662,6 @@
   ],
   "curva_pontos": {
     "pontos": [
-      18,
-      19,
-      20,
       21,
       22,
       23,
@@ -934,79 +728,78 @@
       84,
       85,
       86,
+      87,
       88
     ],
     "amostras": [
-      769,
-      1280,
-      1236,
-      1806,
-      2310,
-      2207,
-      2294,
-      2748,
-      3318,
-      3958,
-      3759,
-      4340,
-      4883,
-      4603,
-      4918,
+      906,
+      1559,
+      1421,
+      2208,
+      2991,
+      3272,
+      4208,
+      4336,
+      4498,
+      5167,
+      5122,
+      5270,
+      5744,
+      5698,
+      6519,
+      7420,
+      8263,
+      10690,
+      13252,
+      14756,
+      17523,
+      20580,
+      21295,
+      22758,
+      24017,
+      22735,
+      21589,
+      21286,
+      17762,
+      16311,
+      16109,
+      12455,
+      13371,
+      13257,
+      13399,
+      13486,
+      14907,
+      15242,
+      14913,
+      14337,
+      14967,
+      12331,
+      11275,
+      11115,
+      7310,
+      6953,
+      5984,
+      2913,
+      3181,
+      2377,
+      564,
+      1843,
+      935,
+      1572,
+      2132,
+      2702,
+      3503,
+      4118,
+      4764,
+      5579,
       5588,
-      5697,
-      6581,
-      8323,
-      9364,
-      10669,
-      13279,
-      15102,
-      16090,
-      17725,
-      19119,
-      19115,
-      19476,
-      19989,
-      18571,
-      17867,
-      18018,
-      16089,
-      15172,
-      15453,
-      13304,
-      13931,
-      15563,
-      13788,
-      15393,
-      16371,
-      14400,
-      15504,
-      15550,
-      13172,
-      12846,
-      11994,
-      8852,
-      8535,
-      6581,
-      4698,
-      4367,
-      3535,
-      2870,
-      3490,
-      3445,
-      3789,
-      3785,
-      5111,
-      3930,
-      4346,
-      5203,
-      2445,
-      5007,
-      2543,
-      3285,
-      2598,
-      2184,
-      3348,
-      2521
+      5993,
+      5839,
+      4026,
+      5348,
+      2272,
+      2682,
+      1502
     ],
     "titulo": [
       0.0,
@@ -1059,25 +852,23 @@
       0.0,
       0.0,
       0.0,
-      0.0,
-      0.1,
+      0.2,
       0.4,
-      1.0,
-      1.5,
-      4.8,
-      8.6,
-      15.0,
-      18.3,
-      33.2,
-      43.1,
-      47.3,
-      93.6,
-      69.9,
-      100.0,
-      100.0,
-      100.0,
-      100.0,
-      100.0,
+      2.6,
+      5.0,
+      7.6,
+      13.0,
+      16.9,
+      24.7,
+      31.2,
+      40.2,
+      48.8,
+      58.5,
+      69.3,
+      77.4,
+      84.3,
+      91.2,
+      95.3,
       100.0
     ],
     "g5": [
@@ -1114,22 +905,20 @@
       0.0,
       0.0,
       0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
       0.1,
-      0.4,
-      2.7,
-      8.8,
-      21.3,
-      39.3,
-      59.8,
-      78.2,
-      89.2,
-      95.8,
-      98.9,
-      99.6,
+      0.6,
+      2.2,
+      7.3,
+      18.5,
+      33.6,
+      53.7,
+      72.9,
+      87.0,
+      95.1,
+      98.5,
+      99.8,
+      100.0,
+      100.0,
       100.0,
       100.0,
       100.0,
@@ -1168,20 +957,18 @@
       100.0,
       100.0,
       100.0,
-      100.0,
-      100.0,
-      100.0,
-      99.5,
-      97.5,
-      91.5,
-      78.8,
-      58.6,
-      37.1,
-      19.1,
-      7.2,
+      99.9,
+      99.3,
+      95.7,
+      85.4,
+      67.2,
+      42.8,
+      21.0,
+      7.6,
       2.0,
       0.4,
-      0.1,
+      0.0,
+      0.0,
       0.0,
       0.0,
       0.0,
@@ -1229,9 +1016,9 @@
     "salvo_99": 44,
     "salvo_95": 43,
     "risco_50": 40,
-    "g5_50": 61,
-    "g5_90": 64,
-    "titulo_50": 80,
-    "titulo_90": 80
+    "g5_50": 60,
+    "g5_90": 63,
+    "titulo_50": 82,
+    "titulo_90": 86
   }
 }
