@@ -9343,5 +9343,110 @@
         "z4": 100.0
       }
     }
+  },
+  {
+    "data": "2026-11-02",
+    "times": {
+      "Flamengo": {
+        "titulo": 86.2,
+        "g5": 100.0,
+        "z4": 0.0
+      },
+      "Palmeiras": {
+        "titulo": 13.8,
+        "g5": 100.0,
+        "z4": 0.0
+      },
+      "Cruzeiro": {
+        "titulo": 0.0,
+        "g5": 81.0,
+        "z4": 0.0
+      },
+      "Fluminense": {
+        "titulo": 0.0,
+        "g5": 65.7,
+        "z4": 0.0
+      },
+      "Athletico-PR": {
+        "titulo": 0.0,
+        "g5": 62.7,
+        "z4": 0.0
+      },
+      "Bahia": {
+        "titulo": 0.0,
+        "g5": 64.9,
+        "z4": 0.0
+      },
+      "Atlético-MG": {
+        "titulo": 0.0,
+        "g5": 17.3,
+        "z4": 0.0
+      },
+      "Santos": {
+        "titulo": 0.0,
+        "g5": 7.6,
+        "z4": 0.0
+      },
+      "RB Bragantino": {
+        "titulo": 0.0,
+        "g5": 0.4,
+        "z4": 0.0
+      },
+      "São Paulo": {
+        "titulo": 0.0,
+        "g5": 0.3,
+        "z4": 0.1
+      },
+      "Coritiba": {
+        "titulo": 0.0,
+        "g5": 0.1,
+        "z4": 1.3
+      },
+      "Botafogo": {
+        "titulo": 0.0,
+        "g5": 0.0,
+        "z4": 10.7
+      },
+      "Vasco": {
+        "titulo": 0.0,
+        "g5": 0.0,
+        "z4": 14.9
+      },
+      "Vitória": {
+        "titulo": 0.0,
+        "g5": 0.0,
+        "z4": 28.2
+      },
+      "Grêmio": {
+        "titulo": 0.0,
+        "g5": 0.0,
+        "z4": 33.7
+      },
+      "Mirassol": {
+        "titulo": 0.0,
+        "g5": 0.0,
+        "z4": 37.1
+      },
+      "Corinthians": {
+        "titulo": 0.0,
+        "g5": 0.0,
+        "z4": 28.4
+      },
+      "Internacional": {
+        "titulo": 0.0,
+        "g5": 0.0,
+        "z4": 53.4
+      },
+      "Remo": {
+        "titulo": 0.0,
+        "g5": 0.0,
+        "z4": 92.3
+      },
+      "Chapecoense": {
+        "titulo": 0.0,
+        "g5": 0.0,
+        "z4": 100.0
+      }
+    }
   }
 ]
