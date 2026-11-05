@@ -11503,45 +11503,45 @@
     "data": "2026-11-05",
     "times": {
       "Novorizontino": {
-        "titulo": 84.2,
+        "titulo": 84.1,
         "acesso_direto": 97.4,
         "playoff": 2.6,
         "z4": 0.0
       },
       "Juventude": {
-        "titulo": 12.1,
-        "acesso_direto": 73.9,
-        "playoff": 26.1,
+        "titulo": 12.3,
+        "acesso_direto": 73.7,
+        "playoff": 26.3,
         "z4": 0.0
       },
       "Vila Nova": {
-        "titulo": 3.3,
-        "acesso_direto": 12.4,
-        "playoff": 87.6,
+        "titulo": 3.2,
+        "acesso_direto": 12.5,
+        "playoff": 87.5,
         "z4": 0.0
       },
       "Fortaleza": {
         "titulo": 0.3,
-        "acesso_direto": 11.9,
-        "playoff": 88.1,
+        "acesso_direto": 12.2,
+        "playoff": 87.8,
         "z4": 0.0
       },
       "Criciúma": {
         "titulo": 0.1,
-        "acesso_direto": 4.4,
-        "playoff": 95.6,
+        "acesso_direto": 4.2,
+        "playoff": 95.8,
         "z4": 0.0
       },
       "CRB": {
         "titulo": 0.0,
         "acesso_direto": 0.0,
-        "playoff": 24.7,
+        "playoff": 25.3,
         "z4": 0.0
       },
       "Goiás": {
         "titulo": 0.0,
         "acesso_direto": 0.0,
-        "playoff": 11.8,
+        "playoff": 11.6,
         "z4": 0.0
       },
       "Sport": {
@@ -11553,7 +11553,7 @@
       "Atlético-GO": {
         "titulo": 0.0,
         "acesso_direto": 0.0,
-        "playoff": 35.2,
+        "playoff": 34.8,
         "z4": 0.0
       },
       "São Bernardo": {
@@ -11565,7 +11565,7 @@
       "Operário-PR": {
         "titulo": 0.0,
         "acesso_direto": 0.0,
-        "playoff": 0.4,
+        "playoff": 0.3,
         "z4": 0.0
       },
       "Botafogo-SP": {
@@ -11596,13 +11596,13 @@
         "titulo": 0.0,
         "acesso_direto": 0.0,
         "playoff": 0.0,
-        "z4": 1.4
+        "z4": 1.3
       },
       "Avaí": {
         "titulo": 0.0,
         "acesso_direto": 0.0,
         "playoff": 0.0,
-        "z4": 98.6
+        "z4": 98.7
       },
       "Londrina": {
         "titulo": 0.0,
