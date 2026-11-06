@@ -11628,9 +11628,9 @@
     "data": "2026-11-06",
     "times": {
       "Novorizontino": {
-        "titulo": 74.5,
-        "acesso_direto": 91.1,
-        "playoff": 8.9,
+        "titulo": 74.6,
+        "acesso_direto": 91.2,
+        "playoff": 8.8,
         "z4": 0.0
       },
       "Juventude": {
@@ -11640,27 +11640,27 @@
         "z4": 0.0
       },
       "Vila Nova": {
-        "titulo": 4.9,
-        "acesso_direto": 15.5,
-        "playoff": 84.5,
+        "titulo": 4.8,
+        "acesso_direto": 15.3,
+        "playoff": 84.7,
         "z4": 0.0
       },
       "Criciúma": {
         "titulo": 0.4,
-        "acesso_direto": 4.4,
-        "playoff": 95.6,
+        "acesso_direto": 4.5,
+        "playoff": 95.5,
         "z4": 0.0
       },
       "Fortaleza": {
         "titulo": 0.2,
-        "acesso_direto": 7.5,
-        "playoff": 92.5,
+        "acesso_direto": 7.4,
+        "playoff": 92.6,
         "z4": 0.0
       },
       "CRB": {
         "titulo": 0.0,
         "acesso_direto": 0.0,
-        "playoff": 24.1,
+        "playoff": 24.0,
         "z4": 0.0
       },
       "Goiás": {
@@ -11672,13 +11672,13 @@
       "Sport": {
         "titulo": 0.0,
         "acesso_direto": 0.0,
-        "playoff": 36.9,
+        "playoff": 37.1,
         "z4": 0.0
       },
       "Atlético-GO": {
         "titulo": 0.0,
         "acesso_direto": 0.0,
-        "playoff": 27.2,
+        "playoff": 27.3,
         "z4": 0.0
       },
       "São Bernardo": {
@@ -11721,13 +11721,13 @@
         "titulo": 0.0,
         "acesso_direto": 0.0,
         "playoff": 0.0,
-        "z4": 3.0
+        "z4": 2.9
       },
       "Avaí": {
         "titulo": 0.0,
         "acesso_direto": 0.0,
         "playoff": 0.0,
-        "z4": 97.0
+        "z4": 97.1
       },
       "Londrina": {
         "titulo": 0.0,
