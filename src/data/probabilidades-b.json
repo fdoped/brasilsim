@@ -1,6 +1,6 @@
 {
   "competicao": "Série B",
-  "atualizado_em": "2026-11-11T13:59:17.553771-03:00",
+  "atualizado_em": "2026-11-12T14:28:29.054472-03:00",
   "fonte": "ge.globo",
   "nsim": 30000,
   "sigma": 0.4,
@@ -44,9 +44,9 @@
         "v"
       ],
       "por_modelo": {
-        "poisson": 71.6,
-        "dixon_coles": 72.5,
-        "elo": 70.3
+        "poisson": 71.8,
+        "dixon_coles": 72.2,
+        "elo": 70.5
       },
       "titulo": 71.5,
       "acesso_direto": 100.0,
@@ -74,13 +74,13 @@
         "v"
       ],
       "por_modelo": {
-        "poisson": 28.4,
-        "dixon_coles": 27.5,
-        "elo": 29.7
+        "poisson": 28.2,
+        "dixon_coles": 27.8,
+        "elo": 29.5
       },
       "titulo": 28.5,
-      "acesso_direto": 78.6,
-      "playoff": 21.4,
+      "acesso_direto": 81.9,
+      "playoff": 18.1,
       "z4": 0.0
     },
     {
@@ -109,8 +109,8 @@
         "elo": 0.0
       },
       "titulo": 0.0,
-      "acesso_direto": 21.4,
-      "playoff": 78.6,
+      "acesso_direto": 18.1,
+      "playoff": 81.9,
       "z4": 0.0
     },
     {
@@ -200,7 +200,7 @@
       },
       "titulo": 0.0,
       "acesso_direto": 0.0,
-      "playoff": 49.2,
+      "playoff": 31.3,
       "z4": 0.0
     },
     {
@@ -230,7 +230,7 @@
       },
       "titulo": 0.0,
       "acesso_direto": 0.0,
-      "playoff": 10.8,
+      "playoff": 20.4,
       "z4": 0.0
     },
     {
@@ -260,7 +260,7 @@
       },
       "titulo": 0.0,
       "acesso_direto": 0.0,
-      "playoff": 38.4,
+      "playoff": 44.5,
       "z4": 0.0
     },
     {
@@ -290,7 +290,7 @@
       },
       "titulo": 0.0,
       "acesso_direto": 0.0,
-      "playoff": 1.5,
+      "playoff": 3.8,
       "z4": 0.0
     },
     {
@@ -448,19 +448,19 @@
       "time": "Náutico",
       "slug": "nautico",
       "pts": 46,
-      "j": 37,
-      "gp": 40,
-      "gc": 49,
-      "sg": -9,
+      "j": 38,
+      "gp": 41,
+      "gc": 51,
+      "sg": -10,
       "vitorias": 12,
       "empates": 10,
-      "derrotas": 15,
-      "aproveitamento": 41,
+      "derrotas": 16,
+      "aproveitamento": 40,
       "ultimos_jogos": [
-        "d",
         "e",
         "d",
         "v",
+        "d",
         "d"
       ],
       "por_modelo": {
@@ -501,7 +501,7 @@
       "titulo": 0.0,
       "acesso_direto": 0.0,
       "playoff": 0.0,
-      "z4": 8.9
+      "z4": 1.1
     },
     {
       "posicao_atual": 17,
@@ -531,27 +531,27 @@
       "titulo": 0.0,
       "acesso_direto": 0.0,
       "playoff": 0.0,
-      "z4": 91.1
+      "z4": 98.9
     },
     {
       "posicao_atual": 18,
       "time": "Londrina",
       "slug": "londrina",
-      "pts": 32,
-      "j": 37,
-      "gp": 45,
-      "gc": 58,
-      "sg": -13,
-      "vitorias": 8,
+      "pts": 35,
+      "j": 38,
+      "gp": 47,
+      "gc": 59,
+      "sg": -12,
+      "vitorias": 9,
       "empates": 8,
       "derrotas": 21,
-      "aproveitamento": 28,
+      "aproveitamento": 30,
       "ultimos_jogos": [
-        "e",
         "v",
         "d",
         "d",
-        "d"
+        "d",
+        "v"
       ],
       "por_modelo": {
         "poisson": 0.0,
@@ -626,39 +626,10 @@
   ],
   "proximos_jogos": [
     {
-      "mandante": "Londrina",
-      "visitante": "Náutico",
-      "casa": 41.3,
-      "empate": 25.1,
-      "fora": 33.6,
-      "gols_esperados": [
-        1.62,
-        1.44
-      ],
-      "top_placares": [
-        {
-          "placar": "1x1",
-          "prob": 11.5
-        },
-        {
-          "placar": "2x1",
-          "prob": 8.9
-        },
-        {
-          "placar": "1x2",
-          "prob": 7.9
-        }
-      ],
-      "placar_provavel": "1x1",
-      "provavel": "casa",
-      "data": "2026-11-11T19:00",
-      "sede": "VGD"
-    },
-    {
       "mandante": "Ponte Preta",
       "visitante": "Operário-PR",
       "casa": 12.0,
-      "empate": 18.1,
+      "empate": 18.2,
       "fora": 69.8,
       "gols_esperados": [
         0.9,
@@ -696,7 +667,7 @@
       "top_placares": [
         {
           "placar": "1x1",
-          "prob": 12.0
+          "prob": 12.1
         },
         {
           "placar": "2x1",
@@ -749,7 +720,7 @@
       "fora": 30.6,
       "gols_esperados": [
         1.29,
-        1.09
+        1.08
       ],
       "top_placares": [
         {
@@ -820,7 +791,7 @@
         },
         {
           "placar": "0x0",
-          "prob": 10.9
+          "prob": 11.0
         }
       ],
       "placar_provavel": "1x1",
@@ -878,7 +849,7 @@
         },
         {
           "placar": "2x0",
-          "prob": 8.1
+          "prob": 8.2
         }
       ],
       "placar_provavel": "1x1",
@@ -890,7 +861,7 @@
       "mandante": "Juventude",
       "visitante": "Botafogo-SP",
       "casa": 53.4,
-      "empate": 28.2,
+      "empate": 28.3,
       "fora": 18.3,
       "gols_esperados": [
         1.44,
@@ -899,7 +870,7 @@
       "top_placares": [
         {
           "placar": "1x0",
-          "prob": 15.9
+          "prob": 16.0
         },
         {
           "placar": "1x1",
@@ -924,7 +895,6 @@
       29,
       30,
       32,
-      33,
       35,
       40,
       41,
@@ -933,7 +903,6 @@
       46,
       47,
       48,
-      49,
       50,
       51,
       52,
@@ -957,47 +926,43 @@
       73
     ],
     "amostras": [
-      15930,
-      7613,
-      6457,
-      18854,
-      6297,
-      19536,
-      8087,
-      7226,
-      6457,
-      7613,
-      26798,
-      7590,
-      23733,
-      26750,
-      15833,
-      9314,
-      25912,
-      11298,
-      19932,
-      7746,
-      21537,
-      28214,
-      8193,
-      10868,
-      39268,
-      23197,
-      39747,
-      22438,
-      17419,
-      20143,
-      7952,
-      8924,
-      13034,
-      21754,
-      8336,
-      16966,
-      13034
+      16582,
+      7482,
+      5936,
+      17966,
+      7531,
+      4503,
+      30000,
+      16090,
+      8310,
+      11536,
+      7482,
+      46582,
+      18417,
+      17823,
+      23760,
+      4503,
+      18376,
+      8052,
+      30828,
+      29524,
+      8263,
+      8406,
+      46844,
+      23336,
+      31868,
+      16498,
+      17401,
+      26101,
+      11334,
+      7021,
+      12894,
+      20385,
+      8366,
+      17106,
+      12894
     ],
     "titulo": [
-      0.0,
-      0.0,
       0.0,
       0.0,
       0.0,
@@ -1065,10 +1030,8 @@
       0.0,
       0.0,
       0.0,
-      0.0,
-      0.0,
-      56.0,
-      66.0,
+      61.4,
+      67.3,
       100.0,
       100.0,
       100.0
@@ -1096,18 +1059,16 @@
       0.0,
       0.0,
       0.0,
-      0.0,
-      0.0,
-      1.7,
-      17.7,
-      63.5,
+      3.7,
+      26.8,
+      69.0,
       100.0,
       100.0,
       100.0,
       100.0,
       100.0,
-      44.0,
-      34.0,
+      38.6,
+      32.7,
       0.0,
       0.0,
       0.0
@@ -1122,9 +1083,7 @@
       100.0,
       100.0,
       100.0,
-      100.0,
-      59.4,
-      0.0,
+      48.5,
       0.0,
       0.0,
       0.0,
@@ -1155,7 +1114,7 @@
   "limiares": {
     "salvo_99": 43,
     "salvo_95": 43,
-    "risco_50": 43,
+    "risco_50": 41,
     "acesso_50": 68,
     "acesso_90": 70,
     "playoff_50": 61,
