@@ -1,6 +1,6 @@
 {
   "competicao": "Série A",
-  "atualizado_em": "2026-11-26T15:54:17.498349-03:00",
+  "atualizado_em": "2026-11-27T15:46:14.493236-03:00",
   "fonte": "ge.globo",
   "nsim": 30000,
   "sigma": 0.4,
@@ -190,7 +190,7 @@
         "elo": 0.0
       },
       "titulo": 0.0,
-      "g5": 9.6,
+      "g5": 9.5,
       "z4": 0.0
     },
     {
@@ -282,6 +282,35 @@
     },
     {
       "posicao_atual": 10,
+      "time": "São Paulo",
+      "slug": "sao-paulo",
+      "pts": 48,
+      "j": 37,
+      "gp": 43,
+      "gc": 42,
+      "sg": 1,
+      "vitorias": 13,
+      "empates": 9,
+      "derrotas": 15,
+      "aproveitamento": 43,
+      "ultimos_jogos": [
+        "d",
+        "e",
+        "d",
+        "e",
+        "v"
+      ],
+      "por_modelo": {
+        "poisson": 0.0,
+        "dixon_coles": 0.0,
+        "elo": 0.0
+      },
+      "titulo": 0.0,
+      "g5": 0.0,
+      "z4": 0.0
+    },
+    {
+      "posicao_atual": 11,
       "time": "Vasco",
       "slug": "vasco",
       "pts": 47,
@@ -299,35 +328,6 @@
         "v",
         "v",
         "d"
-      ],
-      "por_modelo": {
-        "poisson": 0.0,
-        "dixon_coles": 0.0,
-        "elo": 0.0
-      },
-      "titulo": 0.0,
-      "g5": 0.0,
-      "z4": 0.0
-    },
-    {
-      "posicao_atual": 11,
-      "time": "São Paulo",
-      "slug": "sao-paulo",
-      "pts": 45,
-      "j": 36,
-      "gp": 40,
-      "gc": 41,
-      "sg": -1,
-      "vitorias": 12,
-      "empates": 9,
-      "derrotas": 15,
-      "aproveitamento": 41,
-      "ultimos_jogos": [
-        "e",
-        "d",
-        "e",
-        "d",
-        "e"
       ],
       "por_modelo": {
         "poisson": 0.0,
@@ -365,7 +365,7 @@
       },
       "titulo": 0.0,
       "g5": 0.0,
-      "z4": 0.4
+      "z4": 0.0
     },
     {
       "posicao_atual": 13,
@@ -394,7 +394,7 @@
       },
       "titulo": 0.0,
       "g5": 0.0,
-      "z4": 5.7
+      "z4": 0.9
     },
     {
       "posicao_atual": 14,
@@ -423,7 +423,7 @@
       },
       "titulo": 0.0,
       "g5": 0.0,
-      "z4": 13.9
+      "z4": 0.7
     },
     {
       "posicao_atual": 15,
@@ -452,7 +452,7 @@
       },
       "titulo": 0.0,
       "g5": 0.0,
-      "z4": 23.8
+      "z4": 5.7
     },
     {
       "posicao_atual": 16,
@@ -481,7 +481,7 @@
       },
       "titulo": 0.0,
       "g5": 0.0,
-      "z4": 36.7
+      "z4": 93.4
     },
     {
       "posicao_atual": 17,
@@ -510,7 +510,7 @@
       },
       "titulo": 0.0,
       "g5": 0.0,
-      "z4": 36.3
+      "z4": 22.2
     },
     {
       "posicao_atual": 18,
@@ -539,26 +539,26 @@
       },
       "titulo": 0.0,
       "g5": 0.0,
-      "z4": 83.1
+      "z4": 77.2
     },
     {
       "posicao_atual": 19,
       "time": "Remo",
       "slug": "remo",
       "pts": 32,
-      "j": 36,
-      "gp": 41,
-      "gc": 61,
-      "sg": -20,
+      "j": 37,
+      "gp": 42,
+      "gc": 64,
+      "sg": -22,
       "vitorias": 7,
       "empates": 11,
-      "derrotas": 18,
-      "aproveitamento": 29,
+      "derrotas": 19,
+      "aproveitamento": 28,
       "ultimos_jogos": [
-        "d",
         "v",
         "d",
         "v",
+        "d",
         "d"
       ],
       "por_modelo": {
@@ -602,42 +602,13 @@
   ],
   "proximos_jogos": [
     {
-      "mandante": "São Paulo",
-      "visitante": "Remo",
-      "casa": 52.9,
-      "empate": 25.5,
-      "fora": 21.5,
-      "gols_esperados": [
-        1.67,
-        0.98
-      ],
-      "top_placares": [
-        {
-          "placar": "1x1",
-          "prob": 12.2
-        },
-        {
-          "placar": "1x0",
-          "prob": 11.3
-        },
-        {
-          "placar": "2x0",
-          "prob": 9.9
-        }
-      ],
-      "placar_provavel": "1x1",
-      "provavel": "casa",
-      "data": "2026-11-26T20:00",
-      "sede": "Morumbis"
-    },
-    {
       "mandante": "Fluminense",
       "visitante": "Cruzeiro",
       "casa": 47.9,
       "empate": 23.3,
       "fora": 28.8,
       "gols_esperados": [
-        1.91,
+        1.9,
         1.44
       ],
       "top_placares": [
@@ -664,10 +635,10 @@
       "visitante": "Bahia",
       "casa": 34.0,
       "empate": 24.5,
-      "fora": 41.6,
+      "fora": 41.5,
       "gols_esperados": [
         1.51,
-        1.69
+        1.68
       ],
       "top_placares": [
         {
@@ -692,11 +663,11 @@
       "mandante": "Coritiba",
       "visitante": "Flamengo",
       "casa": 15.1,
-      "empate": 20.0,
-      "fora": 64.9,
+      "empate": 20.1,
+      "fora": 64.8,
       "gols_esperados": [
         0.99,
-        2.24
+        2.23
       ],
       "top_placares": [
         {
@@ -724,7 +695,7 @@
       "empate": 25.0,
       "fora": 39.8,
       "gols_esperados": [
-        1.5,
+        1.49,
         1.6
       ],
       "top_placares": [
@@ -751,7 +722,7 @@
       "visitante": "Grêmio",
       "casa": 44.7,
       "empate": 28.6,
-      "fora": 26.8,
+      "fora": 26.7,
       "gols_esperados": [
         1.37,
         1.0
@@ -779,11 +750,11 @@
       "mandante": "Mirassol",
       "visitante": "Athletico-PR",
       "casa": 31.0,
-      "empate": 25.6,
-      "fora": 43.4,
+      "empate": 25.7,
+      "fora": 43.3,
       "gols_esperados": [
-        1.32,
-        1.6
+        1.31,
+        1.59
       ],
       "top_placares": [
         {
@@ -808,8 +779,8 @@
       "mandante": "Internacional",
       "visitante": "RB Bragantino",
       "casa": 34.0,
-      "empate": 28.0,
-      "fora": 38.0,
+      "empate": 28.1,
+      "fora": 37.9,
       "gols_esperados": [
         1.23,
         1.31
@@ -870,9 +841,7 @@
       27,
       32,
       33,
-      34,
       35,
-      36,
       38,
       39,
       40,
@@ -917,60 +886,56 @@
       86
     ],
     "amostras": [
-      19623,
-      5536,
-      4841,
-      5423,
-      5747,
-      1903,
-      7399,
-      5234,
-      9696,
-      6397,
-      2156,
-      20173,
-      21813,
-      14350,
-      36000,
-      34713,
-      21086,
-      35268,
-      24782,
-      15705,
-      23485,
-      26819,
-      7688,
-      23818,
-      16240,
-      11993,
-      16263,
-      10341,
-      15645,
-      1328,
-      16962,
-      5833,
-      8985,
-      4592,
-      1936,
-      18598,
-      13529,
-      1414,
-      12773,
-      2490,
-      1423,
-      5875,
-      6567,
-      17558,
-      1857,
-      3030,
-      1424,
-      6887,
-      6796,
-      10006
+      19538,
+      5660,
+      4802,
+      12590,
+      7646,
+      9764,
+      5506,
+      6415,
+      2231,
+      45468,
+      16273,
+      11200,
+      29429,
+      25561,
+      16227,
+      28056,
+      27363,
+      17592,
+      22043,
+      33394,
+      7384,
+      25270,
+      15894,
+      12064,
+      16682,
+      10210,
+      16149,
+      1249,
+      16828,
+      5803,
+      8954,
+      4670,
+      1837,
+      18760,
+      13350,
+      1448,
+      12605,
+      2590,
+      1495,
+      5929,
+      6697,
+      17374,
+      1873,
+      3032,
+      1380,
+      6914,
+      6791,
+      10010
     ],
     "titulo": [
-      0.0,
-      0.0,
       0.0,
       0.0,
       0.0,
@@ -1046,12 +1011,10 @@
       0.0,
       0.0,
       0.0,
-      0.0,
-      0.0,
-      13.0,
-      24.7,
-      78.3,
-      71.7,
+      12.7,
+      25.9,
+      78.1,
+      71.5,
       100.0,
       100.0,
       100.0,
@@ -1082,13 +1045,11 @@
       100.0,
       100.0,
       100.0,
-      100.0,
-      100.0,
-      95.0,
-      71.8,
-      34.3,
-      15.9,
-      1.6,
+      89.3,
+      27.6,
+      1.9,
+      1.8,
+      0.0,
       0.0,
       0.0,
       0.0,
@@ -1126,9 +1087,9 @@
     ]
   },
   "limiares": {
-    "salvo_99": 45,
-    "salvo_95": 44,
-    "risco_50": 42,
+    "salvo_99": 44,
+    "salvo_95": 42,
+    "risco_50": 41,
     "g5_50": 59,
     "g5_90": 61,
     "titulo_50": 80,
